@@ -1,0 +1,31 @@
+{
+  "name": "visualization",
+  "version": "1.0.0",
+  "description": "Project in the module Visualization of the Media Informatics Masters at the TH Köln",
+  "main": "index.js",
+  "scripts": {
+    "start": "web-dev-server --node-resolve --open --watch",
+    "build": "rollup -c",
+    "test": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finnge/mi-visualization.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/finnge/mi-visualization/issues"
+  },
+  "homepage": "https://github.com/finnge/mi-visualization#readme",
+  "dependencies": {
+    "@web/rollup-plugin-html": "^1.10.3",
+    "d3": "^7.4.4"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.31",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
