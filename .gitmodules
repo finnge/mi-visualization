@@ -1,0 +1,3 @@
+[submodule "data/flights/_supplementary-data"]
+	path = data/flights/_supplementary-data
+	url = https://github.com/davidmegginson/ourairports-data

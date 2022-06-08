@@ -2,7 +2,18 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6603766.svg)](https://doi.org/10.5281/zenodo.6603766)
 
+## Example Data
 
+```
+callsign,number,icao24,registration,typecode,origin,destination,firstseen,lastseen,day,latitude_1,longitude_1,altitude_1,latitude_2,longitude_2,altitude_2
+HVN19,,888152,,,YMML,LFPG,2018-12-31 00:43:16+00:00,2019-01-01 04:56:29+00:00,2019-01-01 00:00:00+00:00,-37.65948486328125,144.80442128282908,304.8,48.99531555175781,2.610802283653846,-53.34
+```
+
+| callsign | number | icao24 | registration | typecode | origin | destination | firstseen | lastseen | day | latitude_1 | longitude_1 | altitude_1 | latitude_2 | longitude_2 | altitude_2 |
+|---|---|---|----|----|----|----|----|----| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| HVN19 |  | 888152 |  |  | YMML | LFPG | 2018-12-31 00:43:16+00:00 | 2019-01-01 04:56:29+00:00 | 2019-01-01 00:00:00+00:00 | -37.65948486328125 | 144.80442128282908 | 304.8 | 48.99531555175781 | 2.610802283653846 | -53.34 |
+
+## Official README
 ```
 MOTIVATION
 
