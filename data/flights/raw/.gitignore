@@ -1,5 +1,5 @@
 # Ignore all raw data sets because of their filesize
 
-**/raw/*.csv
-**/raw/*.tsv
-**/raw/*.json
+*.csv
+*.tsv
+*.json
