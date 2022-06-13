@@ -11,10 +11,14 @@ const colors = require('ansi-colors');
 const FILEPATH = {
   airports: path.resolve(__dirname, '_supplementary-data/airports.csv'),
   flights: path.resolve(__dirname, 'raw/flightlist_*.csv'),
-  output: path.resolve(__dirname, 'aggregated/data.csv'),
+  outputRegions: path.resolve(__dirname, 'aggregated/data_regions.csv'),
+  outputCountries: path.resolve(__dirname, 'aggregated/data_countries.csv'),
 };
 
 (async () => {
+  // Track Time
+  const startTime = Date.now();
+
   // Airport Data
   const airportsRaw = await fs.promises.readFile(FILEPATH.airports, 'utf8');
   const airports = await csvAsync.parse(airportsRaw, {
@@ -24,12 +28,14 @@ const FILEPATH = {
   });
 
   // Statistic
-  const statistic = [];
+  const statsRegions = {};
+  const statsCountries = {};
+  const months = new Set();
   let counterAll = 0;
   let counterWrite = 0;
 
   const b1 = new cliProgress.SingleBar({
-    format: `CSV Converter |${colors.cyan('{bar}')}| {percentage}% || {value}/{total} Files || Read Lines: {counterAll} || Included Items: {counterWrite}`,
+    format: `CSV Converter |${colors.cyan('{bar}')}| {percentage}% || {value}/{total} Files || Lines: {counterAll} || Included: {counterWrite} || Speed: {speed} tI/s`,
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true,
@@ -45,6 +51,7 @@ const FILEPATH = {
     b1.update({
       counterAll,
       counterWrite,
+      speed: Math.round((counterAll / 1000) / ((Date.now() - startTime) / 1000)),
     });
 
     counterAll += 1;
@@ -68,30 +75,39 @@ const FILEPATH = {
 
     const year = dateOfFlight.getFullYear();
     const month = dateOfFlight.getMonth() + 1; // Jan = 0
+    const yearMonth = `${year}-${month}`;
 
-    const index = statistic.findIndex((entry) => {
-      if (
-        entry.year === year
-        && entry.month === month
-        && entry.origin === flight.origin
-        && entry.destination === flight.destination
-      ) {
-        return true;
-      }
-      return false;
-    });
+    // Region
+    const flightPathRegion = `${airports[flight.origin].iso_region}-${airports[flight.destination].iso_region}`;
 
-    if (index !== -1) {
-      statistic[index].numberOfFlights += 1;
+    if (!statsRegions[flightPathRegion]) {
+      statsRegions[flightPathRegion] = {
+        origin: airports[flight.origin].iso_region,
+        destination: airports[flight.destination].iso_region,
+        [yearMonth]: 1,
+      };
+    } else if (!statsRegions[flightPathRegion][yearMonth]) {
+      statsRegions[flightPathRegion][yearMonth] = 1;
     } else {
-      statistic.push({
-        year,
-        month,
-        origin: flight.origin,
-        destination: flight.destination,
-        numberOfFlights: 1,
-      });
+      statsRegions[flightPathRegion][yearMonth] += 1;
     }
+
+    // Country
+    const flightPathCountry = `${airports[flight.origin].iso_country}-${airports[flight.destination].iso_country}`;
+
+    if (!statsCountries[flightPathCountry]) {
+      statsCountries[flightPathCountry] = {
+        origin: airports[flight.origin].iso_country,
+        destination: airports[flight.destination].iso_country,
+        [yearMonth]: 1,
+      };
+    } else if (!statsCountries[flightPathCountry][yearMonth]) {
+      statsCountries[flightPathCountry][yearMonth] = 1;
+    } else {
+      statsCountries[flightPathCountry][yearMonth] += 1;
+    }
+
+    months.add(yearMonth);
 
     counterWrite += 1;
   });
@@ -108,7 +124,7 @@ const FILEPATH = {
   const flightFiles = await glob(FILEPATH.flights);
 
   // reduce file number for testing
-  // const numberOfFiles = 2;
+  // const numberOfFiles = 3;
   // for (let i = flightFiles.length; i > numberOfFiles; i -= 1) {
   //   flightFiles.pop();
   // }
@@ -127,19 +143,41 @@ const FILEPATH = {
   });
 
   new MultiStream(flightFileStreams).pipe(parser).on('end', () => {
-    // Write
-    const writeStream = fs.createWriteStream(FILEPATH.output);
-    const csvData = csvStream.stringify(statistic, {
-      header: true,
-      columns: {
-        year: 'year',
-        month: 'month',
-        origin: 'origin',
-        destination: 'destination',
-        numberOfFlights: 'number_of_flights',
-      },
+    const columns = {
+      origin: 'origin',
+      destination: 'destination',
+    };
+
+    const sortedMonths = Array.from(months).sort();
+
+    sortedMonths.forEach((month) => {
+      columns[month] = month;
     });
 
-    csvData.pipe(writeStream);
+    [
+      [statsRegions, FILEPATH.outputRegions],
+      [statsCountries, FILEPATH.outputCountries],
+    ].forEach((stats) => {
+      // nulllify all empty values
+      const values = Object.values(stats[0]).map((datum) => {
+        const datumWithZeros = {};
+        sortedMonths.forEach((month) => {
+          if (!datum[month]) {
+            datumWithZeros[month] = 0;
+          }
+        });
+
+        return { ...datum, ...datumWithZeros };
+      });
+
+      // Write
+      const writeStream = fs.createWriteStream(stats[1]);
+      const csvData = csvStream.stringify(values, {
+        header: true,
+        columns,
+      });
+
+      csvData.pipe(writeStream);
+    });
   });
 })();
