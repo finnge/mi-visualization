@@ -75,7 +75,7 @@ const FILEPATH = {
 
     const year = dateOfFlight.getFullYear();
     const month = dateOfFlight.getMonth() + 1; // Jan = 0
-    const yearMonth = `${year}-${month}`;
+    const yearMonth = `${year}-${month < 10 ? `0${month}` : month}`;
 
     // Region
     const flightPathRegion = `${airports[flight.origin].iso_region}-${airports[flight.destination].iso_region}`;
@@ -124,7 +124,7 @@ const FILEPATH = {
   const flightFiles = await glob(FILEPATH.flights);
 
   // reduce file number for testing
-  // const numberOfFiles = 3;
+  // const numberOfFiles = 2;
   // for (let i = flightFiles.length; i > numberOfFiles; i -= 1) {
   //   flightFiles.pop();
   // }
@@ -169,6 +169,9 @@ const FILEPATH = {
 
         return { ...datum, ...datumWithZeros };
       });
+
+      // sort rows
+      values.sort((a, b) => a.origin.localeCompare(b.origin));
 
       // Write
       const writeStream = fs.createWriteStream(stats[1]);
