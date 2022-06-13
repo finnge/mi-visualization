@@ -8,6 +8,12 @@ const glob = require('glob-promise');
 const cliProgress = require('cli-progress');
 const colors = require('ansi-colors');
 
+function timeConvert(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+  return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+}
+
 const FILEPATH = {
   airports: path.resolve(__dirname, '_supplementary-data/airports.csv'),
   flights: path.resolve(__dirname, 'raw/flightlist_*.csv'),
@@ -67,9 +73,12 @@ const FILEPATH = {
     }
 
     // Has been outside of EU (one)
-    if (airports[flight.origin]?.continent !== 'EU' || airports[flight.destination]?.continent !== 'EU') {
-      return;
-    }
+    // if (airports[flight.origin]?.continent !== 'EU' || airports[flight.destination]?.continent !== 'EU') {
+    //   return;
+    // }
+
+    let origin = `_${airports[flight.origin].continent}`;
+    let destination = `_${airports[flight.destination].continent}`;
 
     const dateOfFlight = new Date(flight.day);
 
@@ -78,12 +87,18 @@ const FILEPATH = {
     const yearMonth = `${year}-${month < 10 ? `0${month}` : month}`;
 
     // Region
-    const flightPathRegion = `${airports[flight.origin].iso_region}-${airports[flight.destination].iso_region}`;
+    if (airports[flight.origin].continent === 'EU') {
+      origin = `${airports[flight.origin].iso_region}`;
+    }
+    if (airports[flight.destination].continent === 'EU') {
+      destination = `${airports[flight.destination].iso_region}`;
+    }
+    const flightPathRegion = `${origin}--${destination}`;
 
     if (!statsRegions[flightPathRegion]) {
       statsRegions[flightPathRegion] = {
-        origin: airports[flight.origin].iso_region,
-        destination: airports[flight.destination].iso_region,
+        origin,
+        destination,
         [yearMonth]: 1,
       };
     } else if (!statsRegions[flightPathRegion][yearMonth]) {
@@ -93,12 +108,18 @@ const FILEPATH = {
     }
 
     // Country
-    const flightPathCountry = `${airports[flight.origin].iso_country}-${airports[flight.destination].iso_country}`;
+    if (airports[flight.origin].continent === 'EU') {
+      origin = `${airports[flight.origin].iso_country}`;
+    }
+    if (airports[flight.destination].continent === 'EU') {
+      destination = `${airports[flight.destination].iso_country}`;
+    }
+    const flightPathCountry = `${origin}--${destination}`;
 
     if (!statsCountries[flightPathCountry]) {
       statsCountries[flightPathCountry] = {
-        origin: airports[flight.origin].iso_country,
-        destination: airports[flight.destination].iso_country,
+        origin,
+        destination,
         [yearMonth]: 1,
       };
     } else if (!statsCountries[flightPathCountry][yearMonth]) {
@@ -116,10 +137,6 @@ const FILEPATH = {
     console.error(err.message);
   });
 
-  parser.on('end', () => {
-    b1.stop();
-  });
-
   // Files
   const flightFiles = await glob(FILEPATH.flights);
 
@@ -129,7 +146,7 @@ const FILEPATH = {
   //   flightFiles.pop();
   // }
 
-  b1.start(flightFiles.length, 0, {
+  b1.start(flightFiles.length, -1, {
     counterAll,
     counterWrite,
   });
@@ -143,6 +160,9 @@ const FILEPATH = {
   });
 
   new MultiStream(flightFileStreams).pipe(parser).on('end', () => {
+    b1.increment();
+    b1.stop();
+
     const columns = {
       origin: 'origin',
       destination: 'destination',
@@ -180,7 +200,9 @@ const FILEPATH = {
         columns,
       });
 
-      csvData.pipe(writeStream);
+      csvData.pipe(writeStream).on('finish', () => {
+        console.log(`Done [${timeConvert((Date.now() - startTime) / 1000)}s]`);
+      });
     });
   });
 })();
