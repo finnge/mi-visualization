@@ -1,12 +1,12 @@
-const path = require('path');
-const fs = require('fs');
-const MultiStream = require('multistream');
-const csvStream = require('csv');
-const csvAsync = require('async-csv');
-const glob = require('glob-promise');
-
-const cliProgress = require('cli-progress');
-const colors = require('ansi-colors');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+import MultiStream from 'multistream';
+import * as csvStream from 'csv';
+import csvAsync from 'async-csv';
+import glob from 'glob-promise';
+import cliProgress from 'cli-progress';
+import colors from 'ansi-colors';
 
 function timeConvert(time) {
   const minutes = Math.floor(time / 60);
@@ -14,11 +14,14 @@ function timeConvert(time) {
   return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
 
+const FILE = fileURLToPath(import.meta.url);
+const DIRNAME = path.dirname(FILE);
+
 const FILEPATH = {
-  airports: path.resolve(__dirname, '_supplementary-data/airports.csv'),
-  flights: path.resolve(__dirname, 'raw/flightlist_*.csv'),
-  outputRegions: path.resolve(__dirname, 'aggregated/data_regions.csv'),
-  outputCountries: path.resolve(__dirname, 'aggregated/data_countries.csv'),
+  airports: path.resolve(DIRNAME, '_supplementary-data/airports.csv'),
+  flights: path.resolve(DIRNAME, 'raw/flightlist_*.csv'),
+  outputRegions: path.resolve(DIRNAME, 'aggregated/data_regions.csv'),
+  outputCountries: path.resolve(DIRNAME, 'aggregated/data_countries.csv'),
 };
 
 (async () => {
