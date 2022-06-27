@@ -73,7 +73,10 @@ const FILEPATH = {
     }
 
     // Has been outside of EU (one)
-    // if (airports[flight.origin]?.continent !== 'EU' || airports[flight.destination]?.continent !== 'EU') {
+    // if (
+    //  airports[flight.origin]?.continent !== 'EU'
+    //  || airports[flight.destination]?.continent !== 'EU'
+    //  ) {
     //   return;
     // }
 
