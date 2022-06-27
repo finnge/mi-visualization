@@ -1,4 +1,4 @@
-[![Data Vis CI](https://github.com/finnge/mi-visualization/actions/workflows/ci.yaml/badge.svg)](https://github.com/finnge/mi-visualization/actions/workflows/ci.yaml)
+[![Data Vis CI](https://github.com/finnge/vis-covid19-flights/actions/workflows/ci.yaml/badge.svg)](https://github.com/finnge/vis-covid19-flights/actions/workflows/ci.yaml)
 # Data Visualisation: COVID-19 cases + Flight data
 
 Project in the module
