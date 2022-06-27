@@ -4,23 +4,33 @@
   "description": "Project in the module Visualization of the Media Informatics Masters at the TH Köln",
   "main": "index.js",
   "scripts": {
-    "start": "web-dev-server --node-resolve --open --watch",
-    "build": "rollup -c",
+    "data:flights": "node data/flights/convertdata.js",
     "test": "eslint",
-    "data:flights": "node data/flights/convertdata.js"
+    "copy:views": "recursive-copy 'src/views' 'dist'",
+    "copy:data": "recursive-copy 'data/flights/aggregated' 'dist/data'",
+    "copy": "npm-run-all -p copy:views copy:data",
+    "build:js": "rollup -c",
+    "build-dirty": "npm-run-all -s build:js copy",
+    "clean": "recursive-delete 'dist'",
+    "build": "npm-run-all -s clean build-dirty",
+    "watch:js": "chokidar './src/**/*.js' -c 'npm run build:js'",
+    "watch:views": "chokidar './src/views/**/*.*' -c 'npm run copy:views'",
+    "watch:data": "chokidar './data/**/*.*' -c 'npm run copy:data'",
+    "watch": "npm-run-all -p build watch:js watch:views watch:data",
+    "server-start": "browser-sync start --files 'dist' --server 'dist'",
+    "server": "npm-run-all -p watch server-start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/finnge/mi-visualization.git"
   },
-  "author": "",
+  "author": "Bao, Gedrath, Pelzer",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/finnge/mi-visualization/issues"
   },
   "homepage": "https://github.com/finnge/mi-visualization#readme",
   "dependencies": {
-    "@web/rollup-plugin-html": "^1.10.3",
     "ansi-colors": "^4.1.3",
     "async-csv": "^2.1.3",
     "cli-progress": "^3.11.1",
@@ -30,9 +40,16 @@
     "multistream": "^4.1.0"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.1.31",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "browser-sync": "^2.27.10",
+    "chokidar-cli": "^3.0.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "npm-run-all": "^4.1.5",
+    "recursive-copy": "^2.0.14",
+    "recursive-fs": "^2.1.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
