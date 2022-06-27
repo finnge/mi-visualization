@@ -1,5 +1,8 @@
 name: Data Vis CI
 
+permissions:
+  contents: write
+
 on:
   - push
 
@@ -47,7 +50,6 @@ jobs:
         run: npm run build
       -
         name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          publish_dir: ./dist
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folder: dist
