@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 import * as d3 from 'd3';
 
 const graphWrapper = d3.select('[ data-js-graph]');
