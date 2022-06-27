@@ -1,0 +1,5 @@
+.banner {
+  padding: var(--s);
+  margin: var(--xs) 0;
+  background-color: var(--c-bg-2);
+}

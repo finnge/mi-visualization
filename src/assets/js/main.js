@@ -4,6 +4,10 @@ import * as d3 from 'd3';
 
 const graphWrapper = d3.select('[ data-js-graph]');
 
+//
+// BEGIN EXAMPLE D3 CODE
+//
+
 const margin = {
   top: 10, right: 40, bottom: 30, left: 30,
 };
@@ -35,3 +39,7 @@ const y = d3.scaleLinear()
 graphSvg
   .append('g')
   .call(d3.axisLeft(y));
+
+//
+// END EXAMPLE D3 CODE
+//

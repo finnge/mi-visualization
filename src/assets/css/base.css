@@ -1,0 +1,25 @@
+body {
+  display: grid;
+  min-height: 100vh;
+  padding: var(--m);
+  font-family: var(--ff-serif);
+  grid-template-rows: 1fr auto;
+}
+
+svg text {
+  font-family: var(--ff-sans);
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+.button svg {
+  width: var(--m);
+  height: var(--m);
+  fill: var(--c-fg-1);
+}

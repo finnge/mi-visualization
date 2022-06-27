@@ -31,7 +31,7 @@
 
   /* Font
        ========================================================================== */
-  --ff-mono: "Inconsolata", "SFMono-Regular", consolas, "Liberation Mono", menlo, courier, monospace;
+  --ff-sans: "Space Grotesk", sans-serif;
   --ff-serif: "Merriweather", serif;
   --fw-normal: 500;
   --fw-bold: 900;
