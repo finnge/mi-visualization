@@ -1,0 +1,43 @@
+/* merriweather-regular - latin */
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(""),
+    url("/assets/fonts/merriweather-v30-latin-regular.woff2") format("woff2"),
+    url("/assets/fonts/merriweather-v30-latin-regular.woff") format("woff");
+}
+
+/* merriweather-700 - latin */
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url("/assets/fonts/merriweather-v30-latin-700.woff2") format("woff2"),
+    url("/assets/fonts/merriweather-v30-latin-700.woff") format("woff");
+}
+
+/* space-grotesk-regular - latin */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(""),
+    url("/assets/fonts/space-grotesk-v12-latin-regular.woff2") format("woff2"),
+    url("/assets/fonts/space-grotesk-v12-latin-regular.woff") format("woff");
+}
+
+/* space-grotesk-700 - latin */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url("/assets/fonts/space-grotesk-v12-latin-700.woff2") format("woff2"),
+    url("/assets/fonts/space-grotesk-v12-latin-700.woff") format("woff");
+}

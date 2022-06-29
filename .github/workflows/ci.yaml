@@ -1,0 +1,57 @@
+name: Data Vis CI
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  coding-style:
+    name: Coding Style
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout Code
+        uses: actions/checkout@v3
+      -
+        name: Setup Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+      -
+        name: Install node dependencies
+        run: npm install -D
+      -
+        name: Run Tests
+        run: npm test
+
+  build:
+    name: Building
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      -
+        name: Setup Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+      -
+        name: Install node dependencies
+        run: npm install -D
+      -
+        name: Build
+        run: npm run build
+      -
+        name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist

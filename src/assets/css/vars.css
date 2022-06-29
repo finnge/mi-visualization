@@ -1,0 +1,59 @@
+:root {
+  /* stylelint-disable number-max-precision */
+  --base: 1rem;          /* Default: 16px */
+  --base-xxs: 0.625;     /* R10(0) = 10 */
+  --base-xs: 0.78125;    /* R10(1) = 12.5 */
+  --base-s: 1;           /* R10(2) = 16 */
+  --base-m: 1.25;        /* R10(3) = 20 */
+  --base-l: 1.5625;      /* R10(4) = 25 */
+  --base-xl: 1.96875;    /* R10(5) = 31.5 */
+  --base-xxl: 2.5;       /* R10(6) = 40 */
+  /* stylelint-enable number-max-precision */
+
+  --xxs: calc(var(--base) * var(--base-xxs));
+  --xs: calc(var(--base) * var(--base-xs));
+  --s: calc(var(--base) * var(--base-s));
+  --m: calc(var(--base) * var(--base-m));
+  --l: calc(var(--base) * var(--base-l));
+  --xl: calc(var(--base) * var(--base-xl));
+  --xxl: calc(var(--base) * var(--base-xxl));
+
+  /* Color
+       ========================================================================== */
+  --c-prim: rgb(244 81 30);
+  --c-prim-interactive: rgb(255 87 34);
+  --c-fg-1: #000;
+  --c-fg-2: #262626;
+  --c-fg-3: #525252;
+  --c-bg-1: #fff;
+  --c-bg-2: #e0e0e0;
+  --c-bg-3: #a8a8a8;
+
+  /* Font
+       ========================================================================== */
+  --ff-sans: "Space Grotesk", sans-serif;
+  --ff-serif: "Merriweather", serif;
+  --fw-normal: 500;
+  --fw-bold: 900;
+  --lh-tight: 110%;
+  --lh-normal: 130%;
+  --lh-loose: 150%;
+}
+
+/* ==========================================================================
+   Dark-Mode
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Color
+           ========================================================================== */
+    --c-prim: rgb(255 138 101);
+    --c-prim-interactive: rgb(255 171 145);
+    --c-fg-1: #f4f4f4;
+    --c-fg-2: #c6c6c6;
+    --c-fg-3: #8d8d8d;
+    --c-bg-1: #161616;
+    --c-bg-2: #393939;
+    --c-bg-3: #6f6f6f;
+  }
+}

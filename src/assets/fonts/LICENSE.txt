@@ -1,0 +1,9 @@
+Fonts provided by Google Fonts (https://fonts.google.com/attribution)
+
+
+SpaceGrotesk[wght].ttf: Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+  SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
+
+Merriweather-Regular.ttf: Copyright 2016 The Merriweather Project Authors (https://github.com/EbenSorkin/Merriweather), with Reserved Font Name "Merriweather".
+Merriweather-Bold.ttf: Copyright 2016 The Merriweather Project Authors (https://github.com/EbenSorkin/Merriweather), with Reserved Font Name "Merriweather".
+  SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
