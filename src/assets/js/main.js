@@ -2,44 +2,62 @@
 
 import * as d3 from 'd3';
 
+import getCssVar from './helper';
+
 const graphWrapper = d3.select('[ data-js-graph]');
 
-//
-// BEGIN EXAMPLE D3 CODE
-//
-
-const margin = {
-  top: 10, right: 40, bottom: 30, left: 30,
+const SETTING = {
+  size: 440,
+  outerBorder: 10,
 };
-const width = 450 - margin.left - margin.right;
-const height = 400 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-const graphSvg = graphWrapper
-  .append('svg')
-  .attr('width', width + margin.left + margin.right)
-  .attr('height', height + margin.top + margin.bottom)
-  // translate this svg element to leave some margin.
+// SVG Area
+const svg = graphWrapper.append('svg')
+  .attr('width', SETTING.size)
+  .attr('height', SETTING.size)
   .append('g')
-  .attr('transform', `translate(${margin.left},${margin.top})`);
+  .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
-// X scale and Axis
-const x = d3.scaleLinear()
-  .domain([0, 100]) // This is the min and the max of the data: 0 to 100 if percentages
-  .range([0, width]); // This is the corresponding value I want in Pixel
-graphSvg
+// create a matrix
+const matrix = [
+  [0, 5871, 8916, 2868],
+  [1951, 0, 2060, 6171],
+  [8010, 16145, 0, 8045],
+  [1013, 990, 940, 0],
+];
+
+// 4 groups, so create a vector of 4 colors
+const colors = ['#440154ff', '#31668dff', '#37b578ff', '#fde725ff'];
+
+// give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
+const res = d3.chord()
+  .padAngle(0.05)
+  .sortSubgroups(d3.descending)(matrix);
+
+// add the groups on the outer part of the circle
+svg
+  .datum(res)
   .append('g')
-  .attr('transform', `translate(0,${height})`)
-  .call(d3.axisBottom(x));
-
-// X scale and Axis
-const y = d3.scaleLinear()
-  .domain([0, 100]) // This is the min and the max of the data: 0 to 100 if percentages
-  .range([height, 0]); // This is the corresponding value I want in Pixel
-graphSvg
+  .selectAll('g')
+  .data((d) => d.groups)
+  .enter()
   .append('g')
-  .call(d3.axisLeft(y));
+  .append('path')
+  .style('fill', (d, i) => colors[i])
+  .style('stroke', 'black')
+  .attr('d', d3.arc()
+    .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
+    .outerRadius(SETTING.size / 2));
 
-//
-// END EXAMPLE D3 CODE
-//
+// Add the links between groups
+svg
+  .datum(res)
+  .append('g')
+  .selectAll('path')
+  .data((d) => d)
+  .enter()
+  .append('path')
+  .attr('d', d3.ribbon()
+    .radius((SETTING.size / 2) - SETTING.outerBorder))
+  .style('fill', (d) => (colors[d.source.index])) // colors depend on the source group. Change to target otherwise.
+  .style('stroke', 'black');
