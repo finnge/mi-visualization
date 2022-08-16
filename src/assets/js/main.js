@@ -54,6 +54,6 @@ import getCssVar from './helper';
     .append('path')
     .attr('d', d3.ribbon()
       .radius((SETTING.size / 2) - SETTING.outerBorder))
-    .style('fill', (d) => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
+    .style('fill', () => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
     .style('stroke', 'black');
 })();
