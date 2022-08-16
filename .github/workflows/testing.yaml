@@ -23,5 +23,8 @@ jobs:
           node-version: 14
           cache: npm
       -
+        name: Install node dependencies
+        run: npm install
+      -
         name: Run Tests
-        run: npm ci
+        run: npm test
