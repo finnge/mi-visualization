@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const csv = require('async-csv');
-const { FILE } = require('dns');
 
 const FILEPATH = {
   inputRegions: path.resolve(__dirname, 'aggregated/flights_regions.csv'),

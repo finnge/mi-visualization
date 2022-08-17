@@ -1,6 +1,6 @@
 # Crowdsourced air traffic data from The OpenSky Network 2020
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6603766.svg)](https://doi.org/10.5281/zenodo.6603766)
+[![DOI 10.5281/zenodo.6797232](https://zenodo.org/badge/DOI/10.5281/zenodo.6797232.svg)](https://doi.org/10.5281/zenodo.6797232)
 
 ## Example Data
 
