@@ -28,31 +28,38 @@ const FILEPATH = {
   });
   listOfCountries.sort();
 
-  // insert values
-  const matrix = new Array(listOfCountries.length);
-  countries.forEach((country) => {
-    const originIndex = listOfCountries.indexOf(country.origin);
-    const destinationIndex = listOfCountries.indexOf(country.destination);
+  // get YearWeek
+  const headers = Object.keys(countries[0]);
 
-    if (matrix[originIndex] === undefined) {
-      matrix[originIndex] = new Array(listOfCountries.length).fill(0);
-    }
+  const listOfYearWeeks = headers.slice(2);
 
-    // if from or continent to continent do 0
-    if (country.origin.startsWith('_') || country.destination.startsWith('_')) {
-      return;
-    }
-
-    matrix[originIndex][destinationIndex] = parseInt(country['2019-03'], 10);
-  });
-
-  // Stringify
+  // Output
   const output = {
-    yearMonth: {
-      '2019-03': matrix,
-    },
+    yearMonth: {},
     countries: listOfCountries,
   };
+
+  // insert values
+  listOfYearWeeks.forEach((weekYear) => {
+    const matrix = new Array(listOfCountries.length);
+    countries.forEach((country) => {
+      const originIndex = listOfCountries.indexOf(country.origin);
+      const destinationIndex = listOfCountries.indexOf(country.destination);
+
+      if (matrix[originIndex] === undefined) {
+        matrix[originIndex] = new Array(listOfCountries.length).fill(0);
+      }
+
+      // if from or continent to continent do 0
+      if (country.origin.startsWith('_') || country.destination.startsWith('_')) {
+        return;
+      }
+
+      matrix[originIndex][destinationIndex] = parseInt(country[weekYear], 10);
+    });
+
+    output.yearMonth[weekYear] = matrix;
+  });
 
   fs.promises.writeFile(FILEPATH.outputData, JSON.stringify(output, null));
 })();

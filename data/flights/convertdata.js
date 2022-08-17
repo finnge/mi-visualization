@@ -86,13 +86,20 @@ const FILEPATH = {
       return;
     }
 
-    // Has been outside of EU (one)
-    // if (
-    //  airports[flight.origin]?.continent !== 'EU'
-    //  || airports[flight.destination]?.continent !== 'EU'
-    //  ) {
-    //   return;
-    // }
+    // Has been outside of EU+EWR+CH (both)
+    const countriesToInclude = [
+      'BE', 'BG', 'DK', 'DE', 'EE', 'FI', 'FR', 'GR', 'IE', 'IT',
+      'HR', 'LV', 'LT', 'LU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO',
+      'SA', 'SK', 'SI', 'ES', 'CZ', 'HU', 'CY', 'LI', 'IS', 'NO',
+      'CH',
+    ];
+
+    if (
+      !countriesToInclude.includes(airports[flight.origin]?.iso_country)
+      || !countriesToInclude.includes(airports[flight.destination]?.iso_country)
+    ) {
+      return;
+    }
 
     let origin = `_${airports[flight.origin].continent}`;
     let destination = `_${airports[flight.destination].continent}`;
@@ -102,10 +109,10 @@ const FILEPATH = {
     const yearCalWeek = dateOfFlight.getYearWeekNumber();
 
     // Region
-    if (airports[flight.origin].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.origin]?.iso_country)) {
       origin = `${airports[flight.origin].iso_region}`;
     }
-    if (airports[flight.destination].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.destination]?.iso_country)) {
       destination = `${airports[flight.destination].iso_region}`;
     }
     const flightPathRegion = `${origin}--${destination}`;
@@ -123,10 +130,10 @@ const FILEPATH = {
     }
 
     // Country
-    if (airports[flight.origin].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.origin]?.iso_country)) {
       origin = `${airports[flight.origin].iso_country}`;
     }
-    if (airports[flight.destination].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.destination]?.iso_country)) {
       destination = `${airports[flight.destination].iso_country}`;
     }
     const flightPathCountry = `${origin}--${destination}`;
