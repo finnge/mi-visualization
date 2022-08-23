@@ -5,7 +5,7 @@ const csv = require('async-csv');
 const FILEPATH = {
   inputRegions: path.resolve(__dirname, 'aggregated/flights_regions.csv'),
   inputCountries: path.resolve(__dirname, 'aggregated/flights_countries.csv'),
-  outputData: path.resolve(__dirname, 'aggregated/flights_countries.json'),
+  outputData: path.resolve(__dirname, 'flights_countries.json'),
 };
 
 (async () => {
@@ -26,7 +26,7 @@ const FILEPATH = {
       listOfCountries.push(country.destination);
     }
   });
-  listOfCountries.sort();
+  listOfCountries.sort(-1);
 
   // get YearWeek
   const headers = Object.keys(countries[0]);

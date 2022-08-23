@@ -6,6 +6,7 @@
   "scripts": {
     "data:flights": "node data/flights/convertdata.js",
     "data:flights:format": "node data/flights/formatdata.js",
+    "data:covid19:format": "node data/covid19/formatdata.js",
     "lint:js": "eslint './src/**/*.js'",
     "lint:js:fix": "eslint './src/**/*.js' --fix",
     "lint:css": "stylelint './src/**/*.css'",
