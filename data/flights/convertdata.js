@@ -29,7 +29,7 @@ Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
 /* eslint-enable no-extend-native */
 
 const FILEPATH = {
-  airports: path.resolve(__dirname, '_supplementary-data/airports.csv'),
+  airports: path.resolve(__dirname, '../_supplementary-data/airports.csv'),
   flights: path.resolve(__dirname, 'raw/flightlist_*.csv'),
   outputRegions: path.resolve(__dirname, 'aggregated/flights_regions.csv'),
   outputCountries: path.resolve(__dirname, 'aggregated/flights_countries.csv'),
