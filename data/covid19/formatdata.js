@@ -69,7 +69,7 @@ const FILEPATH = {
 
   // Output
   const output = {
-    yearMonth: formattedData,
+    yearWeek: formattedData,
     countries: popData2020,
   };
 
