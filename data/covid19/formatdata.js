@@ -18,7 +18,7 @@ Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
 
 const FILEPATH = {
   inputCovid19: path.resolve(__dirname, 'raw/data.csv'),
-  outputData: path.resolve(__dirname, 'covid19.json'),
+  outputData: path.resolve(__dirname, 'output/covid19.json'),
 };
 
 (async () => {
