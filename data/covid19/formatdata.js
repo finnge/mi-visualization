@@ -39,10 +39,44 @@ const FILEPATH = {
   // filter data
   const filteredData = data.filter((el) => countriesToInclude.includes(el.geoId));
 
+  // calc incidence
+  const filteredDataWithIncidence = filteredData.map((el) => {
+    const newEl = el;
+
+    const dataOfLast7Days = filteredData.filter((pastEl) => {
+      if (pastEl.geoId !== el.geoI) {
+        return false;
+      }
+
+      const pastDate = new Date(`${pastEl.year}-${pastEl.month}-${pastEl.day}`);
+      const date = new Date(`${el.year}-${el.month}-${el.day}`);
+
+      const diffTime = Math.abs(date - pastDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays <= 7) {
+        return true;
+      }
+
+      return false;
+    });
+
+    let casesOfLast7Days = el.cases;
+
+    dataOfLast7Days.forEach((pastEl) => {
+      casesOfLast7Days += parseInt(pastEl.cases, 10);
+    });
+
+    newEl.incidence = (casesOfLast7Days / el.popData2020) * 100000;
+
+    return newEl;
+  });
+
+  // format data
   const formattedData = {};
   const popData2020 = {};
 
-  filteredData.forEach((el) => {
+  filteredDataWithIncidence.forEach((el) => {
     const date = new Date(`${el.year}-${el.month}-${el.day}`);
     const yearWeek = date.getYearWeekNumber();
 
@@ -58,14 +92,31 @@ const FILEPATH = {
       formattedData[yearWeek][el.geoId] = {
         cases: 0,
         deaths: 0,
+        incidence: [],
       };
     }
 
     formattedData[yearWeek][el.geoId].cases += parseInt(el.cases, 10);
     formattedData[yearWeek][el.geoId].deaths += parseInt(el.deaths, 10);
+    formattedData[yearWeek][el.geoId].incidence.push(el.incidence);
   });
 
-  // filteredData.sort();
+  // 7 day incidence average for week
+  Object.keys(formattedData).forEach((key) => {
+    const el = formattedData[key];
+
+    Object.keys(el).forEach((countryKey) => {
+      const num = formattedData[key][countryKey].incidence.length;
+
+      let addedIncidence = 0;
+
+      formattedData[key][countryKey].incidence.forEach((incidence) => {
+        addedIncidence += incidence;
+      });
+
+      formattedData[key][countryKey].incidence = Math.round((addedIncidence / num) * 100) / 100;
+    });
+  });
 
   // Output
   const output = {
