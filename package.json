@@ -6,6 +6,7 @@
   "scripts": {
     "data:flights": "node data/flights/convertdata.js",
     "data:flights:format": "node data/flights/formatdata.js",
+    "data:covid19:format": "node data/covid19/formatdata.js",
     "lint:js": "eslint './src/**/*.js'",
     "lint:js:fix": "eslint './src/**/*.js' --fix",
     "lint:css": "stylelint './src/**/*.css'",
@@ -14,7 +15,7 @@
     "test": "npm-run-all -p lint",
     "copy:views": "recursive-copy 'src/views' 'dist'",
     "copy:fonts": "recursive-copy 'src/assets/fonts' 'dist/assets/fonts'",
-    "copy:data": "recursive-copy 'data/flights/aggregated' 'dist/data'",
+    "copy:data": "recursive-copy 'data/flights/output' 'dist/data' && recursive-copy 'data/covid19/output' 'dist/data'",
     "copy": "npm-run-all -p copy:*",
     "clean": "recursive-delete 'dist'",
     "build:js": "rollup -c",
