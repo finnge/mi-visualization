@@ -21,6 +21,8 @@ To start developing clone the repository (including submodules `git clone --recu
 
 - Data scripts
   - **`npm run data:flights`**: Run a data conversion and aggregation for the flight data (can take a while)
+  - **`npm run data:flights:format`**: Formats data to JSON
+  - **`npm run data:covid:format`**: Formats data to JSON
 - Linting
   - **`npm run lint:js`**: Check JavaScript for Linting errors
   - **`npm run lint:js:fix`**: Check and Fix JavaScript for Linting errors

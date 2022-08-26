@@ -20,9 +20,9 @@ import getCssVar from './helper';
     .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
   // data
-  const json_data = await d3.json('data/flights_countries.json');
+  const jsonData = await d3.json('data/flights_countries.json');
 
-  const matrix = json_data.yearMonth['2019-03'];
+  const matrix = jsonData.yearMonth['2019-03'];
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   const res = d3.chord()
@@ -40,6 +40,7 @@ import getCssVar from './helper';
     .append('path')
     .style('fill', (d, i) => getCssVar(`--c-data-${i}`))
   // .style('stroke', 'black')
+
     .attr('d', d3.arc()
       .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
       .outerRadius(SETTING.size / 2));

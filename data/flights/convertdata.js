@@ -14,8 +14,22 @@ function timeConvert(time) {
   return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
 
+/* eslint-disable no-extend-native */
+// Get ISO week number for given date
+// @see https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
+Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
+  const d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+
+  return `${d.getUTCFullYear()}-${weekNo < 10 ? `0${weekNo}` : weekNo}`;
+};
+/* eslint-enable no-extend-native */
+
 const FILEPATH = {
-  airports: path.resolve(__dirname, '_supplementary-data/airports.csv'),
+  airports: path.resolve(__dirname, '../_supplementary-data/airports.csv'),
   flights: path.resolve(__dirname, 'raw/flightlist_*.csv'),
   outputRegions: path.resolve(__dirname, 'aggregated/flights_regions.csv'),
   outputCountries: path.resolve(__dirname, 'aggregated/flights_countries.csv'),
@@ -36,7 +50,7 @@ const FILEPATH = {
   // Statistic
   const statsRegions = {};
   const statsCountries = {};
-  const months = new Set();
+  const calWeeks = new Set();
   let counterAll = 0;
   let counterWrite = 0;
 
@@ -72,28 +86,33 @@ const FILEPATH = {
       return;
     }
 
-    // Has been outside of EU (one)
-    // if (
-    //  airports[flight.origin]?.continent !== 'EU'
-    //  || airports[flight.destination]?.continent !== 'EU'
-    //  ) {
-    //   return;
-    // }
+    // Has been outside of EU+EWR+CH (both)
+    const countriesToInclude = [
+      'BE', 'BG', 'DK', 'DE', 'EE', 'FI', 'FR', 'GR', 'IE', 'IT',
+      'HR', 'LV', 'LT', 'LU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO',
+      'SA', 'SK', 'SI', 'ES', 'CZ', 'HU', 'CY', 'LI', 'IS', 'NO',
+      'CH',
+    ];
+
+    if (
+      !countriesToInclude.includes(airports[flight.origin]?.iso_country)
+      || !countriesToInclude.includes(airports[flight.destination]?.iso_country)
+    ) {
+      return;
+    }
 
     let origin = `_${airports[flight.origin].continent}`;
     let destination = `_${airports[flight.destination].continent}`;
 
     const dateOfFlight = new Date(flight.day);
 
-    const year = dateOfFlight.getFullYear();
-    const month = dateOfFlight.getMonth() + 1; // Jan = 0
-    const yearMonth = `${year}-${month < 10 ? `0${month}` : month}`;
+    const yearCalWeek = dateOfFlight.getYearWeekNumber();
 
     // Region
-    if (airports[flight.origin].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.origin]?.iso_country)) {
       origin = `${airports[flight.origin].iso_region}`;
     }
-    if (airports[flight.destination].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.destination]?.iso_country)) {
       destination = `${airports[flight.destination].iso_region}`;
     }
     const flightPathRegion = `${origin}--${destination}`;
@@ -102,19 +121,19 @@ const FILEPATH = {
       statsRegions[flightPathRegion] = {
         origin,
         destination,
-        [yearMonth]: 1,
+        [yearCalWeek]: 1,
       };
-    } else if (!statsRegions[flightPathRegion][yearMonth]) {
-      statsRegions[flightPathRegion][yearMonth] = 1;
+    } else if (!statsRegions[flightPathRegion][yearCalWeek]) {
+      statsRegions[flightPathRegion][yearCalWeek] = 1;
     } else {
-      statsRegions[flightPathRegion][yearMonth] += 1;
+      statsRegions[flightPathRegion][yearCalWeek] += 1;
     }
 
     // Country
-    if (airports[flight.origin].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.origin]?.iso_country)) {
       origin = `${airports[flight.origin].iso_country}`;
     }
-    if (airports[flight.destination].continent === 'EU') {
+    if (countriesToInclude.includes(airports[flight.destination]?.iso_country)) {
       destination = `${airports[flight.destination].iso_country}`;
     }
     const flightPathCountry = `${origin}--${destination}`;
@@ -123,15 +142,15 @@ const FILEPATH = {
       statsCountries[flightPathCountry] = {
         origin,
         destination,
-        [yearMonth]: 1,
+        [yearCalWeek]: 1,
       };
-    } else if (!statsCountries[flightPathCountry][yearMonth]) {
-      statsCountries[flightPathCountry][yearMonth] = 1;
+    } else if (!statsCountries[flightPathCountry][yearCalWeek]) {
+      statsCountries[flightPathCountry][yearCalWeek] = 1;
     } else {
-      statsCountries[flightPathCountry][yearMonth] += 1;
+      statsCountries[flightPathCountry][yearCalWeek] += 1;
     }
 
-    months.add(yearMonth);
+    calWeeks.add(yearCalWeek);
 
     counterWrite += 1;
   });
@@ -171,9 +190,9 @@ const FILEPATH = {
       destination: 'destination',
     };
 
-    const sortedMonths = Array.from(months).sort();
+    const sortedCalWeeks = Array.from(calWeeks).sort();
 
-    sortedMonths.forEach((month) => {
+    sortedCalWeeks.forEach((month) => {
       columns[month] = month;
     });
 
@@ -184,7 +203,7 @@ const FILEPATH = {
       // nulllify all empty values
       const values = Object.values(stats[0]).map((datum) => {
         const datumWithZeros = {};
-        sortedMonths.forEach((month) => {
+        sortedCalWeeks.forEach((month) => {
           if (!datum[month]) {
             datumWithZeros[month] = 0;
           }
