@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 
 import getCssVar from './helper';
 
-async function generateChord(jsonData, yearweek) {
+async function generateChord(jsonData, year, week) {
   // delete existing diagram
   document.getElementById('chorddiagram').innerHTML = '';
 
@@ -22,6 +22,7 @@ async function generateChord(jsonData, yearweek) {
     .append('g')
     .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
+  const yearweek = `${year}-${week}`;
   const matrix = jsonData.yearMonth[yearweek];
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
@@ -64,9 +65,9 @@ async function generateChord(jsonData, yearweek) {
 
   // Generate Chord-Diagram when button is clicked
   function HelperFunction() {
-    generateChord(jsonData, document.getElementById('yearweekinput').value);
+    generateChord(jsonData, '2020', document.getElementById('rangeweek').value);// document.getElementById('yearweekinput').value);
   }
 
-  const button = document.getElementById('generatebutton');
-  button.addEventListener('click', HelperFunction);
+  const rangedings = document.getElementById('rangeweek');
+  rangedings.addEventListener('input', HelperFunction);
 })();
