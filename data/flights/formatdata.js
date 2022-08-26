@@ -26,12 +26,38 @@ const FILEPATH = {
       listOfCountries.push(country.destination);
     }
   });
-  listOfCountries.sort(-1);
+  listOfCountries.sort();
 
   // get YearWeek
   const headers = Object.keys(countries[0]);
-
   const listOfYearWeeks = headers.slice(2);
+
+  // empty country
+  listOfCountries.push('--');
+  countries.push((() => {
+    const obj = {
+      origin: '--',
+      destination: '--',
+    };
+
+    const sums = {};
+
+    listOfYearWeeks.forEach((weekYear) => {
+      sums[weekYear] = 0;
+
+      countries.forEach((data) => {
+        sums[weekYear] += parseInt(data[weekYear], 10);
+      });
+    });
+
+    const maxValue = Math.max(...Object.values(sums));
+
+    listOfYearWeeks.forEach((weekYear) => {
+      obj[weekYear] = maxValue - sums[weekYear];
+    });
+
+    return obj;
+  })());
 
   // Output
   const output = {
@@ -61,5 +87,5 @@ const FILEPATH = {
     output.yearMonth[weekYear] = matrix;
   });
 
-  fs.promises.writeFile(FILEPATH.outputData, JSON.stringify(output, null));
+  fs.promises.writeFile(FILEPATH.outputData, JSON.stringify(output, null, true));
 })();
