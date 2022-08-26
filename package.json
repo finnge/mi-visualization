@@ -13,6 +13,7 @@
     "lint:css:fix": "stylelint './src/**/*.css' --fix",
     "lint": "npm-run-all -p lint:js lint:css",
     "test": "npm-run-all -p lint",
+    "test:data": "node data/flights/testdata.js",
     "copy:views": "recursive-copy 'src/views' 'dist'",
     "copy:fonts": "recursive-copy 'src/assets/fonts' 'dist/assets/fonts'",
     "copy:data": "recursive-copy 'data/flights/output' 'dist/data' && recursive-copy 'data/covid19/output' 'dist/data'",
@@ -39,6 +40,10 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/finnge/mi-visualization/issues"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
   },
   "homepage": "https://github.com/finnge/mi-visualization#readme",
   "dependencies": {
