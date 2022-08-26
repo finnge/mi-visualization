@@ -64,10 +64,32 @@ async function generateChord(jsonData, year, week) {
   const jsonData = await d3.json('data/flights_countries.json');
 
   // Generate Chord-Diagram when button is clicked
-  function HelperFunction() {
-    generateChord(jsonData, '2020', document.getElementById('rangeweek').value);// document.getElementById('yearweekinput').value);
+
+  async function getWeek() {
+    let week = document.getElementById('rangeweek').value;
+    if (week < 10) {
+      week = `0${week}`;
+    }
+    return week;
   }
+
+  let year = 2019;
+
+  async function HelperFunction() {
+    const week = await getWeek();
+    generateChord(jsonData, year, week);
+  }
+
+  HelperFunction();
 
   const rangedings = document.getElementById('rangeweek');
   rangedings.addEventListener('input', HelperFunction);
+
+  function selectOption() {
+    const selectedOption = this.options[this.selectedIndex].value;
+    year = selectedOption;
+    HelperFunction();
+  }
+
+  document.getElementById('year').addEventListener('change', selectOption, false);
 })();
