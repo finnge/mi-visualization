@@ -4,7 +4,10 @@ import * as d3 from 'd3';
 
 import getCssVar from './helper';
 
-(async () => {
+async function generateChord(jsonData, yearweek) {
+  // delete existing diagram
+  document.getElementById('chorddiagram').innerHTML = '';
+
   const graphWrapper = d3.select('[ data-js-graph]');
 
   const SETTING = {
@@ -19,10 +22,7 @@ import getCssVar from './helper';
     .append('g')
     .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
-  // data
-  const jsonData = await d3.json('data/flights_countries.json');
-
-  const matrix = jsonData.yearMonth['2019-03'];
+  const matrix = jsonData.yearMonth[yearweek];
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   const res = d3.chord()
@@ -56,4 +56,17 @@ import getCssVar from './helper';
       .radius((SETTING.size / 2) - SETTING.outerBorder))
     .style('fill', () => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
     .style('stroke', 'black');
+}
+
+(async () => {
+  // data
+  const jsonData = await d3.json('data/flights_countries.json');
+
+  // Generate Chord-Diagram when button is clicked
+  function HelperFunction() {
+    generateChord(jsonData, document.getElementById('yearweekinput').value);
+  }
+
+  const button = document.getElementById('generatebutton');
+  button.addEventListener('click', HelperFunction);
 })();
