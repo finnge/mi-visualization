@@ -21,3 +21,10 @@ svg text {
   align-items: center;
   justify-content: center;
 }
+
+input[type="range"] {
+  display: flex;
+  width: 1000px;
+  align-items: center;
+  justify-content: center;
+}
