@@ -22,7 +22,7 @@ import getCssVar from './helper';
   // data
   const jsonData = await d3.json('data/flights_countries.json');
 
-  const matrix = jsonData.yearMonth['2019-03'];
+  const matrix = jsonData.yearMonth['2019-23'];
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   const res = d3.chord()
