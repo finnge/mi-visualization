@@ -20,8 +20,37 @@
 
   /* Color
        ========================================================================== */
-  --c-prim: rgb(244 81 30);
-  --c-prim-interactive: rgb(255 87 34);
+  --c-data-1: #ffcdb7;
+  --c-data-2: #31d6e7;
+  --c-data-3: #ffa1a1;
+  --c-data-4: #72f7ea;
+  --c-data-5: #ffadcf;
+  --c-data-6: #5cc29d;
+  --c-data-7: #f8bfff;
+  --c-data-8: #a1d897;
+  --c-data-9: #cf99d3;
+  --c-data-10: #edf1a3;
+  --c-data-11: #aeb2fb;
+  --c-data-12: #f0dd91;
+  --c-data-13: #7fc9ff;
+  --c-data-14: #cabb71;
+  --c-data-15: #c7c8ff;
+  --c-data-16: #acb06e;
+  --c-data-17: #a7a9cf;
+  --c-data-18: #ddffc1;
+  --c-data-19: #c0bbd7;
+  --c-data-20: #6bddbf;
+  --c-data-21: #e39a76;
+  --c-data-22: #9afbff;
+  --c-data-23: #d5a171;
+  --c-data-24: #8eeaff;
+  --c-data-25: #ffbc94;
+  --c-data-26: #6fb7c1;
+  --c-data-27: #fff2b3;
+  --c-data-28: #beeaff;
+  --c-data-29: #ffd7ac;
+  --c-data-30: #7cb991;
+  --c-data-31: #b9c8ad;
   --c-fg-1: #000;
   --c-fg-2: #262626;
   --c-fg-3: #525252;
@@ -47,8 +76,6 @@
   :root {
     /* Color
            ========================================================================== */
-    --c-prim: rgb(255 138 101);
-    --c-prim-interactive: rgb(255 171 145);
     --c-fg-1: #f4f4f4;
     --c-fg-2: #c6c6c6;
     --c-fg-3: #8d8d8d;

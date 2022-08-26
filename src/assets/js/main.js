@@ -38,8 +38,8 @@ import getCssVar from './helper';
     .enter()
     .append('g')
     .append('path')
-    .style('fill', (d) => getCssVar('--c-prim-interactive'))
-    .style('stroke', 'black')
+    .style('fill', (d, i) => getCssVar(`--c-data-${i}`))
+  // .style('stroke', 'black')
     .attr('d', d3.arc()
       .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
       .outerRadius(SETTING.size / 2));
@@ -54,6 +54,6 @@ import getCssVar from './helper';
     .append('path')
     .attr('d', d3.ribbon()
       .radius((SETTING.size / 2) - SETTING.outerBorder))
-    .style('fill', (d) => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
-    .style('stroke', 'black');
+    .style('fill', (d) => getCssVar(`--c-data-${d.source.index}`)); // colors depend on the source group. Change to target otherwise.
+  // .style('stroke', 'black');
 })();
