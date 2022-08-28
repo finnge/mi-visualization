@@ -62,41 +62,37 @@ async function generateChord(jsonData, year, week) {
 (async () => {
   // load data and select components
   const jsonData = await d3.json('data/flights_countries.json');
-  const yearselect = document.getElementById('year');
   const weekslider = document.getElementById('weekslider');
   const weekindicator = document.getElementById('weekindicator-week');
+  const yearindicator = document.getElementById('yearindicator');
 
-  async function getWeek() {
-    // adjust slider for number of weeks
-    if (yearselect.value == 2019) {
-      weekslider.setAttribute('max', '52');
-    }
-    if (yearselect.value == 2020) {
-      weekslider.setAttribute('max', '53');
-    }
-    if (yearselect.value == 2021) {
-      weekslider.setAttribute('max', '52');
-    }
-    if (yearselect.value == 2022) {
-      weekslider.setAttribute('max', '26');
-    }
-
+  // Generate Visualization by calculating week+year and generating Chord-Diagramm
+  async function GenerateVisualization() {
     let week = weekslider.value;
+    let year = 2019;
+
+    if (weekslider.value > 52) {
+      week -= 52;
+      year = 2020;
+    }
+    if (weekslider.value > 105) {
+      week -= 53;
+      year = 2021;
+    }
+    if (weekslider.value > 157) {
+      week -= 52;
+      year = 2022;
+    }
 
     // add 0 to 1-9
     if (week < 10) {
       week = `0${week}`;
     }
-    return week;
-  }
 
-  // Generate Visualization by getting week and generating Chord-Diagramm
-  async function GenerateVisualization() {
-    const week = await getWeek();
-    const year = yearselect.value;
     generateChord(jsonData, year, week);
 
     weekindicator.innerHTML = week;
+    yearindicator.innerHTML = year;
   }
 
   // Generate Visualization when website is loaded
@@ -106,6 +102,4 @@ async function generateChord(jsonData, year, week) {
   weekslider.addEventListener('input', () => {
     GenerateVisualization();
   });
-
-  yearselect.addEventListener('change', GenerateVisualization, false);
 })();
