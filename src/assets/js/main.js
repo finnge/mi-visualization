@@ -62,34 +62,53 @@ async function generateChord(jsonData, year, week) {
 (async () => {
   // data
   const jsonData = await d3.json('data/flights_countries.json');
-
-  // Generate Chord-Diagram when button is clicked
+  const yearselect = document.getElementById('year');
+  const weekslider = document.getElementById('weekslider');
+  // let year = 2019;
 
   async function getWeek() {
-    let week = document.getElementById('rangeweek').value;
+    let week = weekslider.value;
+
+    // add 0 to 1-9
     if (week < 10) {
       week = `0${week}`;
     }
     return week;
   }
 
-  let year = 2019;
-
-  async function HelperFunction() {
+  // Generate Visualization by getting Week and generating Chord-Diagramm
+  async function GenerateVisualization() {
     const week = await getWeek();
+    const year = yearselect.value;
     generateChord(jsonData, year, week);
+
+    console.log(`${year} - KW${week}`);
   }
 
-  HelperFunction();
+  GenerateVisualization();
 
-  const rangedings = document.getElementById('rangeweek');
-  rangedings.addEventListener('input', HelperFunction);
+  // Generate Visualization when Slider is used
+  const rangedings = document.getElementById('weekslider');
+  rangedings.addEventListener('input', GenerateVisualization);
 
-  function selectOption() {
-    const selectedOption = this.options[this.selectedIndex].value;
-    year = selectedOption;
-    HelperFunction();
+  // Change Year
+  function selectYear() {
+    const slider = document.getElementById('weekslider');
+
+    if (yearselect.value === 2019) {
+      slider.setAttribute('max', '52');
+    }
+    if (yearselect.value === 2020) {
+      slider.setAttribute('max', '53');
+    }
+    if (yearselect.value === 2021) {
+      slider.setAttribute('max', '52');
+    }
+    if (yearselect.value === 2022) {
+      slider.setAttribute('max', '26');
+    }
+    GenerateVisualization();
   }
 
-  document.getElementById('year').addEventListener('change', selectOption, false);
+  yearselect.addEventListener('change', selectYear, false);
 })();

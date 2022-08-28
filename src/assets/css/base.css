@@ -22,9 +22,13 @@ svg text {
   justify-content: center;
 }
 
-input[type="range"] {
+.navigation {
   display: flex;
-  width: 1000px;
   align-items: center;
   justify-content: center;
+  margin: 20px;
+}
+
+.navigation-range {
+  width: 90%;
 }

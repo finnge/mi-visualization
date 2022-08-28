@@ -26,17 +26,16 @@
     <h1>COVID-19 + flights</h1>
     <div data-js-graph id="chorddiagram"></div>
 
-    <label for="year">Jahr:</label>
-    <select name="year" id="year">
-      <option value="2019">2019</option>
-      <option value="2020">2020</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-    </select>
-
-    <input type="range" id="rangeweek" min="1" max="50">
-
-
+    <div class="navigation">
+      <label for="year">Jahr:</label>
+      <select name="year" id="year">
+        <option selected value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+      </select>
+      <input type="range" class="navigation-range" id="weekslider" min="1" max="50">
+    </div>
 
   </main>
   <footer>
