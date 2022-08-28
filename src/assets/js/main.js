@@ -64,6 +64,7 @@ async function generateChord(jsonData, year, week) {
   const jsonData = await d3.json('data/flights_countries.json');
   const yearselect = document.getElementById('year');
   const weekslider = document.getElementById('weekslider');
+  const weekindicator = document.getElementById('weekindicator-week');
 
   async function getWeek() {
     // adjust slider for number of weeks
@@ -95,15 +96,16 @@ async function generateChord(jsonData, year, week) {
     const year = yearselect.value;
     generateChord(jsonData, year, week);
 
-    console.log(`${year} - KW${week}`);
+    weekindicator.innerHTML = week;
   }
 
   // Generate Visualization when website is loaded
   GenerateVisualization();
 
   // Generate Visualization when slider is used
-  const rangedings = document.getElementById('weekslider');
-  rangedings.addEventListener('input', GenerateVisualization);
+  weekslider.addEventListener('input', () => {
+    GenerateVisualization();
+  });
 
   yearselect.addEventListener('change', GenerateVisualization, false);
 })();
