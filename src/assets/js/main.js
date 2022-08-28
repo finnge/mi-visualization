@@ -60,39 +60,13 @@ async function generateChord(jsonData, year, week) {
 }
 
 (async () => {
-  // data
+  // load data and select components
   const jsonData = await d3.json('data/flights_countries.json');
   const yearselect = document.getElementById('year');
   const weekslider = document.getElementById('weekslider');
-  // let year = 2019;
 
   async function getWeek() {
-    let week = weekslider.value;
-
-    // add 0 to 1-9
-    if (week < 10) {
-      week = `0${week}`;
-    }
-    return week;
-  }
-
-  // Generate Visualization by getting Week and generating Chord-Diagramm
-  async function GenerateVisualization() {
-    const week = await getWeek();
-    const year = yearselect.value;
-    generateChord(jsonData, year, week);
-
-    console.log(`${year} - KW${week}`);
-  }
-
-  GenerateVisualization();
-
-  // Generate Visualization when Slider is used
-  const rangedings = document.getElementById('weekslider');
-  rangedings.addEventListener('input', GenerateVisualization);
-
-  // Change Year
-  function selectYear() {
+    // adjust slider for number of weeks
     if (yearselect.value == 2019) {
       weekslider.setAttribute('max', '52');
     }
@@ -105,8 +79,31 @@ async function generateChord(jsonData, year, week) {
     if (yearselect.value == 2022) {
       weekslider.setAttribute('max', '26');
     }
-    GenerateVisualization();
+
+    let week = weekslider.value;
+
+    // add 0 to 1-9
+    if (week < 10) {
+      week = `0${week}`;
+    }
+    return week;
   }
 
-  yearselect.addEventListener('change', selectYear, false);
+  // Generate Visualization by getting week and generating Chord-Diagramm
+  async function GenerateVisualization() {
+    const week = await getWeek();
+    const year = yearselect.value;
+    generateChord(jsonData, year, week);
+
+    console.log(`${year} - KW${week}`);
+  }
+
+  // Generate Visualization when website is loaded
+  GenerateVisualization();
+
+  // Generate Visualization when slider is used
+  const rangedings = document.getElementById('weekslider');
+  rangedings.addEventListener('input', GenerateVisualization);
+
+  yearselect.addEventListener('change', GenerateVisualization, false);
 })();
