@@ -27,19 +27,13 @@
     <div data-js-graph id="chorddiagram"></div>
 
     <div class="weekindicator">
-      <p>KW</p>
-      <p id="weekindicator-week">1</p>
+      <p data-js="yearindicator"></p>
+      <p>-KW</p>
+      <p data-js="weekindicator-week"></p>
     </div>
 
     <div class="navigation">
-      <label for="year">Jahr:</label>
-      <select name="year" id="year">
-        <option selected value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-      </select>
-      <input type="range" class="navigation-range" id="weekslider" min="1" max="52">
+      <input type="range" class="navigation-range" data-js="weekslider" min="1" max="183">
     </div>
 
   </main>
