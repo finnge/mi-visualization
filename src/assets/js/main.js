@@ -62,9 +62,7 @@ async function generateChord(jsonData, year, week) {
 (async () => {
   // load data and select components
   const jsonData = await d3.json('data/flights_countries.json');
-  const weekslider = document.getElementById('weekslider');
-  const weekindicator = document.getElementById('weekindicator-week');
-  const yearindicator = document.getElementById('yearindicator');
+  const weekslider = document.querySelector('[data-js="weekslider"');
 
   // Generate Visualization by calculating week+year and generating Chord-Diagramm
   async function GenerateVisualization() {
