@@ -93,19 +93,17 @@ async function generateChord(jsonData, year, week) {
 
   // Change Year
   function selectYear() {
-    const slider = document.getElementById('weekslider');
-
-    if (yearselect.value === 2019) {
-      slider.setAttribute('max', '52');
+    if (yearselect.value == 2019) {
+      weekslider.setAttribute('max', '52');
     }
-    if (yearselect.value === 2020) {
-      slider.setAttribute('max', '53');
+    if (yearselect.value == 2020) {
+      weekslider.setAttribute('max', '53');
     }
-    if (yearselect.value === 2021) {
-      slider.setAttribute('max', '52');
+    if (yearselect.value == 2021) {
+      weekslider.setAttribute('max', '52');
     }
-    if (yearselect.value === 2022) {
-      slider.setAttribute('max', '26');
+    if (yearselect.value == 2022) {
+      weekslider.setAttribute('max', '26');
     }
     GenerateVisualization();
   }
