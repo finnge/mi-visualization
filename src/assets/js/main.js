@@ -22,8 +22,8 @@ async function generateChord(jsonData, year, week) {
     .append('g')
     .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
-  const yearweek = `${year}-${week}`;
-  const matrix = jsonData.yearMonth[yearweek];
+  const yearWeek = `${year}-${week}`;
+  const matrix = jsonData.yearMonth[yearWeek];
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   const res = d3.chord()
@@ -62,24 +62,23 @@ async function generateChord(jsonData, year, week) {
 (async () => {
   // load data and select components
   const jsonData = await d3.json('data/flights_countries.json');
-  const weekslider = document.querySelector('[data-js="weekslider"');
-  const weekindicator = document.querySelector('[data-js="weekindicator-week"');
-  const yearindicator = document.querySelector('[data-js="yearindicator"');
+  const slider = document.querySelector('[data-js-slider]');
+  const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
   // Generate Visualization by calculating week+year and generating Chord-Diagramm
-  async function GenerateVisualization() {
-    let week = weekslider.value;
+  async function generateVisualization() {
+    let week = slider.value;
     let year = 2019;
 
-    if (weekslider.value > 52) {
+    if (slider.value > 52) {
       week -= 52;
       year = 2020;
     }
-    if (weekslider.value > 105) {
+    if (slider.value > 105) {
       week -= 53;
       year = 2021;
     }
-    if (weekslider.value > 157) {
+    if (slider.value > 157) {
       week -= 52;
       year = 2022;
     }
@@ -91,15 +90,14 @@ async function generateChord(jsonData, year, week) {
 
     generateChord(jsonData, year, week);
 
-    weekindicator.innerHTML = week;
-    yearindicator.innerHTML = year;
+    weekIndicator.innerHTML = `${year} - KW ${week}`;
   }
 
   // Generate Visualization when website is loaded
-  GenerateVisualization();
+  generateVisualization();
 
   // Generate Visualization when slider is used
-  weekslider.addEventListener('input', () => {
-    GenerateVisualization();
+  slider.addEventListener('input', () => {
+    generateVisualization();
   });
 })();
