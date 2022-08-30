@@ -41,11 +41,18 @@ async function generateChord(jsonData, year, week) {
       .data((d) => d.groups)
       .enter()
       .append('path')
+      .attr('data-value', (d) => d.value)
+      .attr('data-group', (d) => d.index)
       .style('fill', () => getCssVar('--c-prim-interactive'))
       .style('stroke', 'black')
       .attr('d', d3.arc()
         .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
-        .outerRadius(SETTING.size / 2));
+        .outerRadius(SETTING.size / 2))
+      .on('mouseover', function () {
+        const el = d3.select(this).node();
+
+        svg.attr('data-group', el.dataset.group);
+      });
 
     // Add the links between groups
     svg
@@ -56,6 +63,8 @@ async function generateChord(jsonData, year, week) {
       .data((d) => d)
       .enter()
       .append('path')
+      .attr('data-group-source', (d) => d.source.index)
+      .attr('data-group-target', (d) => d.target.index)
       .attr('d', d3.ribbon()
         .radius((SETTING.size / 2) - SETTING.outerBorder))
       .style('fill', () => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
