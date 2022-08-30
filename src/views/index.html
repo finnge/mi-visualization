@@ -17,7 +17,8 @@
 
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <script src="/assets/js/main.min.js" async defer></script>
+  <script src="/assets/js/main.js" async defer></script>
+  <script src="/assets/js/components/index.min.js" async defer></script>
   <title>Document</title>
 </head>
 
@@ -26,9 +27,17 @@
     <h1>COVID-19 + flights</h1>
     <div data-js-graph id="chorddiagram"></div>
 
+    <div data-js-timeline></div>
+
     <div class="navigation">
       <span data-js-week-indicator></span>
-      <input type="range" class="navigation-range" data-js-slider min="1" max="183">
+
+      <div class="progress">
+
+        <input type="range" class="navigation-range" data-js-slider min="1">
+      </div>
+
+      <timeline-player min="2019-01-01" value="2019-01-01" max="2021-12-28" step="w"></timeline-player>
     </div>
 
   </main>
