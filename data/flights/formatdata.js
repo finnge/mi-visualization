@@ -31,6 +31,7 @@ const FILEPATH = {
   // get YearWeek
   const headers = Object.keys(countries[0]);
   const listOfYearWeeks = headers.slice(2);
+  const totalNumOfFlights = {};
 
   // empty country
   listOfCountries.push('--');
@@ -40,20 +41,18 @@ const FILEPATH = {
       destination: '--',
     };
 
-    const sums = {};
-
     listOfYearWeeks.forEach((weekYear) => {
-      sums[weekYear] = 0;
+      totalNumOfFlights[weekYear] = 0;
 
       countries.forEach((data) => {
-        sums[weekYear] += parseInt(data[weekYear], 10);
+        totalNumOfFlights[weekYear] += parseInt(data[weekYear], 10);
       });
     });
 
-    const maxValue = Math.max(...Object.values(sums));
+    const maxValue = Math.max(...Object.values(totalNumOfFlights));
 
     listOfYearWeeks.forEach((weekYear) => {
-      obj[weekYear] = maxValue - sums[weekYear];
+      obj[weekYear] = maxValue - totalNumOfFlights[weekYear];
     });
 
     return obj;
@@ -63,6 +62,7 @@ const FILEPATH = {
   const output = {
     yearMonth: {},
     countries: listOfCountries,
+    totalNumOfFlights,
   };
 
   // insert values
@@ -87,5 +87,5 @@ const FILEPATH = {
     output.yearMonth[weekYear] = matrix;
   });
 
-  fs.promises.writeFile(FILEPATH.outputData, JSON.stringify(output, null, true));
+  fs.promises.writeFile(FILEPATH.outputData, JSON.stringify(output, null));
 })();
