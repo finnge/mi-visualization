@@ -1,4 +1,5 @@
 .navigation {
+  margin-top: var(--m);
   background-color: var(--c-bg-2);
 }
 

@@ -1,5 +1,4 @@
 /* eslint-env browser */
-/* eslint-disable import/prefer-default-export */
 
 /**
  * Returns Value of CSS Variable
@@ -11,6 +10,16 @@
 export function getCssVar(name, backup = '', el = document.documentElement) {
   return getComputedStyle(el)
     .getPropertyValue(`--${name}`) ?? backup;
+}
+
+/**
+ * Runs a given function every time the color scheme changes and once initially.
+ * @param {() => {})} fun Function to invoke
+ */
+export function changeOnPrefersColorSchemeAndOnce(fun = () => {}) {
+  fun();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun);
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', fun);
 }
 
 /* eslint-disable no-extend-native */

@@ -1,5 +1,5 @@
 import * as d3 from 'd3'; // TODO: shorten
-import { getCssVar } from '../helper';
+import { changeOnPrefersColorSchemeAndOnce, getCssVar } from '../helper';
 
 /**
  * Generates d3 timeline.
@@ -76,8 +76,11 @@ export default function generateTimeline(
   const marker = svg.append('circle')
     .attr('r', 4)
     .attr('cx', -100)
-    .attr('fill', 'none')
-    .attr('stroke', getCssVar('c-fg-2'));
+    .attr('fill', 'none');
+
+  changeOnPrefersColorSchemeAndOnce(() => {
+    marker.attr('stroke', getCssVar('c-fg-2'));
+  });
 
   const startIndex = Math.round(data.length / 2);
   let currentLookup = new Date(data[startIndex].date);
@@ -85,10 +88,13 @@ export default function generateTimeline(
 
   const bar = svg
     .append('line')
-    .attr('style', `stroke:${getCssVar('c-fg-2')}; stroke-width:0.5; stroke-dasharray: 5 3;`)
     .attr('y2', contentHeight)
     .attr('x1', x(currentLookup))
     .attr('x2', x(currentLookup));
+
+  changeOnPrefersColorSchemeAndOnce(() => {
+    bar.attr('style', `stroke:${getCssVar('c-fg-2')}; stroke-width:0.5; stroke-dasharray: 5 3;`);
+  });
 
   function update(date) {
     const i = bisect.right(data, date);
