@@ -1,0 +1,11 @@
+[data-js-graph] [data-type="arcs"] path {
+  cursor: pointer;
+}
+
+[data-js-graph] [data-type="links"] path {
+  opacity: 0.8;
+}
+
+[data-js-graph] [data-type="links"] path[data-passive] {
+  opacity: 0.05;
+}

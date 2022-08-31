@@ -3,4 +3,5 @@
 @import "vars.css";
 @import "base.css";
 @import "components/banner.css";
+@import "components/chordDiagram.css";
 @import "components/navigation.css";

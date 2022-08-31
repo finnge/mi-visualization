@@ -34,29 +34,29 @@ const FILEPATH = {
   const totalNumOfFlights = {};
 
   // empty country
-  listOfCountries.push('--');
-  countries.push((() => {
-    const obj = {
-      origin: '--',
-      destination: '--',
-    };
+  // listOfCountries.push('--');
+  // countries.push((() => {
+  //   const obj = {
+  //     origin: '--',
+  //     destination: '--',
+  //   };
 
-    listOfYearWeeks.forEach((weekYear) => {
-      totalNumOfFlights[weekYear] = 0;
+  listOfYearWeeks.forEach((weekYear) => {
+    totalNumOfFlights[weekYear] = 0;
 
-      countries.forEach((data) => {
-        totalNumOfFlights[weekYear] += parseInt(data[weekYear], 10);
-      });
+    countries.forEach((data) => {
+      totalNumOfFlights[weekYear] += parseInt(data[weekYear], 10);
     });
+  });
 
-    const maxValue = Math.max(...Object.values(totalNumOfFlights));
+  // const maxValue = Math.max(...Object.values(totalNumOfFlights));
 
-    listOfYearWeeks.forEach((weekYear) => {
-      obj[weekYear] = maxValue - totalNumOfFlights[weekYear];
-    });
+  // listOfYearWeeks.forEach((weekYear) => {
+  //   obj[weekYear] = maxValue - totalNumOfFlights[weekYear];
+  // });
 
-    return obj;
-  })());
+  //   return obj;
+  // })());
 
   // Output
   const output = {
