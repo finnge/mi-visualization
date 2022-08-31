@@ -23,10 +23,3 @@ svg text {
   align-items: center;
   justify-content: center;
 }
-
-[data-js-week-indicator] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-}

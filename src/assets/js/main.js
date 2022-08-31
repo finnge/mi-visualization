@@ -8,13 +8,13 @@ import './helper';
 (async () => {
   // load data and select components
   const flightCountriesJson = await d3.json('data/flights_countries.json');
-  const slider = document.querySelector('[data-js-slider]');
+  const elSlider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
   const listOfWeeks = Object.keys(flightCountriesJson.yearMonth);
 
   const totalNumberOfWeeks = listOfWeeks.length;
-  slider.max = totalNumberOfWeeks;
+  elSlider.max = totalNumberOfWeeks;
 
   const startWeekParts = listOfWeeks[0].split('-');
 
@@ -25,13 +25,11 @@ import './helper';
 
   // Generate Visualization by calculating week+year and generating Chord-Diagramm
   function generateVisualization() {
-    const numberOfWeeks = slider.value - 1;
+    const numberOfWeeks = elSlider.value - 1;
 
     const currentDate = new Date(startDate);
 
     currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
-
-    console.log(currentDate, startDate.getYear(), startDate);
 
     generateChordChart(
       flightCountriesJson.yearMonth,
@@ -40,6 +38,8 @@ import './helper';
       currentDate.getISOWeek(),
     );
 
+    console.log(currentDate);
+
     weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
   }
 
@@ -47,7 +47,7 @@ import './helper';
   generateVisualization();
 
   // Generate Visualization when slider is used
-  slider.addEventListener('input', () => {
+  elSlider.addEventListener('input', () => {
     generateVisualization();
   });
 
@@ -63,11 +63,13 @@ import './helper';
 
     generateTimelineChart(
       elTimelineWrapper,
+      elSlider,
       flightCountriesJson.totalNumOfFlights,
       width,
       height,
     );
   }
+
   renderTimelineChart();
   window.addEventListener('resize', renderTimelineChart);
 })();

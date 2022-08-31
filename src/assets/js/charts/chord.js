@@ -2,7 +2,7 @@ import * as d3 from 'd3'; // TODO: shorten
 import { getCssVar } from '../helper';
 
 /**
- *
+ * Generates d3 chord.
  * @param {object} listOfMatrix
  * @param {array} listOfCountries
  * @param {int} year Current year Number

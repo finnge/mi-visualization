@@ -1,9 +1,14 @@
 .navigation {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: grid;
   background-color: var(--c-bg-2);
-  grid-template-columns: 1fr 150px;
+}
+
+.navigation .graph {
+  min-height: 100px;
+}
+
+.navigation .indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--xs);
 }
