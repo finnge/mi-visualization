@@ -28,7 +28,7 @@
     "watch:fonts": "chokidar './src/assets/fonts/**/*.*' -c 'npm run copy:fonts'",
     "watch:data": "chokidar './data/**/*.*' -c 'npm run copy:data'",
     "watch": "npm-run-all -p build watch:*",
-    "server-start": "browser-sync start --files 'dist' --server 'dist'",
+    "server-start": "browser-sync start --files 'dist' --server 'dist' --no-ghost-mode --no-inject-changes --no-ui",
     "server": "npm-run-all -p watch server-start"
   },
   "repository": {
