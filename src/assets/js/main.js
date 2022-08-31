@@ -5,17 +5,18 @@ import * as d3 from 'd3';
 import getCssVar from './helper';
 
 async function generateChord(jsonData, year, week) {
-  // delete existing diagram
-  document.getElementById('chorddiagram').innerHTML = '';
-
   const graphWrapper = d3.select('[data-js-graph]');
+  const elGraphWrapper = graphWrapper.node();
+
+  // delete existing diagram
+  elGraphWrapper.innerHTML = '';
 
   const SETTING = {
     size: 750,
-    outerBorder: 10,
+    outerBorder: 25,
   };
 
-  if (document.getElementById('chorddiagram').innerHTML === '') {
+  if (elGraphWrapper.innerHTML === '') {
     // SVG Area
     const svg = graphWrapper.append('svg')
       .attr('width', SETTING.size)
@@ -41,8 +42,10 @@ async function generateChord(jsonData, year, week) {
       .data((d) => d.groups)
       .enter()
       .append('path')
+      .attr('data-value', (d) => d.value)
+      .attr('data-group', (d) => d.index)
       .style('fill', () => getCssVar('--c-prim-interactive'))
-      .style('stroke', 'black')
+      // .style('stroke', 'black')
       .attr('d', d3.arc()
         .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
         .outerRadius(SETTING.size / 2));
@@ -56,10 +59,47 @@ async function generateChord(jsonData, year, week) {
       .data((d) => d)
       .enter()
       .append('path')
+      .attr('data-group-source', (d) => d.source.index)
+      .attr('data-group-target', (d) => d.target.index)
       .attr('d', d3.ribbon()
         .radius((SETTING.size / 2) - SETTING.outerBorder))
-      .style('fill', () => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
-      .style('stroke', 'black');
+      .style('fill', () => getCssVar('--c-prim-interactive')); // colors depend on the source group. Change to target otherwise.
+    // .style('stroke', 'black');
+
+    const listOfAllLinks = elGraphWrapper.querySelectorAll('path[data-group-source]');
+    const listOfAllGroups = elGraphWrapper.querySelectorAll('path[data-group]');
+
+    listOfAllGroups.forEach((group) => {
+      group.addEventListener('mouseenter', (e) => {
+        const { target } = e;
+        const { group: groupId } = target.dataset;
+
+        const listOfGroupSource = elGraphWrapper.querySelectorAll(`path[data-group-source="${groupId}"]`);
+        const listOfGroupTarget = elGraphWrapper.querySelectorAll(`path[data-group-target="${groupId}"]`);
+        const listOfLinks = Array.from(listOfGroupSource).concat(Array.from(listOfGroupTarget));
+
+        listOfAllLinks.forEach((el) => {
+          // eslint-disable-next-line no-param-reassign
+          el.dataset.passive = true;
+        });
+
+        listOfLinks.forEach((el) => {
+          if (el.dataset.passive !== undefined) {
+            // eslint-disable-next-line no-param-reassign
+            delete el.dataset.passive;
+          }
+        });
+      });
+
+      group.addEventListener('mouseleave', () => {
+        listOfAllLinks.forEach((el) => {
+          if (el.dataset.passive !== undefined) {
+            // eslint-disable-next-line no-param-reassign
+            delete el.dataset.passive;
+          }
+        });
+      });
+    });
   } else {
     const yearWeek = `${year}-${week}`;
     const matrix = jsonData.yearMonth[yearWeek];
