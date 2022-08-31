@@ -12,7 +12,7 @@ import '../helper';
 export default function generateTimeline(baseSelection, listOfTimeData, width = 400, height = 100) {
   // set the dimensions and margins of the graph
   const margin = {
-    top: 10, right: 10, bottom: 10, left: 50,
+    top: 10, right: 10, bottom: 20, left: 50,
   };
   const contentWidth = width - margin.left - margin.right;
   const contentHeight = height - margin.top - margin.bottom;
@@ -41,13 +41,14 @@ export default function generateTimeline(baseSelection, listOfTimeData, width = 
     .domain(d3.extent(data, (d) => d.date))
     .range([0, contentWidth]);
   svg.append('g')
-    .attr('transform', `translate(0,${height})`)
+    .attr('transform', `translate(0,${contentHeight})`)
     .call(d3.axisBottom(x));
 
   // Add Y axis
   const y = d3.scaleLinear()
-    .domain([0, d3.max(data, (d) => +d.value)])
-    .range([contentHeight, 0]);
+    .domain(d3.extent(data, (d) => d.value))
+    .range([contentHeight, 0])
+    .nice();
   svg.append('g')
     .call(d3.axisLeft(y));
 
