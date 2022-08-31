@@ -1,9 +1,16 @@
 /* eslint-env browser */
 /* eslint-disable import/prefer-default-export */
 
-export function getCssVar(name, el = document.documentElement) {
+/**
+ * Returns Value of CSS Variable
+ * @param {string} name Name of CSS var
+ * @param {string|int} backup Fallback value if property has none
+ * @param {HTMLElement} el DOM Element for selecting the computed
+ * @returns Value of css Variable
+ */
+export function getCssVar(name, backup = '', el = document.documentElement) {
   return getComputedStyle(el)
-    .getPropertyValue(name);
+    .getPropertyValue(`--${name}`) ?? backup;
 }
 
 /* eslint-disable no-extend-native */

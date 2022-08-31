@@ -36,7 +36,7 @@ export default async function generateChord(jsonData, year, week) {
     .enter()
     .append('g')
     .append('path')
-    .style('fill', () => getCssVar('--c-prim-interactive'))
+    .style('fill', () => getCssVar('c-prim-interactive'))
     .style('stroke', 'black')
     .attr('d', d3.arc()
       .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
@@ -52,6 +52,6 @@ export default async function generateChord(jsonData, year, week) {
     .append('path')
     .attr('d', d3.ribbon()
       .radius((SETTING.size / 2) - SETTING.outerBorder))
-    .style('fill', () => getCssVar('--c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
+    .style('fill', () => getCssVar('c-prim-interactive')) // colors depend on the source group. Change to target otherwise.
     .style('stroke', 'black');
 }

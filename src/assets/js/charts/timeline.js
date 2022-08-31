@@ -3,24 +3,22 @@ import '../helper';
 
 /**
  * Generates d3 chord.
- * @param {string} selector DOM Selector of element the d3 diagram should generate into.
- * @param {Object} totalNumOfFlights List of flights per week.
+ * @param {d3.Selection} baseSelection DOM Selector of element the d3 diagram should generate into.
+ * @param {Object} listOfTimeData List of flights per week.
  *    {string: int} ISO Week with format "yyyy-ww": Number of flights
  * @param {int} width Width of svg element
  * @param {int} height Width of svg element
  */
-export default function generateTimeline(selector, totalNumOfFlights, width = 1200, height = 100) {
-  const d3Timeline = d3.select(selector);
-
+export default function generateTimeline(baseSelection, listOfTimeData, width = 400, height = 100) {
   // set the dimensions and margins of the graph
   const margin = {
-    top: 10, right: 30, bottom: 30, left: 50,
+    top: 10, right: 10, bottom: 10, left: 50,
   };
   const contentWidth = width - margin.left - margin.right;
   const contentHeight = height - margin.top - margin.bottom;
 
   // form the data
-  const data = Object.entries(totalNumOfFlights).map((entry) => {
+  const data = Object.entries(listOfTimeData).map((entry) => {
     const parts = entry[0].split('-');
     const date = Date.fromISOWeek(parseInt(parts[1], 10), parseInt(parts[0], 10));
 
@@ -31,7 +29,7 @@ export default function generateTimeline(selector, totalNumOfFlights, width = 12
   });
 
   // append the svg object to the body of the page
-  const svg = d3Timeline
+  const svg = baseSelection
     .append('svg')
     .attr('width', width)
     .attr('height', height)

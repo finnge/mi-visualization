@@ -47,5 +47,23 @@ import './helper';
     generateVisualization();
   });
 
-  generateTimelineChart('[data-js-timeline]', flightCountriesJson.totalNumOfFlights);
+  const elTimelineWrapper = d3.select('[data-js-timeline]');
+
+  function renderTimelineChart() {
+    elTimelineWrapper.node().replaceChildren();
+
+    const {
+      width,
+      height,
+    } = elTimelineWrapper.node().getBoundingClientRect();
+
+    generateTimelineChart(
+      elTimelineWrapper,
+      flightCountriesJson.totalNumOfFlights,
+      width,
+      height,
+    );
+  }
+  renderTimelineChart();
+  window.addEventListener('resize', renderTimelineChart);
 })();
