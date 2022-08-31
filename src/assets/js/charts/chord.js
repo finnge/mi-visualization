@@ -1,6 +1,13 @@
 import * as d3 from 'd3'; // TODO: shorten
 import { getCssVar } from '../helper';
 
+/**
+ *
+ * @param {object} listOfMatrix
+ * @param {array} listOfCountries
+ * @param {int} year Current year Number
+ * @param {int} week Current Week Number
+ */
 export default async function generateChord(listOfMatrix, listOfCountries, year, week) {
   const graphWrapper = d3.select('[data-js-graph]');
   const elGraphWrapper = graphWrapper.node();
@@ -21,7 +28,8 @@ export default async function generateChord(listOfMatrix, listOfCountries, year,
       .append('g')
       .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
-    const yearWeek = `${year}-${week}`;
+    const yearWeek = `${year}-${week < 10 ? `0${week}` : week}`;
+    console.log(yearWeek);
     const matrix = listOfMatrix[yearWeek];
 
     // give this matrix to d3.chord(): it will calculates all

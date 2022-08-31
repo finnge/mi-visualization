@@ -11,32 +11,36 @@ import './helper';
   const slider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
+  const listOfWeeks = Object.keys(flightCountriesJson.yearMonth);
+
+  const totalNumberOfWeeks = listOfWeeks.length;
+  slider.max = totalNumberOfWeeks;
+
+  const startWeekParts = listOfWeeks[0].split('-');
+
+  const startDate = Date.fromISOWeek(
+    parseInt(startWeekParts[1], 10),
+    parseInt(startWeekParts[0], 10),
+  );
+
   // Generate Visualization by calculating week+year and generating Chord-Diagramm
-  async function generateVisualization() {
-    let week = slider.value;
-    let year = 2019;
+  function generateVisualization() {
+    const numberOfWeeks = slider.value - 1;
 
-    if (slider.value > 52) {
-      week -= 52;
-      year = 2020;
-    }
-    if (slider.value > 105) {
-      week -= 53;
-      year = 2021;
-    }
-    if (slider.value > 157) {
-      week -= 52;
-      year = 2022;
-    }
+    const currentDate = new Date(startDate);
 
-    // add 0 to 1-9
-    if (week < 10) {
-      week = `0${week}`;
-    }
+    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
 
-    generateChordChart(flightCountriesJson.yearMonth, flightCountriesJson.countries, year, week);
+    console.log(currentDate, startDate.getYear(), startDate);
 
-    weekIndicator.innerHTML = `${year} - KW ${week}`;
+    generateChordChart(
+      flightCountriesJson.yearMonth,
+      flightCountriesJson.countries,
+      currentDate.getFullYear(),
+      currentDate.getISOWeek(),
+    );
+
+    weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
   }
 
   // Generate Visualization when website is loaded
