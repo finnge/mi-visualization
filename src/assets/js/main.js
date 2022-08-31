@@ -34,7 +34,7 @@ import './helper';
       week = `0${week}`;
     }
 
-    generateChordChart(flightCountriesJson, year, week);
+    generateChordChart(flightCountriesJson.yearMonth, flightCountriesJson.countries, year, week);
 
     weekIndicator.innerHTML = `${year} - KW ${week}`;
   }

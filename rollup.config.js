@@ -10,7 +10,7 @@ import pkg from './package.json';
 
 // Configs
 const configs = {
-  files: ['main.js', 'components/index.js'],
+  files: ['main.js'],
   formats: ['iife', 'es'],
   default: 'iife',
   pathIn: 'src/assets/js',

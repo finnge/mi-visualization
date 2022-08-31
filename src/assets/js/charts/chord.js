@@ -1,7 +1,7 @@
 import * as d3 from 'd3'; // TODO: shorten
 import { getCssVar } from '../helper';
 
-export default async function generateChord(jsonData, year, week) {
+export default async function generateChord(listOfMatrix, listOfCountries, year, week) {
   const graphWrapper = d3.select('[data-js-graph]');
   const elGraphWrapper = graphWrapper.node();
 
@@ -22,7 +22,7 @@ export default async function generateChord(jsonData, year, week) {
       .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
 
     const yearWeek = `${year}-${week}`;
-    const matrix = jsonData.yearMonth[yearWeek];
+    const matrix = listOfMatrix[yearWeek];
 
     // give this matrix to d3.chord(): it will calculates all
     // the info we need to draw arc and ribbon
@@ -39,6 +39,7 @@ export default async function generateChord(jsonData, year, week) {
       .data((d) => d.groups)
       .enter()
       .append('path')
+      .attr('data-country', (d) => listOfCountries[d.index])
       .attr('data-value', (d) => d.value)
       .attr('data-group', (d) => d.index)
       .style('fill', () => getCssVar('c-prim-interactive'))
@@ -63,14 +64,27 @@ export default async function generateChord(jsonData, year, week) {
       .style('fill', () => getCssVar('c-prim-interactive')); // colors depend on the source group. Change to target otherwise.
     // .style('stroke', 'black');
 
+    // Tooltip
+    const tooltip = graphWrapper.append('div')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden')
+      .style('z-index', 1)
+      .text('Value');
+
     const listOfAllLinks = elGraphWrapper.querySelectorAll('path[data-group-source]');
     const listOfAllGroups = elGraphWrapper.querySelectorAll('path[data-group]');
 
     listOfAllGroups.forEach((group) => {
       group.addEventListener('mouseenter', (e) => {
         const { target } = e;
-        const { group: groupId } = target.dataset;
+        const { group: groupId, country } = target.dataset;
 
+        // tooltip
+        tooltip
+          .style('visibility', 'visible')
+          .text(country);
+
+        // highlight active paths
         const listOfGroupSource = elGraphWrapper.querySelectorAll(`path[data-group-source="${groupId}"]`);
         const listOfGroupTarget = elGraphWrapper.querySelectorAll(`path[data-group-target="${groupId}"]`);
         const listOfLinks = Array.from(listOfGroupSource).concat(Array.from(listOfGroupTarget));
@@ -88,7 +102,18 @@ export default async function generateChord(jsonData, year, week) {
         });
       });
 
+      group.addEventListener('mousemove', (e) => {
+        // tooltip
+        tooltip
+          .style('top', `${e.pageY + 20}px`)
+          .style('left', `${e.pageX + 20}px`);
+      });
+
       group.addEventListener('mouseleave', () => {
+        // tooltip
+        tooltip.style('visibility', 'hidden');
+
+        // highlight active paths
         listOfAllLinks.forEach((el) => {
           if (el.dataset.passive !== undefined) {
             // eslint-disable-next-line no-param-reassign
@@ -98,35 +123,35 @@ export default async function generateChord(jsonData, year, week) {
       });
     });
   } else {
-    const yearWeek = `${year}-${week}`;
-    const matrix = jsonData.yearMonth[yearWeek];
+    // const yearWeek = `${year}-${week}`;
+    // const matrix = listOfMatrix[yearWeek];
 
-    const svg = d3.select('[data-js-graph] > svg');
+    // const svg = d3.select('[data-js-graph] > svg');
 
-    const res = d3.chord()
-      .padAngle(0.05)
-      .sortSubgroups(d3.descending)(matrix);
+    // const res = d3.chord()
+    //   .padAngle(0.05)
+    //   .sortSubgroups(d3.descending)(matrix);
 
-    const arcs = svg.select('g[data-type="arcs"]')
-      .selectAll('path')
-      .datum(res)
-      .data((d) => d.groups);
+    // const arcs = svg.select('g[data-type="arcs"]')
+    //   .selectAll('path')
+    //   .datum(res)
+    //   .data((d) => d.groups);
 
-    console.log(arcs);
+    // console.log(arcs);
 
-    arcs
-      .enter()
-      .append('path')
-      .style('fill', () => getCssVar('--c-prim-interactive'))
-      .style('stroke', 'black')
-      .attr('d', d3.arc()
-        .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
-        .outerRadius(SETTING.size / 2));
+    // arcs
+    //   .enter()
+    //   .append('path')
+    //   .style('fill', () => getCssVar('--c-prim-interactive'))
+    //   .style('stroke', 'black')
+    //   .attr('d', d3.arc()
+    //     .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
+    //     .outerRadius(SETTING.size / 2));
 
-    arcs.exit()
-      .remove();
+    // arcs.exit()
+    //   .remove();
 
-    console.log(arcs);
+    // console.log(arcs);
 
     // svg
     //   .datum(res)
