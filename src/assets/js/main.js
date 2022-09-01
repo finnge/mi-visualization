@@ -8,6 +8,7 @@ import './helper';
 (async () => {
   // load data and select components
   const flightCountriesJson = await d3.json('data/flights_countries.json');
+  const covidCountriesJson = await d3.json('data/covid19.json');
   const elSlider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
@@ -44,6 +45,7 @@ import './helper';
       elGraphWrapper,
       flightCountriesJson.yearMonth,
       flightCountriesJson.countries,
+      covidCountriesJson.yearWeek,
       currentDate.getFullYear(),
       currentDate.getISOWeek(),
       width,
