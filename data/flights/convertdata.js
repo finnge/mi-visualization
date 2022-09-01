@@ -76,6 +76,16 @@ const FILEPATH = {
 
     counterAll += 1;
 
+    const dateOfFlight = new Date(flight.day);
+    const yearCalWeek = dateOfFlight.getYearWeekNumber();
+
+    if (
+      dateOfFlight.getFullYear() < 2019
+      || (dateOfFlight.getFullYear() === 2019 && yearCalWeek <= 9)
+    ) {
+      return;
+    }
+
     // Stayed at same airport
     if (flight.origin === flight.destination) {
       return;
@@ -103,10 +113,6 @@ const FILEPATH = {
 
     let origin = `_${airports[flight.origin].continent}`;
     let destination = `_${airports[flight.destination].continent}`;
-
-    const dateOfFlight = new Date(flight.day);
-
-    const yearCalWeek = dateOfFlight.getYearWeekNumber();
 
     // Region
     if (countriesToInclude.includes(airports[flight.origin]?.iso_country)) {
