@@ -7,69 +7,100 @@ import { getCssVar } from '../helper';
  * @param {array} listOfCountries
  * @param {int} year Current year Number
  * @param {int} week Current Week Number
+ * @param {int} width Outer Width of diagram
+ * @param {int} height Outer Height of diagram
  */
-export default async function generateChord(listOfMatrix, listOfCountries, year, week) {
+export default async function generateChord(
+  listOfMatrix,
+  listOfCountries,
+  year,
+  week,
+  width = 750,
+  height = 750,
+) {
   const graphWrapper = d3.select('[data-js-graph]');
   const elGraphWrapper = graphWrapper.node();
 
   // delete existing diagram
   elGraphWrapper.innerHTML = '';
 
-  const SETTING = {
-    size: 750,
-    outerBorder: 25,
+  // set the dimensions and margins of the graph
+  const margin = {
+    top: 50, right: 50, bottom: 50, left: 50,
   };
+  const contentWidth = width - margin.left - margin.right;
+  const contentHeight = height - margin.top - margin.bottom;
+  const outerRadius = Math.min(contentWidth, contentHeight) / 2;
+  const innerRadius = outerRadius - 25;
 
   // SVG Area
   const svg = graphWrapper.append('svg')
-    .attr('width', SETTING.size)
-    .attr('height', SETTING.size)
+    .attr('width', width)
+    .attr('height', height)
     .append('g')
-    .attr('transform', `translate(${SETTING.size / 2},${SETTING.size / 2})`);
+    .attr('transform', `translate(${width / 2},${height / 2})`);
 
   const yearWeek = `${year}-${week < 10 ? `0${week}` : week}`;
-  console.log(yearWeek);
   const matrix = listOfMatrix[yearWeek];
 
   // give this matrix to d3.chord(): it will calculates all
   // the info we need to draw arc and ribbon
   const res = d3.chord()
     .padAngle(0.05)
-    .sortSubgroups(d3.descending)(matrix);
+    .sortSubgroups(d3.descending)
+    .sortGroups(d3.ascending)(matrix);
 
   // add the groups on the outer part of the circle
-  svg
+  const outerGroups = svg
     .datum(res)
     .append('g')
     .attr('data-type', 'arcs')
     .selectAll('g')
     .data((d) => d.groups)
     .enter()
+    .append('g')
+    .attr('data-country', (d) => listOfCountries[d.index]);
+
+  outerGroups
     .append('path')
     .attr('data-country', (d) => listOfCountries[d.index])
     .attr('data-value', (d) => d.value)
     .attr('data-group', (d) => d.index)
     .style('fill', () => getCssVar('c-prim-interactive'))
-  // .style('stroke', 'black')
     .attr('d', d3.arc()
-      .innerRadius((SETTING.size / 2) - SETTING.outerBorder)
-      .outerRadius(SETTING.size / 2));
+      .innerRadius(innerRadius)
+      .outerRadius(outerRadius));
+
+  // add text label
+  outerGroups
+    .append('text')
+    .each((d) => {
+      const d2 = d;
+      d2.angle = (d.startAngle + d.endAngle) / 2;
+      return d2;
+    })
+    .attr('dy', '.35em')
+    .attr('class', 'titles')
+    .attr('text-anchor', (d) => (d.angle > Math.PI ? 'end' : null))
+    .attr('transform', (d) => `rotate(${(d.angle * 180) / Math.PI - 90})`
+        + `translate(${outerRadius + 10})${
+          d.angle > Math.PI ? 'rotate(180)' : ''}`)
+    .text((d, i) => listOfCountries[i]);
 
   // Add the links between groups
   svg
     .datum(res)
     .append('g')
     .attr('data-type', 'links')
-    .selectAll('g[data-type="arcs"] path')
+    .selectAll('path')
     .data((d) => d)
     .enter()
     .append('path')
     .attr('data-group-source', (d) => d.source.index)
     .attr('data-group-target', (d) => d.target.index)
     .attr('d', d3.ribbon()
-      .radius((SETTING.size / 2) - SETTING.outerBorder))
+      .radius(innerRadius))
     .style('fill', () => getCssVar('c-prim-interactive')); // colors depend on the source group. Change to target otherwise.
-  // .style('stroke', 'black');
 
   // Tooltip
   const tooltip = graphWrapper.append('div')
