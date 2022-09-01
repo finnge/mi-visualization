@@ -38,8 +38,6 @@ import './helper';
       currentDate.getISOWeek(),
     );
 
-    console.log(currentDate);
-
     weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
   }
 
