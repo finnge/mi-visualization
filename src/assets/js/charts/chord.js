@@ -1,8 +1,9 @@
 import * as d3 from 'd3'; // TODO: shorten
-import { getCssVar } from '../helper';
+import '../helper';
 
 /**
  * Generates d3 chord.
+ * @param {d3.Selection} baseSelection DOM Selector of element the d3 diagram should generate into.
  * @param {object} listOfMatrix
  * @param {array} listOfCountries
  * @param {int} year Current year Number
@@ -11,6 +12,7 @@ import { getCssVar } from '../helper';
  * @param {int} height Outer Height of diagram
  */
 export default async function generateChord(
+  baseSelection,
   listOfMatrix,
   listOfCountries,
   year,
@@ -18,11 +20,10 @@ export default async function generateChord(
   width = 750,
   height = 750,
 ) {
-  const graphWrapper = d3.select('[data-js-graph]');
-  const elGraphWrapper = graphWrapper.node();
+  const elGraphWrapper = baseSelection.node();
 
   // delete existing diagram
-  elGraphWrapper.innerHTML = '';
+  elGraphWrapper.replaceChildren();
 
   // set the dimensions and margins of the graph
   const margin = {
@@ -34,7 +35,7 @@ export default async function generateChord(
   const innerRadius = outerRadius - 25;
 
   // SVG Area
-  const svg = graphWrapper.append('svg')
+  const svg = baseSelection.append('svg')
     .attr('width', width)
     .attr('height', height)
     .append('g')
@@ -169,7 +170,7 @@ export default async function generateChord(
     });
 
   // Tooltip
-  const tooltip = graphWrapper.append('div')
+  const tooltip = baseSelection.append('div')
     .style('position', 'absolute')
     .style('visibility', 'hidden')
     .style('z-index', 1)
