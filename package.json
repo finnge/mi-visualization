@@ -41,6 +41,10 @@
     "url": "https://github.com/finnge/mi-visualization/issues"
   },
   "homepage": "https://github.com/finnge/mi-visualization#readme",
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
   "dependencies": {
     "ansi-colors": "^4.1.3",
     "async-csv": "^2.1.3",
