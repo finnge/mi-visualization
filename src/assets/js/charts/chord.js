@@ -1,5 +1,6 @@
 import * as d3 from 'd3'; // TODO: shorten
 import '../helper';
+import { getCssVar } from '../helper';
 
 /**
  * Generates d3 chord.
@@ -34,6 +35,7 @@ export default async function generateChord(
   const contentHeight = height - margin.top - margin.bottom;
   const outerRadius = Math.min(contentWidth, contentHeight) / 2;
   const innerRadius = outerRadius - 25;
+  const ringPadding = 50;
 
   // SVG Area
   const svg = baseSelection.append('svg')
@@ -44,13 +46,15 @@ export default async function generateChord(
 
   const yearWeek = `${year}-${week < 10 ? `0${week}` : week}`;
   const matrix = listOfMatrix[yearWeek];
-  const covid19 = Object.entries(listOfCovidIncidence[yearWeek]);/* .map((entry) => {
-    const [key, value] = entry;
-    return {
-      country: key,
-      incidence: value.incidence,
-    };
-  }); */
+  const covid19 = new Array(listOfCountries.length);
+
+  Object.entries(listOfCovidIncidence[yearWeek]).forEach((entry) => {
+    const [countryCode, value] = entry;
+
+    const index = listOfCountries.findIndex((v) => v === countryCode);
+
+    covid19[index] = value.incidence;
+  });
 
   // give this matrix to d3.chord(): it will calculates all
   // the info we need to draw arc and ribbon
@@ -148,19 +152,23 @@ export default async function generateChord(
   // X scale
 
   const y = d3.scaleRadial()
-    .range([outerRadius, Math.min(margin.left, margin.right)])
-    .domain([0, 10000]); // TODO: max value of covid
+    .range([
+      outerRadius + ringPadding,
+      outerRadius + Math.min(margin.left, margin.right),
+    ])
+    .domain([0, d3.max(covid19)]); // TODO: max value of all covid
+
+  console.log([outerRadius + ringPadding, outerRadius + Math.min(margin.left, margin.right)]);
 
   outerGroups
     .append('path')
-    .attr('fill', '#69b3a2')
+    .attr('fill', getCssVar('c-prim'))
     .attr('d', d3.arc() // imagine your doing a part of a donut plot
-      .innerRadius(outerRadius)
-      .outerRadius((d) => y(d.Value))
-      .startAngle((d) => d.startAngle)
-      .endAngle((d) => d.endAngle)
-      .padAngle(0.01)
-      .padRadius(innerRadius));
+      .innerRadius(outerRadius + ringPadding)
+      .outerRadius((d) => y(covid19[d.index] ?? 0))
+      .startAngle((d) => d.startAngle - 0.01)
+      .endAngle((d) => d.endAngle + 0.01));
+  // .padRadius(outerRadius));
 
   // Tooltip
   const tooltip = baseSelection.append('div')
