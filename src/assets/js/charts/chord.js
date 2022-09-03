@@ -156,9 +156,17 @@ export default async function generateChord(
       outerRadius + ringPadding,
       outerRadius + Math.min(margin.left, margin.right),
     ])
-    .domain([0, d3.max(covid19)]); // TODO: max value of all covid
-
-  console.log([outerRadius + ringPadding, outerRadius + Math.min(margin.left, margin.right)]);
+    .domain([
+      0,
+      d3.max(covid19),
+      // d3.max(
+      //   Object.values(listOfCovidIncidence),
+      //   (weekYearDatum) => d3.max(
+      //     Object.values(weekYearDatum),
+      //     (datum) => datum.incidence,
+      //   ),
+      // ),
+    ]);
 
   outerGroups
     .append('path')
@@ -169,6 +177,36 @@ export default async function generateChord(
       .startAngle((d) => d.startAngle - 0.01)
       .endAngle((d) => d.endAngle + 0.01));
   // .padRadius(outerRadius));
+
+  const yAxis = svg.append('g')
+    .attr('text-anchor', 'middle');
+
+  const yTick = yAxis
+    .selectAll('g')
+    .data(y.ticks(5))
+    .enter().append('g');
+
+  yTick.append('circle')
+    .attr('fill', 'none')
+    .attr('stroke', getCssVar('c-fg-1'))
+    .style('opacity', 0.3)
+    .attr('r', y);
+
+  yTick.append('text')
+    .attr('y', (d) => -y(d))
+    .attr('dy', '0.35em')
+    .attr('fill', 'none')
+    .attr('stroke', getCssVar('c-bg-1'))
+    .attr('stroke-width', 5)
+    .style('font-size', getCssVar('xs'))
+    .text(y.tickFormat(5, 's'));
+
+  yTick.append('text')
+    .attr('fill', getCssVar('c-fg-1'))
+    .attr('y', (d) => -y(d))
+    .attr('dy', '0.35em')
+    .style('font-size', getCssVar('xs'))
+    .text(y.tickFormat(5, 's'));
 
   // Tooltip
   const tooltip = baseSelection.append('div')
