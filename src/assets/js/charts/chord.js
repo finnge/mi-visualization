@@ -96,7 +96,7 @@ export default async function generateChord(
       return d2;
     })
     .attr('dy', '.35em')
-    .attr('class', 'titles')
+    .attr('fill', getCssVar('c-fg-1'))
     .attr('text-anchor', (d) => (d.angle > Math.PI ? 'end' : null))
     .attr('transform', (d) => `rotate(${(d.angle * 180) / Math.PI - 90})`
         + `translate(${outerRadius + 10})${
@@ -174,9 +174,8 @@ export default async function generateChord(
     .attr('d', d3.arc() // imagine your doing a part of a donut plot
       .innerRadius(outerRadius + ringPadding)
       .outerRadius((d) => y(covid19[d.index] ?? 0))
-      .startAngle((d) => d.startAngle - 0.01)
-      .endAngle((d) => d.endAngle + 0.01));
-  // .padRadius(outerRadius));
+      .startAngle((d) => d3.mean([d.startAngle, d.endAngle]) - 0.02)
+      .endAngle((d) => d3.mean([d.startAngle, d.endAngle]) + 0.02));
 
   const yAxis = svg.append('g')
     .attr('text-anchor', 'middle');
