@@ -178,6 +178,11 @@
         "deaths": 128,
         "incidence": 50.83
       },
+      "GR": {
+        "cases": 77062,
+        "deaths": 306,
+        "incidence": 102.71
+      },
       "HU": {
         "cases": 18078,
         "deaths": 80,
@@ -262,6 +267,11 @@
         "cases": 27955,
         "deaths": 458,
         "incidence": 29.53
+      },
+      "SE": {
+        "cases": 3212,
+        "deaths": 1,
+        "incidence": 10.37
       }
     },
     "2022-31": {
@@ -319,6 +329,11 @@
         "cases": 362367,
         "deaths": 315,
         "incidence": 62.24
+      },
+      "GR": {
+        "cases": 103059,
+        "deaths": 345,
+        "incidence": 137.36
       },
       "HU": {
         "cases": 21840,
@@ -404,6 +419,11 @@
         "cases": 39605,
         "deaths": 583,
         "incidence": 41.84
+      },
+      "SE": {
+        "cases": 6234,
+        "deaths": 59,
+        "incidence": 8.62
       }
     },
     "2022-30": {
@@ -461,6 +481,11 @@
         "cases": 494877,
         "deaths": 575,
         "incidence": 85.01
+      },
+      "GR": {
+        "cases": 125193,
+        "deaths": 378,
+        "incidence": 166.86
       },
       "HU": {
         "cases": 14402,
@@ -546,6 +571,11 @@
         "cases": 65107,
         "deaths": 711,
         "incidence": 68.78
+      },
+      "SE": {
+        "cases": 5706,
+        "deaths": 75,
+        "incidence": 7.89
       }
     },
     "2022-29": {
@@ -603,6 +633,11 @@
         "cases": 626171,
         "deaths": 747,
         "incidence": 107.56
+      },
+      "GR": {
+        "cases": 138652,
+        "deaths": 292,
+        "incidence": 184.8
       },
       "HU": {
         "cases": 10255,
@@ -688,6 +723,11 @@
         "cases": 114387,
         "deaths": 900,
         "incidence": 120.83
+      },
+      "SE": {
+        "cases": 5953,
+        "deaths": 96,
+        "incidence": 8.23
       }
     },
     "2022-28": {
@@ -745,6 +785,11 @@
         "cases": 674647,
         "deaths": 696,
         "incidence": 115.89
+      },
+      "GR": {
+        "cases": 367629,
+        "deaths": 231,
+        "incidence": 489.98
       },
       "HU": {
         "cases": 8036,
@@ -830,6 +875,11 @@
         "cases": 116861,
         "deaths": 720,
         "incidence": 123.45
+      },
+      "SE": {
+        "cases": 5442,
+        "deaths": 56,
+        "incidence": 7.53
       }
     },
     "2022-27": {
@@ -887,6 +937,11 @@
         "cases": 628572,
         "deaths": 552,
         "incidence": 107.97
+      },
+      "GR": {
+        "cases": 123303,
+        "deaths": 174,
+        "incidence": 164.34
       },
       "HU": {
         "cases": 4663,
@@ -967,6 +1022,11 @@
         "cases": 155431,
         "deaths": 509,
         "incidence": 164.19
+      },
+      "SE": {
+        "cases": 4236,
+        "deaths": 56,
+        "incidence": 5.86
       }
     },
     "2022-26": {
@@ -1024,6 +1084,11 @@
         "cases": 620772,
         "deaths": 480,
         "incidence": 106.63
+      },
+      "GR": {
+        "cases": 102965,
+        "deaths": 124,
+        "incidence": 137.23
       },
       "HU": {
         "cases": 3042,
@@ -1104,6 +1169,11 @@
         "cases": 136364,
         "deaths": 359,
         "incidence": 144.05
+      },
+      "SE": {
+        "cases": 4118,
+        "deaths": 42,
+        "incidence": 5.7
       }
     },
     "2022-25": {
@@ -1161,6 +1231,11 @@
         "cases": 572081,
         "deaths": 478,
         "incidence": 98.27
+      },
+      "GR": {
+        "cases": 71762,
+        "deaths": 91,
+        "incidence": 95.64
       },
       "HU": {
         "cases": 1961,
@@ -1241,6 +1316,11 @@
         "cases": 118421,
         "deaths": 354,
         "incidence": 125.09
+      },
+      "SE": {
+        "cases": 3090,
+        "deaths": 34,
+        "incidence": 4.27
       }
     },
     "2022-24": {
@@ -1298,6 +1378,11 @@
         "cases": 412452,
         "deaths": 339,
         "incidence": 70.85
+      },
+      "GR": {
+        "cases": 44623,
+        "deaths": 67,
+        "incidence": 59.47
       },
       "HU": {
         "cases": 0,
@@ -1378,6 +1463,11 @@
         "cases": null,
         "deaths": 350,
         "incidence": 59.44
+      },
+      "SE": {
+        "cases": 2165,
+        "deaths": 22,
+        "incidence": 2.99
       }
     },
     "2022-23": {
@@ -1435,6 +1525,11 @@
         "cases": 330939,
         "deaths": 250,
         "incidence": 56.85
+      },
+      "GR": {
+        "cases": 29849,
+        "deaths": 107,
+        "incidence": 39.78
       },
       "HU": {
         "cases": 3282,
@@ -1520,6 +1615,11 @@
         "cases": null,
         "deaths": 157,
         "incidence": 22.86
+      },
+      "SE": {
+        "cases": 1896,
+        "deaths": 28,
+        "incidence": 2.62
       }
     },
     "2022-22": {
@@ -1577,6 +1677,11 @@
         "cases": 244906,
         "deaths": 203,
         "incidence": 42.07
+      },
+      "GR": {
+        "cases": 25102,
+        "deaths": 110,
+        "incidence": 33.46
       },
       "HU": {
         "cases": 2063,
@@ -1662,6 +1767,11 @@
         "cases": null,
         "deaths": 291,
         "incidence": 23.23
+      },
+      "SE": {
+        "cases": 1255,
+        "deaths": 23,
+        "incidence": 1.74
       }
     },
     "2022-21": {
@@ -1719,6 +1829,11 @@
         "cases": 187104,
         "deaths": 196,
         "incidence": 32.14
+      },
+      "GR": {
+        "cases": 27925,
+        "deaths": 113,
+        "incidence": 37.22
       },
       "HU": {
         "cases": 3080,
@@ -1804,6 +1919,11 @@
         "cases": null,
         "deaths": 328,
         "incidence": 26.62
+      },
+      "SE": {
+        "cases": 1316,
+        "deaths": 26,
+        "incidence": 1.82
       }
     },
     "2022-20": {
@@ -1861,6 +1981,11 @@
         "cases": 292824,
         "deaths": 308,
         "incidence": 50.3
+      },
+      "GR": {
+        "cases": 25038,
+        "deaths": 143,
+        "incidence": 33.37
       },
       "HU": {
         "cases": 4749,
@@ -1946,6 +2071,11 @@
         "cases": null,
         "deaths": 431,
         "incidence": 33.49
+      },
+      "SE": {
+        "cases": 1817,
+        "deaths": 40,
+        "incidence": 2.51
       }
     },
     "2022-19": {
@@ -2003,6 +2133,11 @@
         "cases": 409052,
         "deaths": 383,
         "incidence": 70.26
+      },
+      "GR": {
+        "cases": 30796,
+        "deaths": 155,
+        "incidence": 41.04
       },
       "HU": {
         "cases": 6748,
@@ -2088,6 +2223,11 @@
         "cases": null,
         "deaths": 490,
         "incidence": 35.63
+      },
+      "SE": {
+        "cases": 1656,
+        "deaths": 42,
+        "incidence": 2.29
       }
     },
     "2022-18": {
@@ -2145,6 +2285,11 @@
         "cases": 471722,
         "deaths": 500,
         "incidence": 81.03
+      },
+      "GR": {
+        "cases": 33156,
+        "deaths": 217,
+        "incidence": 44.19
       },
       "HU": {
         "cases": 2183,
@@ -2230,6 +2375,11 @@
         "cases": null,
         "deaths": 423,
         "incidence": 34.08
+      },
+      "SE": {
+        "cases": 1940,
+        "deaths": 51,
+        "incidence": 2.68
       }
     },
     "2022-17": {
@@ -2287,6 +2437,11 @@
         "cases": 596999,
         "deaths": 638,
         "incidence": 102.55
+      },
+      "GR": {
+        "cases": 51066,
+        "deaths": 308,
+        "incidence": 68.06
       },
       "HU": {
         "cases": 10064,
@@ -2372,6 +2527,11 @@
         "cases": null,
         "deaths": 373,
         "incidence": 33.23
+      },
+      "SE": {
+        "cases": 2319,
+        "deaths": 51,
+        "incidence": 3.21
       }
     },
     "2022-16": {
@@ -2429,6 +2589,11 @@
         "cases": 732561,
         "deaths": 766,
         "incidence": 125.83
+      },
+      "GR": {
+        "cases": 39388,
+        "deaths": 279,
+        "incidence": 52.5
       },
       "HU": {
         "cases": 11473,
@@ -2514,6 +2679,11 @@
         "cases": null,
         "deaths": 364,
         "incidence": 37.37
+      },
+      "SE": {
+        "cases": 2525,
+        "deaths": 70,
+        "incidence": 3.49
       }
     },
     "2022-15": {
@@ -2571,6 +2741,11 @@
         "cases": 779618,
         "deaths": 928,
         "incidence": 133.92
+      },
+      "GR": {
+        "cases": 64539,
+        "deaths": 458,
+        "incidence": 86.02
       },
       "HU": {
         "cases": 11473,
@@ -2656,6 +2831,11 @@
         "cases": null,
         "deaths": 345,
         "incidence": 10.48
+      },
+      "SE": {
+        "cases": 3071,
+        "deaths": 71,
+        "incidence": 4.25
       }
     },
     "2022-14": {
@@ -2713,6 +2893,11 @@
         "cases": 984767,
         "deaths": 1225,
         "incidence": 169.16
+      },
+      "GR": {
+        "cases": 95919,
+        "deaths": 446,
+        "incidence": 127.84
       },
       "HU": {
         "cases": 13809,
@@ -2798,6 +2983,11 @@
         "cases": null,
         "deaths": 305,
         "incidence": 16.1
+      },
+      "SE": {
+        "cases": 4091,
+        "deaths": 120,
+        "incidence": 5.66
       }
     },
     "2022-13": {
@@ -2855,6 +3045,11 @@
         "cases": 1294589,
         "deaths": 1428,
         "incidence": 222.37
+      },
+      "GR": {
+        "cases": 147390,
+        "deaths": 416,
+        "incidence": 196.44
       },
       "HU": {
         "cases": 14840,
@@ -2940,6 +3135,11 @@
         "cases": 52928,
         "deaths": 279,
         "incidence": 15.97
+      },
+      "SE": {
+        "cases": 4952,
+        "deaths": 122,
+        "incidence": 6.85
       }
     },
     "2022-12": {
@@ -2997,6 +3197,11 @@
         "cases": 1585544,
         "deaths": 1771,
         "incidence": 272.35
+      },
+      "GR": {
+        "cases": 141667,
+        "deaths": 331,
+        "incidence": 188.81
       },
       "HU": {
         "cases": 15269,
@@ -3082,6 +3287,11 @@
         "cases": 101899,
         "deaths": 301,
         "incidence": 30.75
+      },
+      "SE": {
+        "cases": 7040,
+        "deaths": 156,
+        "incidence": 9.74
       }
     },
     "2022-11": {
@@ -3139,6 +3349,11 @@
         "cases": 1580406,
         "deaths": 1838,
         "incidence": 271.47
+      },
+      "GR": {
+        "cases": 153040,
+        "deaths": 375,
+        "incidence": 203.97
       },
       "HU": {
         "cases": 9727,
@@ -3224,6 +3439,11 @@
         "cases": 119092,
         "deaths": 361,
         "incidence": 35.94
+      },
+      "SE": {
+        "cases": 8502,
+        "deaths": 195,
+        "incidence": 11.76
       }
     },
     "2022-10": {
@@ -3281,6 +3501,11 @@
         "cases": 1410712,
         "deaths": 1697,
         "incidence": 242.32
+      },
+      "GR": {
+        "cases": 127142,
+        "deaths": 368,
+        "incidence": 169.45
       },
       "HU": {
         "cases": 14316,
@@ -3366,6 +3591,11 @@
         "cases": 110881,
         "deaths": 420,
         "incidence": 33.47
+      },
+      "SE": {
+        "cases": 10110,
+        "deaths": 204,
+        "incidence": 13.98
       }
     },
     "2022-09": {
@@ -3423,6 +3653,11 @@
         "cases": 1132403,
         "deaths": 1531,
         "incidence": 194.52
+      },
+      "GR": {
+        "cases": 103071,
+        "deaths": 409,
+        "incidence": 137.37
       },
       "HU": {
         "cases": 20872,
@@ -3508,6 +3743,11 @@
         "cases": 114341,
         "deaths": 509,
         "incidence": 34.51
+      },
+      "SE": {
+        "cases": 12548,
+        "deaths": 273,
+        "incidence": 17.36
       }
     },
     "2022-08": {
@@ -3565,6 +3805,11 @@
         "cases": 1093077,
         "deaths": 1552,
         "incidence": 187.76
+      },
+      "GR": {
+        "cases": 106475,
+        "deaths": 458,
+        "incidence": 141.91
       },
       "HU": {
         "cases": 32750,
@@ -3650,6 +3895,11 @@
         "cases": 110883,
         "deaths": 637,
         "incidence": 33.47
+      },
+      "SE": {
+        "cases": 17660,
+        "deaths": 319,
+        "incidence": 24.43
       }
     },
     "2022-07": {
@@ -3707,6 +3957,11 @@
         "cases": 1193699,
         "deaths": 1699,
         "incidence": 205.04
+      },
+      "GR": {
+        "cases": 124833,
+        "deaths": 573,
+        "incidence": 166.38
       },
       "HU": {
         "cases": 50433,
@@ -3792,6 +4047,11 @@
         "cases": 149320,
         "deaths": 917,
         "incidence": 45.07
+      },
+      "SE": {
+        "cases": 22160,
+        "deaths": 361,
+        "incidence": 30.65
       }
     },
     "2022-06": {
@@ -3849,6 +4109,11 @@
         "cases": 1309908,
         "deaths": 1646,
         "incidence": 225.01
+      },
+      "GR": {
+        "cases": 126244,
+        "deaths": 660,
+        "incidence": 168.26
       },
       "HU": {
         "cases": 79145,
@@ -3934,6 +4199,11 @@
         "cases": 229056,
         "deaths": 1360,
         "incidence": 69.13
+      },
+      "SE": {
+        "cases": 62338,
+        "deaths": 328,
+        "incidence": 86.23
       }
     },
     "2022-05": {
@@ -3991,6 +4261,11 @@
         "cases": 1292670,
         "deaths": 1455,
         "incidence": 222.04
+      },
+      "GR": {
+        "cases": 126857,
+        "deaths": 722,
+        "incidence": 169.08
       },
       "HU": {
         "cases": 108488,
@@ -4076,6 +4351,11 @@
         "cases": 360320,
         "deaths": 1649,
         "incidence": 108.75
+      },
+      "SE": {
+        "cases": 185716,
+        "deaths": 358,
+        "incidence": 256.89
       }
     },
     "2022-04": {
@@ -4133,6 +4413,11 @@
         "cases": 1112800,
         "deaths": 1085,
         "incidence": 191.15
+      },
+      "GR": {
+        "cases": 127681,
+        "deaths": 737,
+        "incidence": 170.17
       },
       "HU": {
         "cases": 106901,
@@ -4218,6 +4503,11 @@
         "cases": 591632,
         "deaths": 1678,
         "incidence": 178.56
+      },
+      "SE": {
+        "cases": 265043,
+        "deaths": 301,
+        "incidence": 366.62
       }
     },
     "2022-03": {
@@ -4275,6 +4565,11 @@
         "cases": 796506,
         "deaths": 856,
         "incidence": 136.82
+      },
+      "GR": {
+        "cases": 132440,
+        "deaths": 651,
+        "incidence": 176.52
       },
       "HU": {
         "cases": 74443,
@@ -4360,6 +4655,11 @@
         "cases": 820641,
         "deaths": 1486,
         "incidence": 247.68
+      },
+      "SE": {
+        "cases": 256322,
+        "deaths": 243,
+        "incidence": 354.56
       }
     },
     "2022-02": {
@@ -4417,6 +4717,11 @@
         "cases": 486044,
         "deaths": 678,
         "incidence": 83.49
+      },
+      "GR": {
+        "cases": 153255,
+        "deaths": 590,
+        "incidence": 204.26
       },
       "HU": {
         "cases": 44057,
@@ -4502,6 +4807,11 @@
         "cases": 905299,
         "deaths": 1281,
         "incidence": 273.23
+      },
+      "SE": {
+        "cases": 164690,
+        "deaths": 171,
+        "incidence": 227.81
       }
     },
     "2022-01": {
@@ -4559,6 +4869,11 @@
         "cases": 338053,
         "deaths": 851,
         "incidence": 58.07
+      },
+      "GR": {
+        "cases": 249121,
+        "deaths": 484,
+        "incidence": 332.03
       },
       "HU": {
         "cases": 26542,
@@ -4644,6 +4959,11 @@
         "cases": 906839,
         "deaths": 923,
         "incidence": 273.7
+      },
+      "SE": {
+        "cases": 125275,
+        "deaths": 130,
+        "incidence": 173.29
       }
     },
     "2021-52": {
@@ -4701,6 +5021,11 @@
         "cases": 208689,
         "deaths": 1019,
         "incidence": 35.85
+      },
+      "GR": {
+        "cases": 183626,
+        "deaths": 481,
+        "incidence": 244.74
       },
       "HU": {
         "cases": 26030,
@@ -4786,6 +5111,11 @@
         "cases": 817370,
         "deaths": 701,
         "incidence": 246.69
+      },
+      "SE": {
+        "cases": 59341,
+        "deaths": 70,
+        "incidence": 82.08
       }
     },
     "2021-51": {
@@ -4843,6 +5173,11 @@
         "cases": 193859,
         "deaths": 1270,
         "incidence": 33.3
+      },
+      "GR": {
+        "cases": 40799,
+        "deaths": 538,
+        "incidence": 54.38
       },
       "HU": {
         "cases": 12090,
@@ -4928,6 +5263,11 @@
         "cases": 545477,
         "deaths": 560,
         "incidence": 164.63
+      },
+      "SE": {
+        "cases": 27907,
+        "deaths": 44,
+        "incidence": 38.6
       }
     },
     "2021-50": {
@@ -4985,6 +5325,11 @@
         "cases": 273573,
         "deaths": 1968,
         "incidence": 46.99
+      },
+      "GR": {
+        "cases": 31193,
+        "deaths": 646,
+        "incidence": 41.57
       },
       "HU": {
         "cases": 35373,
@@ -5070,6 +5415,11 @@
         "cases": 253699,
         "deaths": 478,
         "incidence": 76.57
+      },
+      "SE": {
+        "cases": 24485,
+        "deaths": 49,
+        "incidence": 33.87
       }
     },
     "2021-49": {
@@ -5127,6 +5477,11 @@
         "cases": 338101,
         "deaths": 2496,
         "incidence": 58.08
+      },
+      "GR": {
+        "cases": 36656,
+        "deaths": 650,
+        "incidence": 48.86
       },
       "HU": {
         "cases": 48053,
@@ -5212,6 +5567,11 @@
         "cases": 130781,
         "deaths": 342,
         "incidence": 39.47
+      },
+      "SE": {
+        "cases": 18649,
+        "deaths": 38,
+        "incidence": 25.8
       }
     },
     "2021-48": {
@@ -5269,6 +5629,11 @@
         "cases": 388112,
         "deaths": 2845,
         "incidence": 66.67
+      },
+      "GR": {
+        "cases": 41715,
+        "deaths": 636,
+        "incidence": 55.6
       },
       "HU": {
         "cases": 65981,
@@ -5354,6 +5719,11 @@
         "cases": 89360,
         "deaths": 282,
         "incidence": 26.97
+      },
+      "SE": {
+        "cases": 13801,
+        "deaths": 29,
+        "incidence": 19.09
       }
     },
     "2021-47": {
@@ -5411,6 +5781,11 @@
         "cases": 403354,
         "deaths": 3064,
         "incidence": 69.28
+      },
+      "GR": {
+        "cases": 45586,
+        "deaths": 646,
+        "incidence": 60.76
       },
       "HU": {
         "cases": 70400,
@@ -5496,6 +5871,11 @@
         "cases": 63118,
         "deaths": 186,
         "incidence": 19.05
+      },
+      "SE": {
+        "cases": 11915,
+        "deaths": 15,
+        "incidence": 16.48
       }
     },
     "2021-46": {
@@ -5553,6 +5933,11 @@
         "cases": 351678,
         "deaths": 2692,
         "incidence": 60.41
+      },
+      "GR": {
+        "cases": 47046,
+        "deaths": 547,
+        "incidence": 62.7
       },
       "HU": {
         "cases": 58704,
@@ -5638,6 +6023,11 @@
         "cases": 44504,
         "deaths": 151,
         "incidence": 13.43
+      },
+      "SE": {
+        "cases": 7093,
+        "deaths": 30,
+        "incidence": 9.81
       }
     },
     "2021-45": {
@@ -5695,6 +6085,11 @@
         "cases": 271161,
         "deaths": 2274,
         "incidence": 46.58
+      },
+      "GR": {
+        "cases": 46970,
+        "deaths": 471,
+        "incidence": 62.6
       },
       "HU": {
         "cases": 47620,
@@ -5780,6 +6175,11 @@
         "cases": 28981,
         "deaths": 156,
         "incidence": 8.75
+      },
+      "SE": {
+        "cases": 5819,
+        "deaths": 31,
+        "incidence": 8.05
       }
     },
     "2021-44": {
@@ -5837,6 +6237,11 @@
         "cases": 177879,
         "deaths": 1667,
         "incidence": 30.55
+      },
+      "GR": {
+        "cases": 42734,
+        "deaths": 357,
+        "incidence": 56.96
       },
       "HU": {
         "cases": 28745,
@@ -5922,6 +6327,11 @@
         "cases": 18408,
         "deaths": 95,
         "incidence": 5.56
+      },
+      "SE": {
+        "cases": 5060,
+        "deaths": 33,
+        "incidence": 7
       }
     },
     "2021-43": {
@@ -5979,6 +6389,11 @@
         "cases": 137010,
         "deaths": 1272,
         "incidence": 23.53
+      },
+      "GR": {
+        "cases": 25812,
+        "deaths": 310,
+        "incidence": 34.4
       },
       "HU": {
         "cases": 19594,
@@ -6064,6 +6479,11 @@
         "cases": 13137,
         "deaths": 101,
         "incidence": 3.96
+      },
+      "SE": {
+        "cases": 5910,
+        "deaths": 30,
+        "incidence": 8.18
       }
     },
     "2021-42": {
@@ -6121,6 +6541,11 @@
         "cases": 97725,
         "deaths": 1039,
         "incidence": 16.79
+      },
+      "GR": {
+        "cases": 22472,
+        "deaths": 253,
+        "incidence": 29.95
       },
       "HU": {
         "cases": 10710,
@@ -6206,6 +6631,11 @@
         "cases": 12257,
         "deaths": 121,
         "incidence": 3.7
+      },
+      "SE": {
+        "cases": 5194,
+        "deaths": 23,
+        "incidence": 7.18
       }
     },
     "2021-41": {
@@ -6263,6 +6693,11 @@
         "cases": 65356,
         "deaths": 577,
         "incidence": 11.23
+      },
+      "GR": {
+        "cases": 17087,
+        "deaths": 240,
+        "incidence": 22.77
       },
       "HU": {
         "cases": 5705,
@@ -6348,6 +6783,11 @@
         "cases": 10391,
         "deaths": 124,
         "incidence": 3.14
+      },
+      "SE": {
+        "cases": 4069,
+        "deaths": 32,
+        "incidence": 5.63
       }
     },
     "2021-40": {
@@ -6405,6 +6845,11 @@
         "cases": 58014,
         "deaths": 486,
         "incidence": 9.97
+      },
+      "GR": {
+        "cases": 15491,
+        "deaths": 215,
+        "incidence": 20.65
       },
       "HU": {
         "cases": 4026,
@@ -6490,6 +6935,11 @@
         "cases": 10876,
         "deaths": 146,
         "incidence": 3.28
+      },
+      "SE": {
+        "cases": 4137,
+        "deaths": 49,
+        "incidence": 5.72
       }
     },
     "2021-39": {
@@ -6547,6 +6997,11 @@
         "cases": 56492,
         "deaths": 422,
         "incidence": 9.7
+      },
+      "GR": {
+        "cases": 15339,
+        "deaths": 241,
+        "incidence": 20.44
       },
       "HU": {
         "cases": 3306,
@@ -6632,6 +7087,11 @@
         "cases": 11375,
         "deaths": 180,
         "incidence": 3.43
+      },
+      "SE": {
+        "cases": 4231,
+        "deaths": 39,
+        "incidence": 5.85
       }
     },
     "2021-38": {
@@ -6689,6 +7149,11 @@
         "cases": 53615,
         "deaths": 350,
         "incidence": 9.21
+      },
+      "GR": {
+        "cases": 15185,
+        "deaths": 213,
+        "incidence": 20.24
       },
       "HU": {
         "cases": 2919,
@@ -6774,6 +7239,11 @@
         "cases": 13946,
         "deaths": 235,
         "incidence": 4.21
+      },
+      "SE": {
+        "cases": 4305,
+        "deaths": 43,
+        "incidence": 5.95
       }
     },
     "2021-37": {
@@ -6831,6 +7301,11 @@
         "cases": 61474,
         "deaths": 384,
         "incidence": 10.56
+      },
+      "GR": {
+        "cases": 15627,
+        "deaths": 297,
+        "incidence": 20.83
       },
       "HU": {
         "cases": 2427,
@@ -6916,6 +7391,11 @@
         "cases": 16900,
         "deaths": 356,
         "incidence": 5.1
+      },
+      "SE": {
+        "cases": 6259,
+        "deaths": 51,
+        "incidence": 8.66
       }
     },
     "2021-36": {
@@ -6973,6 +7453,11 @@
         "cases": 71664,
         "deaths": 447,
         "incidence": 12.31
+      },
+      "GR": {
+        "cases": 15206,
+        "deaths": 283,
+        "incidence": 20.27
       },
       "HU": {
         "cases": 1692,
@@ -7058,6 +7543,11 @@
         "cases": 20919,
         "deaths": 417,
         "incidence": 6.31
+      },
+      "SE": {
+        "cases": 7968,
+        "deaths": 49,
+        "incidence": 11.02
       }
     },
     "2021-35": {
@@ -7115,6 +7605,11 @@
         "cases": 74743,
         "deaths": 429,
         "incidence": 12.84
+      },
+      "GR": {
+        "cases": 18636,
+        "deaths": 13886,
+        "incidence": 24.84
       },
       "HU": {
         "cases": 1334,
@@ -7200,6 +7695,11 @@
         "cases": 29916,
         "deaths": 546,
         "incidence": 9.03
+      },
+      "SE": {
+        "cases": 7237,
+        "deaths": 25,
+        "incidence": 10.01
       }
     },
     "2021-34": {
@@ -7257,6 +7757,11 @@
         "cases": 66389,
         "deaths": 351,
         "incidence": 11.4
+      },
+      "GR": {
+        "cases": 22129,
+        "deaths": 0,
+        "incidence": 29.49
       },
       "HU": {
         "cases": 925,
@@ -7342,6 +7847,11 @@
         "cases": 45505,
         "deaths": 630,
         "incidence": 13.73
+      },
+      "SE": {
+        "cases": 6685,
+        "deaths": 20,
+        "incidence": 9.25
       }
     },
     "2021-33": {
@@ -7399,6 +7909,11 @@
         "cases": 49651,
         "deaths": 224,
         "incidence": 8.53
+      },
+      "GR": {
+        "cases": 22061,
+        "deaths": 0,
+        "incidence": 29.4
       },
       "HU": {
         "cases": 465,
@@ -7484,6 +7999,11 @@
         "cases": 64576,
         "deaths": 713,
         "incidence": 19.49
+      },
+      "SE": {
+        "cases": 6463,
+        "deaths": 11,
+        "incidence": 8.94
       }
     },
     "2021-32": {
@@ -7541,6 +8061,11 @@
         "cases": 32071,
         "deaths": 144,
         "incidence": 5.51
+      },
+      "GR": {
+        "cases": 22933,
+        "deaths": 0,
+        "incidence": 30.57
       },
       "HU": {
         "cases": 461,
@@ -7626,6 +8151,11 @@
         "cases": 83111,
         "deaths": 803,
         "incidence": 25.08
+      },
+      "SE": {
+        "cases": 5817,
+        "deaths": 7,
+        "incidence": 8.05
       }
     },
     "2021-31": {
@@ -7683,6 +8213,11 @@
         "cases": 20425,
         "deaths": 89,
         "incidence": 3.51
+      },
+      "GR": {
+        "cases": 19285,
+        "deaths": 0,
+        "incidence": 25.7
       },
       "HU": {
         "cases": 364,
@@ -7768,6 +8303,11 @@
         "cases": 112038,
         "deaths": 694,
         "incidence": 33.81
+      },
+      "SE": {
+        "cases": 4609,
+        "deaths": 7,
+        "incidence": 6.38
       }
     },
     "2021-30": {
@@ -7825,6 +8365,11 @@
         "cases": 15520,
         "deaths": 71,
         "incidence": 2.67
+      },
+      "GR": {
+        "cases": 18988,
+        "deaths": 0,
+        "incidence": 25.31
       },
       "HU": {
         "cases": 390,
@@ -7910,6 +8455,11 @@
         "cases": 149659,
         "deaths": 559,
         "incidence": 45.17
+      },
+      "SE": {
+        "cases": 3460,
+        "deaths": 4,
+        "incidence": 4.79
       }
     },
     "2021-29": {
@@ -7967,6 +8517,11 @@
         "cases": 12645,
         "deaths": 40,
         "incidence": 2.17
+      },
+      "GR": {
+        "cases": 18607,
+        "deaths": 0,
+        "incidence": 24.8
       },
       "HU": {
         "cases": 376,
@@ -8052,6 +8607,11 @@
         "cases": 185306,
         "deaths": 386,
         "incidence": 55.93
+      },
+      "SE": {
+        "cases": 2661,
+        "deaths": 3,
+        "incidence": 3.68
       }
     },
     "2021-28": {
@@ -8109,6 +8669,11 @@
         "cases": 9115,
         "deaths": 29,
         "incidence": 1.57
+      },
+      "GR": {
+        "cases": 18503,
+        "deaths": 0,
+        "incidence": 24.66
       },
       "HU": {
         "cases": 288,
@@ -8194,6 +8759,11 @@
         "cases": 185787,
         "deaths": 167,
         "incidence": 56.07
+      },
+      "SE": {
+        "cases": 1883,
+        "deaths": 2,
+        "incidence": 2.6
       }
     },
     "2021-27": {
@@ -8251,6 +8821,11 @@
         "cases": 5591,
         "deaths": 25,
         "incidence": 0.96
+      },
+      "GR": {
+        "cases": 12845,
+        "deaths": 0,
+        "incidence": 17.12
       },
       "HU": {
         "cases": 240,
@@ -8336,6 +8911,11 @@
         "cases": 146293,
         "deaths": 89,
         "incidence": 44.15
+      },
+      "SE": {
+        "cases": 1514,
+        "deaths": 3,
+        "incidence": 2.09
       }
     },
     "2021-26": {
@@ -8393,6 +8973,11 @@
         "cases": 4386,
         "deaths": 25,
         "incidence": 0.75
+      },
+      "GR": {
+        "cases": 5059,
+        "deaths": 0,
+        "incidence": 6.74
       },
       "HU": {
         "cases": 287,
@@ -8478,6 +9063,11 @@
         "cases": 90545,
         "deaths": 89,
         "incidence": 27.33
+      },
+      "SE": {
+        "cases": 1870,
+        "deaths": 8,
+        "incidence": 2.59
       }
     },
     "2021-25": {
@@ -8535,6 +9125,11 @@
         "cases": 4859,
         "deaths": 30,
         "incidence": 0.83
+      },
+      "GR": {
+        "cases": 2563,
+        "deaths": 0,
+        "incidence": 3.42
       },
       "HU": {
         "cases": 482,
@@ -8620,6 +9215,11 @@
         "cases": 35924,
         "deaths": 114,
         "incidence": 10.84
+      },
+      "SE": {
+        "cases": 1983,
+        "deaths": 9,
+        "incidence": 2.74
       }
     },
     "2021-24": {
@@ -8677,6 +9277,11 @@
         "cases": 7287,
         "deaths": 46,
         "incidence": 1.25
+      },
+      "GR": {
+        "cases": 3409,
+        "deaths": 0,
+        "incidence": 4.54
       },
       "HU": {
         "cases": 638,
@@ -8762,6 +9367,11 @@
         "cases": 24490,
         "deaths": 126,
         "incidence": 7.39
+      },
+      "SE": {
+        "cases": 2848,
+        "deaths": 17,
+        "incidence": 3.94
       }
     },
     "2021-23": {
@@ -8819,6 +9429,11 @@
         "cases": 14071,
         "deaths": 66,
         "incidence": 2.42
+      },
+      "GR": {
+        "cases": 5565,
+        "deaths": 0,
+        "incidence": 7.42
       },
       "HU": {
         "cases": 782,
@@ -8904,6 +9519,11 @@
         "cases": 23377,
         "deaths": 144,
         "incidence": 7.06
+      },
+      "SE": {
+        "cases": 4394,
+        "deaths": 22,
+        "incidence": 6.08
       }
     },
     "2021-22": {
@@ -8961,6 +9581,11 @@
         "cases": 20693,
         "deaths": 141,
         "incidence": 3.55
+      },
+      "GR": {
+        "cases": 8067,
+        "deaths": 0,
+        "incidence": 10.75
       },
       "HU": {
         "cases": 1626,
@@ -9046,6 +9671,11 @@
         "cases": 27697,
         "deaths": 207,
         "incidence": 8.36
+      },
+      "SE": {
+        "cases": 9094,
+        "deaths": 39,
+        "incidence": 12.58
       }
     },
     "2021-21": {
@@ -9103,6 +9733,11 @@
         "cases": 29898,
         "deaths": 261,
         "incidence": 5.14
+      },
+      "GR": {
+        "cases": 11497,
+        "deaths": 0,
+        "incidence": 15.32
       },
       "HU": {
         "cases": 2294,
@@ -9183,6 +9818,11 @@
         "cases": 30174,
         "deaths": 185,
         "incidence": 9.11
+      },
+      "SE": {
+        "cases": 7974,
+        "deaths": 47,
+        "incidence": 11.03
       }
     },
     "2021-20": {
@@ -9240,6 +9880,11 @@
         "cases": 52727,
         "deaths": 446,
         "incidence": 9.06
+      },
+      "GR": {
+        "cases": 12714,
+        "deaths": 0,
+        "incidence": 16.95
       },
       "HU": {
         "cases": 3941,
@@ -9325,6 +9970,11 @@
         "cases": 31990,
         "deaths": 253,
         "incidence": 9.66
+      },
+      "SE": {
+        "cases": 18170,
+        "deaths": 70,
+        "incidence": 25.13
       }
     },
     "2021-19": {
@@ -9382,6 +10032,11 @@
         "cases": 70820,
         "deaths": 667,
         "incidence": 12.16
+      },
+      "GR": {
+        "cases": 15086,
+        "deaths": 0,
+        "incidence": 20.11
       },
       "HU": {
         "cases": 6438,
@@ -9467,6 +10122,11 @@
         "cases": 33663,
         "deaths": 360,
         "incidence": 10.16
+      },
+      "SE": {
+        "cases": 25914,
+        "deaths": 111,
+        "incidence": 35.85
       }
     },
     "2021-18": {
@@ -9524,6 +10184,11 @@
         "cases": 100964,
         "deaths": 1009,
         "incidence": 17.34
+      },
+      "GR": {
+        "cases": 15582,
+        "deaths": 0,
+        "incidence": 20.77
       },
       "HU": {
         "cases": 8817,
@@ -9609,6 +10274,11 @@
         "cases": 39980,
         "deaths": 452,
         "incidence": 12.07
+      },
+      "SE": {
+        "cases": 33678,
+        "deaths": 107,
+        "incidence": 46.59
       }
     },
     "2021-17": {
@@ -9666,6 +10336,11 @@
         "cases": 124821,
         "deaths": 1299,
         "incidence": 21.44
+      },
+      "GR": {
+        "cases": 13293,
+        "deaths": 0,
+        "incidence": 17.72
       },
       "HU": {
         "cases": 13374,
@@ -9751,6 +10426,11 @@
         "cases": 49343,
         "deaths": 454,
         "incidence": 14.89
+      },
+      "SE": {
+        "cases": 35306,
+        "deaths": 115,
+        "incidence": 48.84
       }
     },
     "2021-16": {
@@ -9808,6 +10488,11 @@
         "cases": 144794,
         "deaths": 1614,
         "incidence": 24.87
+      },
+      "GR": {
+        "cases": 17856,
+        "deaths": 0,
+        "incidence": 23.8
       },
       "HU": {
         "cases": 19010,
@@ -9893,6 +10578,11 @@
         "cases": 56546,
         "deaths": 520,
         "incidence": 17.07
+      },
+      "SE": {
+        "cases": 36030,
+        "deaths": 131,
+        "incidence": 49.84
       }
     },
     "2021-15": {
@@ -9950,6 +10640,11 @@
         "cases": 142092,
         "deaths": 1619,
         "incidence": 24.41
+      },
+      "GR": {
+        "cases": 19793,
+        "deaths": 0,
+        "incidence": 26.38
       },
       "HU": {
         "cases": 30344,
@@ -10035,6 +10730,11 @@
         "cases": 58710,
         "deaths": 565,
         "incidence": 17.72
+      },
+      "SE": {
+        "cases": 41036,
+        "deaths": 141,
+        "incidence": 56.76
       }
     },
     "2021-14": {
@@ -10092,6 +10792,11 @@
         "cases": 118259,
         "deaths": 1577,
         "incidence": 20.31
+      },
+      "GR": {
+        "cases": 20066,
+        "deaths": 0,
+        "incidence": 26.74
       },
       "HU": {
         "cases": 34185,
@@ -10177,6 +10882,11 @@
         "cases": 59181,
         "deaths": 556,
         "incidence": 17.86
+      },
+      "SE": {
+        "cases": 41142,
+        "deaths": 133,
+        "incidence": 56.91
       }
     },
     "2021-13": {
@@ -10234,6 +10944,11 @@
         "cases": 110114,
         "deaths": 1582,
         "incidence": 18.91
+      },
+      "GR": {
+        "cases": 21383,
+        "deaths": 0,
+        "incidence": 28.5
       },
       "HU": {
         "cases": 52118,
@@ -10319,6 +11034,11 @@
         "cases": 48814,
         "deaths": 531,
         "incidence": 14.73
+      },
+      "SE": {
+        "cases": 38384,
+        "deaths": 142,
+        "incidence": 53.09
       }
     },
     "2021-12": {
@@ -10376,6 +11096,11 @@
         "cases": 116353,
         "deaths": 1523,
         "incidence": 19.99
+      },
+      "GR": {
+        "cases": 16906,
+        "deaths": 0,
+        "incidence": 22.53
       },
       "HU": {
         "cases": 62265,
@@ -10461,6 +11186,11 @@
         "cases": 44263,
         "deaths": 523,
         "incidence": 13.36
+      },
+      "SE": {
+        "cases": 37880,
+        "deaths": 126,
+        "incidence": 52.4
       }
     },
     "2021-11": {
@@ -10518,6 +11248,11 @@
         "cases": 92634,
         "deaths": 1276,
         "incidence": 15.91
+      },
+      "GR": {
+        "cases": 15978,
+        "deaths": 0,
+        "incidence": 21.3
       },
       "HU": {
         "cases": 55106,
@@ -10603,6 +11338,11 @@
         "cases": 36102,
         "deaths": 586,
         "incidence": 10.9
+      },
+      "SE": {
+        "cases": 33032,
+        "deaths": 127,
+        "incidence": 45.69
       }
     },
     "2021-10": {
@@ -10660,6 +11400,11 @@
         "cases": 71385,
         "deaths": 1096,
         "incidence": 12.26
+      },
+      "GR": {
+        "cases": 16027,
+        "deaths": 0,
+        "incidence": 21.36
       },
       "HU": {
         "cases": 50473,
@@ -10745,6 +11490,11 @@
         "cases": 32981,
         "deaths": 713,
         "incidence": 9.95
+      },
+      "SE": {
+        "cases": 28555,
+        "deaths": 141,
+        "incidence": 39.5
       }
     },
     "2021-09": {
@@ -10802,6 +11552,11 @@
         "cases": 58429,
         "deaths": 1047,
         "incidence": 10.04
+      },
+      "GR": {
+        "cases": 14020,
+        "deaths": 0,
+        "incidence": 18.69
       },
       "HU": {
         "cases": 37418,
@@ -10887,6 +11642,11 @@
         "cases": 33552,
         "deaths": 921,
         "incidence": 10.13
+      },
+      "SE": {
+        "cases": 27739,
+        "deaths": 129,
+        "incidence": 38.37
       }
     },
     "2021-08": {
@@ -10944,6 +11704,11 @@
         "cases": 56375,
         "deaths": 1219,
         "incidence": 9.68
+      },
+      "GR": {
+        "cases": 15041,
+        "deaths": 0,
+        "incidence": 20.05
       },
       "HU": {
         "cases": 25576,
@@ -11024,6 +11789,11 @@
         "cases": 36950,
         "deaths": 1302,
         "incidence": 11.15
+      },
+      "SE": {
+        "cases": 26681,
+        "deaths": 146,
+        "incidence": 36.91
       }
     },
     "2021-07": {
@@ -11081,6 +11851,11 @@
         "cases": 52431,
         "deaths": 1472,
         "incidence": 9.01
+      },
+      "GR": {
+        "cases": 3931,
+        "deaths": 0,
+        "incidence": 5.24
       },
       "HU": {
         "cases": 15561,
@@ -11166,6 +11941,11 @@
         "cases": 46523,
         "deaths": 1677,
         "incidence": 14.04
+      },
+      "SE": {
+        "cases": 23613,
+        "deaths": 172,
+        "incidence": 32.66
       }
     },
     "2021-06": {
@@ -11223,6 +12003,11 @@
         "cases": 50815,
         "deaths": 1673,
         "incidence": 8.73
+      },
+      "GR": {
+        "cases": 8182,
+        "deaths": 0,
+        "incidence": 10.9
       },
       "HU": {
         "cases": 10967,
@@ -11308,6 +12093,11 @@
         "cases": 66649,
         "deaths": 2449,
         "incidence": 20.12
+      },
+      "SE": {
+        "cases": 21282,
+        "deaths": 205,
+        "incidence": 29.44
       }
     },
     "2021-05": {
@@ -11365,6 +12155,11 @@
         "cases": 64563,
         "deaths": 2251,
         "incidence": 11.09
+      },
+      "GR": {
+        "cases": 6989,
+        "deaths": 0,
+        "incidence": 9.31
       },
       "HU": {
         "cases": 8909,
@@ -11450,6 +12245,11 @@
         "cases": 112088,
         "deaths": 3300,
         "incidence": 33.83
+      },
+      "SE": {
+        "cases": 19604,
+        "deaths": 269,
+        "incidence": 27.12
       }
     },
     "2021-04": {
@@ -11507,6 +12307,11 @@
         "cases": 78151,
         "deaths": 3082,
         "incidence": 13.42
+      },
+      "GR": {
+        "cases": 4977,
+        "deaths": 0,
+        "incidence": 6.63
       },
       "HU": {
         "cases": 8012,
@@ -11592,6 +12397,11 @@
         "cases": 180109,
         "deaths": 3801,
         "incidence": 54.36
+      },
+      "SE": {
+        "cases": 20654,
+        "deaths": 389,
+        "incidence": 28.57
       }
     },
     "2021-03": {
@@ -11649,6 +12459,11 @@
         "cases": 95530,
         "deaths": 4088,
         "incidence": 16.41
+      },
+      "GR": {
+        "cases": 3373,
+        "deaths": 0,
+        "incidence": 4.5
       },
       "HU": {
         "cases": 7746,
@@ -11734,6 +12549,11 @@
         "cases": 239003,
         "deaths": 3386,
         "incidence": 72.13
+      },
+      "SE": {
+        "cases": 23222,
+        "deaths": 513,
+        "incidence": 32.12
       }
     },
     "2021-02": {
@@ -11791,6 +12611,11 @@
         "cases": 118896,
         "deaths": 5085,
         "incidence": 20.42
+      },
+      "GR": {
+        "cases": 3869,
+        "deaths": 0,
+        "incidence": 5.16
       },
       "HU": {
         "cases": 9591,
@@ -11876,6 +12701,11 @@
         "cases": 240365,
         "deaths": 2308,
         "incidence": 72.55
+      },
+      "SE": {
+        "cases": 28935,
+        "deaths": 598,
+        "incidence": 40.02
       }
     },
     "2021-01": {
@@ -11933,6 +12763,11 @@
         "cases": 145477,
         "deaths": 5722,
         "incidence": 24.99
+      },
+      "GR": {
+        "cases": 4639,
+        "deaths": 0,
+        "incidence": 6.18
       },
       "HU": {
         "cases": 14242,
@@ -12018,6 +12853,11 @@
         "cases": 188608,
         "deaths": 1560,
         "incidence": 56.92
+      },
+      "SE": {
+        "cases": 39446,
+        "deaths": 644,
+        "incidence": 54.56
       }
     },
     "2020-53": {
@@ -12075,6 +12915,11 @@
         "cases": 123068,
         "deaths": 5725,
         "incidence": 21.14
+      },
+      "GR": {
+        "cases": 4643,
+        "deaths": 0,
+        "incidence": 6.19
       },
       "HU": {
         "cases": 11935,
@@ -12160,6 +13005,11 @@
         "cases": 110995,
         "deaths": 1286,
         "incidence": 33.5
+      },
+      "SE": {
+        "cases": 41323,
+        "deaths": 663,
+        "incidence": 57.16
       }
     },
     "2020-52": {
@@ -12217,6 +13067,11 @@
         "cases": 138892,
         "deaths": 5701,
         "incidence": 23.86
+      },
+      "GR": {
+        "cases": 4384,
+        "deaths": 0,
+        "incidence": 5.84
       },
       "HU": {
         "cases": 13071,
@@ -12302,6 +13157,11 @@
         "cases": 74537,
         "deaths": 1161,
         "incidence": 22.5
+      },
+      "SE": {
+        "cases": 37134,
+        "deaths": 643,
+        "incidence": 51.37
       }
     },
     "2020-51": {
@@ -12359,6 +13219,11 @@
         "cases": 174670,
         "deaths": 6447,
         "incidence": 30
+      },
+      "GR": {
+        "cases": 6538,
+        "deaths": 0,
+        "incidence": 8.71
       },
       "HU": {
         "cases": 22589,
@@ -12444,6 +13309,11 @@
         "cases": 68985,
         "deaths": 1149,
         "incidence": 20.82
+      },
+      "SE": {
+        "cases": 46177,
+        "deaths": 645,
+        "incidence": 63.87
       }
     },
     "2020-50": {
@@ -12501,6 +13371,11 @@
         "cases": 156294,
         "deaths": 5747,
         "incidence": 26.85
+      },
+      "GR": {
+        "cases": 9063,
+        "deaths": 0,
+        "incidence": 12.08
       },
       "HU": {
         "cases": 30122,
@@ -12586,6 +13461,11 @@
         "cases": 57038,
         "deaths": 1352,
         "incidence": 17.21
+      },
+      "SE": {
+        "cases": 43631,
+        "deaths": 500,
+        "incidence": 60.35
       }
     },
     "2020-49": {
@@ -12643,6 +13523,11 @@
         "cases": 128347,
         "deaths": 4464,
         "incidence": 22.05
+      },
+      "GR": {
+        "cases": 11244,
+        "deaths": 0,
+        "incidence": 14.99
       },
       "HU": {
         "cases": 38751,
@@ -12728,6 +13613,11 @@
         "cases": 49219,
         "deaths": 1519,
         "incidence": 14.86
+      },
+      "SE": {
+        "cases": 36837,
+        "deaths": 476,
+        "incidence": 50.96
       }
     },
     "2020-48": {
@@ -12785,6 +13675,11 @@
         "cases": 123161,
         "deaths": 3586,
         "incidence": 21.16
+      },
+      "GR": {
+        "cases": 12608,
+        "deaths": 0,
+        "incidence": 16.8
       },
       "HU": {
         "cases": 36909,
@@ -12870,6 +13765,11 @@
         "cases": 54303,
         "deaths": 1864,
         "incidence": 16.39
+      },
+      "SE": {
+        "cases": 35560,
+        "deaths": 417,
+        "incidence": 49.19
       }
     },
     "2020-47": {
@@ -12927,6 +13827,11 @@
         "cases": 128394,
         "deaths": 3218,
         "incidence": 22.05
+      },
+      "GR": {
+        "cases": 17414,
+        "deaths": 0,
+        "incidence": 23.21
       },
       "HU": {
         "cases": 33657,
@@ -13012,6 +13917,11 @@
         "cases": 73471,
         "deaths": 2175,
         "incidence": 22.17
+      },
+      "SE": {
+        "cases": 31944,
+        "deaths": 332,
+        "incidence": 44.19
       }
     },
     "2020-46": {
@@ -13069,6 +13979,11 @@
         "cases": 127858,
         "deaths": 2529,
         "incidence": 21.96
+      },
+      "GR": {
+        "cases": 17507,
+        "deaths": 0,
+        "incidence": 23.33
       },
       "HU": {
         "cases": 31345,
@@ -13154,6 +14069,11 @@
         "cases": 102503,
         "deaths": 2339,
         "incidence": 30.94
+      },
+      "SE": {
+        "cases": 31319,
+        "deaths": 235,
+        "incidence": 43.32
       }
     },
     "2020-45": {
@@ -13211,6 +14131,11 @@
         "cases": 125746,
         "deaths": 1900,
         "incidence": 21.6
+      },
+      "GR": {
+        "cases": 15769,
+        "deaths": 0,
+        "incidence": 21.02
       },
       "HU": {
         "cases": 30417,
@@ -13296,6 +14221,11 @@
         "cases": 129059,
         "deaths": 2292,
         "incidence": 38.95
+      },
+      "SE": {
+        "cases": 25405,
+        "deaths": 157,
+        "incidence": 35.14
       }
     },
     "2020-44": {
@@ -13353,6 +14283,11 @@
         "cases": 110991,
         "deaths": 1614,
         "incidence": 19.07
+      },
+      "GR": {
+        "cases": 10147,
+        "deaths": 0,
+        "incidence": 13.52
       },
       "HU": {
         "cases": 19952,
@@ -13438,6 +14373,11 @@
         "cases": 143163,
         "deaths": 1791,
         "incidence": 43.21
+      },
+      "SE": {
+        "cases": 18474,
+        "deaths": 82,
+        "incidence": 25.55
       }
     },
     "2020-43": {
@@ -13495,6 +14435,11 @@
         "cases": 74872,
         "deaths": 1011,
         "incidence": 12.86
+      },
+      "GR": {
+        "cases": 5412,
+        "deaths": 0,
+        "incidence": 7.21
       },
       "HU": {
         "cases": 12957,
@@ -13580,6 +14525,11 @@
         "cases": 141523,
         "deaths": 1381,
         "incidence": 42.71
+      },
+      "SE": {
+        "cases": 9155,
+        "deaths": 43,
+        "incidence": 12.66
       }
     },
     "2020-42": {
@@ -13637,6 +14587,11 @@
         "cases": 42055,
         "deaths": 465,
         "incidence": 7.22
+      },
+      "GR": {
+        "cases": 3012,
+        "deaths": 0,
+        "incidence": 4.01
       },
       "HU": {
         "cases": 8626,
@@ -13722,6 +14677,11 @@
         "cases": 102727,
         "deaths": 1048,
         "incidence": 31
+      },
+      "SE": {
+        "cases": 5620,
+        "deaths": 16,
+        "incidence": 7.77
       }
     },
     "2020-41": {
@@ -13779,6 +14739,11 @@
         "cases": 26128,
         "deaths": 245,
         "incidence": 4.49
+      },
+      "GR": {
+        "cases": 2516,
+        "deaths": 0,
+        "incidence": 3.35
       },
       "HU": {
         "cases": 7089,
@@ -13864,6 +14829,11 @@
         "cases": 82275,
         "deaths": 948,
         "incidence": 24.83
+      },
+      "SE": {
+        "cases": 4278,
+        "deaths": 22,
+        "incidence": 5.92
       }
     },
     "2020-40": {
@@ -13921,6 +14891,11 @@
         "cases": 15938,
         "deaths": 120,
         "incidence": 2.74
+      },
+      "GR": {
+        "cases": 2398,
+        "deaths": 0,
+        "incidence": 3.2
       },
       "HU": {
         "cases": 6561,
@@ -14006,6 +14981,11 @@
         "cases": 67226,
         "deaths": 943,
         "incidence": 20.29
+      },
+      "SE": {
+        "cases": 3642,
+        "deaths": 17,
+        "incidence": 5.04
       }
     },
     "2020-39": {
@@ -14063,6 +15043,11 @@
         "cases": 13073,
         "deaths": 110,
         "incidence": 2.25
+      },
+      "GR": {
+        "cases": 2302,
+        "deaths": 0,
+        "incidence": 3.07
       },
       "HU": {
         "cases": 6024,
@@ -14148,6 +15133,11 @@
         "cases": 71473,
         "deaths": 885,
         "incidence": 21.57
+      },
+      "SE": {
+        "cases": 2919,
+        "deaths": 11,
+        "incidence": 4.04
       }
     },
     "2020-38": {
@@ -14205,6 +15195,11 @@
         "cases": 12293,
         "deaths": 82,
         "incidence": 2.11
+      },
+      "GR": {
+        "cases": 1902,
+        "deaths": 0,
+        "incidence": 2.53
       },
       "HU": {
         "cases": 5681,
@@ -14290,6 +15285,11 @@
         "cases": 77546,
         "deaths": 835,
         "incidence": 23.4
+      },
+      "SE": {
+        "cases": 2080,
+        "deaths": 12,
+        "incidence": 2.88
       }
     },
     "2020-37": {
@@ -14347,6 +15347,11 @@
         "cases": 9766,
         "deaths": 68,
         "incidence": 1.68
+      },
+      "GR": {
+        "cases": 1716,
+        "deaths": 0,
+        "incidence": 2.29
       },
       "HU": {
         "cases": 3922,
@@ -14432,6 +15437,11 @@
         "cases": 74667,
         "deaths": 679,
         "incidence": 22.54
+      },
+      "SE": {
+        "cases": 1592,
+        "deaths": 13,
+        "incidence": 2.2
       }
     },
     "2020-36": {
@@ -14489,6 +15499,11 @@
         "cases": 8619,
         "deaths": 35,
         "incidence": 1.48
+      },
+      "GR": {
+        "cases": 1390,
+        "deaths": 0,
+        "incidence": 1.85
       },
       "HU": {
         "cases": 2426,
@@ -14574,6 +15589,11 @@
         "cases": 68692,
         "deaths": 513,
         "incidence": 20.73
+      },
+      "SE": {
+        "cases": 1332,
+        "deaths": 12,
+        "incidence": 1.84
       }
     },
     "2020-35": {
@@ -14631,6 +15651,11 @@
         "cases": 8832,
         "deaths": 18,
         "incidence": 1.52
+      },
+      "GR": {
+        "cases": 1470,
+        "deaths": 0,
+        "incidence": 1.96
       },
       "HU": {
         "cases": 806,
@@ -14716,6 +15741,11 @@
         "cases": 62778,
         "deaths": 394,
         "incidence": 18.95
+      },
+      "SE": {
+        "cases": 1200,
+        "deaths": 10,
+        "incidence": 1.66
       }
     },
     "2020-34": {
@@ -14773,6 +15803,11 @@
         "cases": 9596,
         "deaths": 31,
         "incidence": 1.65
+      },
+      "GR": {
+        "cases": 1589,
+        "deaths": 0,
+        "incidence": 2.12
       },
       "HU": {
         "cases": 239,
@@ -14858,6 +15893,11 @@
         "cases": 55041,
         "deaths": 310,
         "incidence": 16.61
+      },
+      "SE": {
+        "cases": 1687,
+        "deaths": 19,
+        "incidence": 2.33
       }
     },
     "2020-33": {
@@ -14915,6 +15955,11 @@
         "cases": 7955,
         "deaths": 31,
         "incidence": 1.37
+      },
+      "GR": {
+        "cases": 1452,
+        "deaths": 0,
+        "incidence": 1.94
       },
       "HU": {
         "cases": 220,
@@ -15000,6 +16045,11 @@
         "cases": 43657,
         "deaths": 207,
         "incidence": 13.18
+      },
+      "SE": {
+        "cases": 2052,
+        "deaths": 16,
+        "incidence": 2.84
       }
     },
     "2020-32": {
@@ -15057,6 +16107,11 @@
         "cases": 6067,
         "deaths": 34,
         "incidence": 1.04
+      },
+      "GR": {
+        "cases": 961,
+        "deaths": 0,
+        "incidence": 1.28
       },
       "HU": {
         "cases": 161,
@@ -15142,6 +16197,11 @@
         "cases": 31858,
         "deaths": 150,
         "incidence": 9.62
+      },
+      "SE": {
+        "cases": 2014,
+        "deaths": 18,
+        "incidence": 2.79
       }
     },
     "2020-31": {
@@ -15199,6 +16259,11 @@
         "cases": 4843,
         "deaths": 36,
         "incidence": 0.83
+      },
+      "GR": {
+        "cases": 469,
+        "deaths": 0,
+        "incidence": 0.63
       },
       "HU": {
         "cases": 100,
@@ -15284,6 +16349,11 @@
         "cases": 22885,
         "deaths": 89,
         "incidence": 6.91
+      },
+      "SE": {
+        "cases": 1556,
+        "deaths": 18,
+        "incidence": 2.15
       }
     },
     "2020-30": {
@@ -15341,6 +16411,11 @@
         "cases": 3936,
         "deaths": 33,
         "incidence": 0.68
+      },
+      "GR": {
+        "cases": 186,
+        "deaths": 0,
+        "incidence": 0.25
       },
       "HU": {
         "cases": 102,
@@ -15426,6 +16501,11 @@
         "cases": 16024,
         "deaths": 50,
         "incidence": 4.84
+      },
+      "SE": {
+        "cases": 1316,
+        "deaths": 30,
+        "incidence": 1.82
       }
     },
     "2020-29": {
@@ -15483,6 +16563,11 @@
         "cases": 3040,
         "deaths": 30,
         "incidence": 0.52
+      },
+      "GR": {
+        "cases": 204,
+        "deaths": 0,
+        "incidence": 0.27
       },
       "HU": {
         "cases": 99,
@@ -15568,6 +16653,11 @@
         "cases": 12156,
         "deaths": 24,
         "incidence": 3.67
+      },
+      "SE": {
+        "cases": 1622,
+        "deaths": 57,
+        "incidence": 2.24
       }
     },
     "2020-28": {
@@ -15625,6 +16715,11 @@
         "cases": 2426,
         "deaths": 25,
         "incidence": 0.42
+      },
+      "GR": {
+        "cases": 284,
+        "deaths": 0,
+        "incidence": 0.38
       },
       "HU": {
         "cases": 51,
@@ -15710,6 +16805,11 @@
         "cases": 6331,
         "deaths": 29,
         "incidence": 1.91
+      },
+      "SE": {
+        "cases": 2179,
+        "deaths": 84,
+        "incidence": 3.01
       }
     },
     "2020-27": {
@@ -15767,6 +16867,11 @@
         "cases": 2693,
         "deaths": 26,
         "incidence": 0.46
+      },
+      "GR": {
+        "cases": 143,
+        "deaths": 0,
+        "incidence": 0.19
       },
       "HU": {
         "cases": 41,
@@ -15852,6 +16957,11 @@
         "cases": 3394,
         "deaths": 47,
         "incidence": 1.02
+      },
+      "SE": {
+        "cases": 4279,
+        "deaths": 98,
+        "incidence": 5.92
       }
     },
     "2020-26": {
@@ -15909,6 +17019,11 @@
         "cases": 3164,
         "deaths": 21,
         "incidence": 0.54
+      },
+      "GR": {
+        "cases": 110,
+        "deaths": 0,
+        "incidence": 0.15
       },
       "HU": {
         "cases": 48,
@@ -15994,6 +17109,11 @@
         "cases": 2586,
         "deaths": 59,
         "incidence": 0.78
+      },
+      "SE": {
+        "cases": 7455,
+        "deaths": 138,
+        "incidence": 10.31
       }
     },
     "2020-25": {
@@ -16051,6 +17171,11 @@
         "cases": 4191,
         "deaths": 41,
         "incidence": 0.72
+      },
+      "GR": {
+        "cases": 145,
+        "deaths": 0,
+        "incidence": 0.19
       },
       "HU": {
         "cases": 25,
@@ -16136,6 +17261,11 @@
         "cases": 2221,
         "deaths": 114,
         "incidence": 0.67
+      },
+      "SE": {
+        "cases": 7073,
+        "deaths": 200,
+        "incidence": 9.78
       }
     },
     "2020-24": {
@@ -16193,6 +17323,11 @@
         "cases": 2345,
         "deaths": 34,
         "incidence": 0.4
+      },
+      "GR": {
+        "cases": 169,
+        "deaths": 0,
+        "incidence": 0.23
       },
       "HU": {
         "cases": 61,
@@ -16278,6 +17413,11 @@
         "cases": 2197,
         "deaths": 163,
         "incidence": 0.66
+      },
+      "SE": {
+        "cases": 7123,
+        "deaths": 234,
+        "incidence": 9.85
       }
     },
     "2020-23": {
@@ -16335,6 +17475,11 @@
         "cases": 2354,
         "deaths": 44,
         "incidence": 0.4
+      },
+      "GR": {
+        "cases": 35,
+        "deaths": 0,
+        "incidence": 0.05
       },
       "HU": {
         "cases": 132,
@@ -16420,6 +17565,11 @@
         "cases": 2690,
         "deaths": 241,
         "incidence": 0.81
+      },
+      "SE": {
+        "cases": 6021,
+        "deaths": 246,
+        "incidence": 8.33
       }
     },
     "2020-22": {
@@ -16477,6 +17627,11 @@
         "cases": 3207,
         "deaths": 65,
         "incidence": 0.55
+      },
+      "GR": {
+        "cases": 39,
+        "deaths": 0,
+        "incidence": 0.05
       },
       "HU": {
         "cases": 135,
@@ -16562,6 +17717,11 @@
         "cases": 3269,
         "deaths": 340,
         "incidence": 0.99
+      },
+      "SE": {
+        "cases": 4280,
+        "deaths": 272,
+        "incidence": 5.92
       }
     },
     "2020-21": {
@@ -16619,6 +17779,11 @@
         "cases": 3606,
         "deaths": 111,
         "incidence": 0.62
+      },
+      "GR": {
+        "cases": 44,
+        "deaths": 0,
+        "incidence": 0.06
       },
       "HU": {
         "cases": 232,
@@ -16704,6 +17869,11 @@
         "cases": 3552,
         "deaths": 454,
         "incidence": 1.07
+      },
+      "SE": {
+        "cases": 3659,
+        "deaths": 360,
+        "incidence": 5.06
       }
     },
     "2020-20": {
@@ -16761,6 +17931,11 @@
         "cases": 4769,
         "deaths": 166,
         "incidence": 0.82
+      },
+      "GR": {
+        "cases": 118,
+        "deaths": 0,
+        "incidence": 0.16
       },
       "HU": {
         "cases": 246,
@@ -16846,6 +18021,11 @@
         "cases": 4008,
         "deaths": 611,
         "incidence": 1.21
+      },
+      "SE": {
+        "cases": 3869,
+        "deaths": 380,
+        "incidence": 5.35
       }
     },
     "2020-19": {
@@ -16903,6 +18083,11 @@
         "cases": 6241,
         "deaths": 257,
         "incidence": 1.07
+      },
+      "GR": {
+        "cases": 90,
+        "deaths": 0,
+        "incidence": 0.12
       },
       "HU": {
         "cases": 265,
@@ -16988,6 +18173,11 @@
         "cases": 2467,
         "deaths": 1069,
         "incidence": 0.74
+      },
+      "SE": {
+        "cases": 4153,
+        "deaths": 509,
+        "incidence": 5.74
       }
     },
     "2020-18": {
@@ -17045,6 +18235,11 @@
         "cases": 7439,
         "deaths": 387,
         "incidence": 1.28
+      },
+      "GR": {
+        "cases": 109,
+        "deaths": 0,
+        "incidence": 0.15
       },
       "HU": {
         "cases": 498,
@@ -17130,6 +18325,11 @@
         "cases": 4858,
         "deaths": 1551,
         "incidence": 1.47
+      },
+      "SE": {
+        "cases": 3832,
+        "deaths": 543,
+        "incidence": 5.3
       }
     },
     "2020-17": {
@@ -17187,6 +18387,11 @@
         "cases": 12355,
         "deaths": 727,
         "incidence": 2.12
+      },
+      "GR": {
+        "cases": 282,
+        "deaths": 0,
+        "incidence": 0.38
       },
       "HU": {
         "cases": 584,
@@ -17272,6 +18477,11 @@
         "cases": 7860,
         "deaths": 2386,
         "incidence": 2.37
+      },
+      "SE": {
+        "cases": 4203,
+        "deaths": 546,
+        "incidence": 5.81
       }
     },
     "2020-16": {
@@ -17329,6 +18539,11 @@
         "cases": 17339,
         "deaths": 1223,
         "incidence": 2.98
+      },
+      "GR": {
+        "cases": 121,
+        "deaths": 0,
+        "incidence": 0.16
       },
       "HU": {
         "cases": 506,
@@ -17414,6 +18629,11 @@
         "cases": 13781,
         "deaths": 3576,
         "incidence": 4.16
+      },
+      "SE": {
+        "cases": 3752,
+        "deaths": 657,
+        "incidence": 5.19
       }
     },
     "2020-15": {
@@ -17471,6 +18691,11 @@
         "cases": 27139,
         "deaths": 1879,
         "incidence": 4.66
+      },
+      "GR": {
+        "cases": 379,
+        "deaths": 0,
+        "incidence": 0.51
       },
       "HU": {
         "cases": 677,
@@ -17556,6 +18781,11 @@
         "cases": 21769,
         "deaths": 4766,
         "incidence": 6.57
+      },
+      "SE": {
+        "cases": 3740,
+        "deaths": 664,
+        "incidence": 5.17
       }
     },
     "2020-14": {
@@ -17613,6 +18843,11 @@
         "cases": 36055,
         "deaths": 2270,
         "incidence": 6.19
+      },
+      "GR": {
+        "cases": 579,
+        "deaths": 0,
+        "incidence": 0.77
       },
       "HU": {
         "cases": 325,
@@ -17698,6 +18933,11 @@
         "cases": 30706,
         "deaths": 5841,
         "incidence": 9.27
+      },
+      "SE": {
+        "cases": 3229,
+        "deaths": 451,
+        "incidence": 4.47
       }
     },
     "2020-13": {
@@ -17755,6 +18995,11 @@
         "cases": 33971,
         "deaths": 1458,
         "incidence": 5.84
+      },
+      "GR": {
+        "cases": 532,
+        "deaths": 0,
+        "incidence": 0.71
       },
       "HU": {
         "cases": 277,
@@ -17840,6 +19085,11 @@
         "cases": 44140,
         "deaths": 5663,
         "incidence": 13.32
+      },
+      "SE": {
+        "cases": 1957,
+        "deaths": 190,
+        "incidence": 2.71
       }
     },
     "2020-12": {
@@ -17897,6 +19147,11 @@
         "cases": 22406,
         "deaths": 478,
         "incidence": 3.85
+      },
+      "GR": {
+        "cases": 293,
+        "deaths": 0,
+        "incidence": 0.39
       },
       "HU": {
         "cases": 99,
@@ -17982,6 +19237,11 @@
         "cases": 60461,
         "deaths": 2432,
         "incidence": 18.25
+      },
+      "SE": {
+        "cases": 924,
+        "deaths": 44,
+        "incidence": 1.28
       }
     },
     "2020-11": {
@@ -18039,6 +19299,11 @@
         "cases": 6437,
         "deaths": 84,
         "incidence": 1.11
+      },
+      "GR": {
+        "cases": 247,
+        "deaths": 0,
+        "incidence": 0.33
       },
       "HU": {
         "cases": 25,
@@ -18124,6 +19389,11 @@
         "cases": 41643,
         "deaths": 457,
         "incidence": 12.57
+      },
+      "SE": {
+        "cases": 838,
+        "deaths": 5,
+        "incidence": 1.16
       }
     },
     "2020-10": {
@@ -18176,6 +19446,11 @@
         "cases": 904,
         "deaths": 12,
         "incidence": 0.16
+      },
+      "GR": {
+        "cases": 77,
+        "deaths": 0,
+        "incidence": 0.1
       },
       "HU": {
         "cases": 7,
@@ -18256,6 +19531,11 @@
         "cases": 9483,
         "deaths": 24,
         "incidence": 2.86
+      },
+      "SE": {
+        "cases": 211,
+        "deaths": 0,
+        "incidence": 0.29
       }
     },
     "2020-09": {
@@ -18303,6 +19583,11 @@
         "cases": 140,
         "deaths": 0,
         "incidence": 0.02
+      },
+      "GR": {
+        "cases": 7,
+        "deaths": 0,
+        "incidence": 0.01
       },
       "IS": {
         "cases": 1,
@@ -18358,6 +19643,11 @@
         "cases": 1808,
         "deaths": 0,
         "incidence": 0.55
+      },
+      "SE": {
+        "cases": 13,
+        "deaths": 0,
+        "incidence": 0.02
       }
     },
     "2020-08": {
@@ -18395,6 +19685,11 @@
         "cases": 315,
         "deaths": 0,
         "incidence": 0.1
+      },
+      "SE": {
+        "cases": 0,
+        "deaths": 0,
+        "incidence": 0
       }
     },
     "2020-07": {
@@ -18427,6 +19722,11 @@
         "cases": 155,
         "deaths": 1,
         "incidence": 0.05
+      },
+      "SE": {
+        "cases": 0,
+        "deaths": 0,
+        "incidence": 0
       }
     },
     "2020-06": {
@@ -18459,6 +19759,11 @@
         "cases": 62,
         "deaths": 0,
         "incidence": 0.02
+      },
+      "SE": {
+        "cases": 1,
+        "deaths": 0,
+        "incidence": 0
       }
     },
     "2020-05": {
@@ -18569,6 +19874,7 @@
     "FI": "5525292",
     "FR": "67320216",
     "DE": "83166711",
+    "GR": "10718565",
     "HU": "9769526",
     "IS": "364134",
     "IE": "4964440",
@@ -18585,6 +19891,7 @@
     "RO": "19328838",
     "SK": "5457873",
     "SI": "2095861",
-    "ES": "47332614"
+    "ES": "47332614",
+    "SE": "10327589"
   }
 }

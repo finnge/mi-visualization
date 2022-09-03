@@ -30,9 +30,9 @@ const FILEPATH = {
 
   // Has been outside of EU+EWR+CH (both)
   const countriesToInclude = [
-    'BE', 'BG', 'DK', 'DE', 'EE', 'FI', 'FR', 'GR', 'IE', 'IT',
+    'BE', 'BG', 'DK', 'DE', 'EE', 'FI', 'FR', 'EL', 'IE', 'IT',
     'HR', 'LV', 'LT', 'LU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO',
-    'SA', 'SK', 'SI', 'ES', 'CZ', 'HU', 'CY', 'LI', 'IS', 'NO',
+    'SE', 'SK', 'SI', 'ES', 'CZ', 'HU', 'CY', 'LI', 'IS', 'NO',
     'CH',
   ];
 
@@ -80,25 +80,27 @@ const FILEPATH = {
     const date = new Date(`${el.year}-${el.month}-${el.day}`);
     const yearWeek = date.getYearWeekNumber();
 
-    if (popData2020[el.geoId] === undefined) {
-      popData2020[el.geoId] = el.popData2020;
+    // Die Bezeichnung EL (Griechenland) wird durch die IOS Abkürzung GR ersetzt
+
+    if (popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] === undefined) {
+      popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] = el.popData2020;
     }
 
     if (formattedData[yearWeek] === undefined) {
       formattedData[yearWeek] = {};
     }
 
-    if (formattedData[yearWeek][el.geoId] === undefined) {
-      formattedData[yearWeek][el.geoId] = {
+    if (formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId] === undefined) {
+      formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId] = {
         cases: 0,
         deaths: 0,
         incidence: [],
       };
     }
 
-    formattedData[yearWeek][el.geoId].cases += parseInt(el.cases, 10);
-    formattedData[yearWeek][el.geoId].deaths += parseInt(el.deaths, 10);
-    formattedData[yearWeek][el.geoId].incidence.push(el.incidence);
+    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].cases += parseInt(el.cases, 10);
+    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].deaths += parseInt(el.deaths, 10);
+    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].incidence.push(el.incidence);
   });
 
   // 7 day incidence average for week
