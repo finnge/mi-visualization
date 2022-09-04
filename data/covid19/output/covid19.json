@@ -123,7 +123,7 @@
       },
       "CH": {
         "cases": 16621,
-        "deaths": null,
+        "deaths": 12,
         "incidence": 27.44
       }
     },
@@ -280,7 +280,7 @@
       },
       "CH": {
         "cases": 18874,
-        "deaths": null,
+        "deaths": 16,
         "incidence": 31.15
       }
     },
@@ -437,7 +437,7 @@
       },
       "CH": {
         "cases": 19830,
-        "deaths": null,
+        "deaths": 19,
         "incidence": 32.73
       }
     },
@@ -594,7 +594,7 @@
       },
       "CH": {
         "cases": 26708,
-        "deaths": null,
+        "deaths": 38,
         "incidence": 44.09
       }
     },
@@ -751,7 +751,7 @@
       },
       "CH": {
         "cases": 39191,
-        "deaths": null,
+        "deaths": 34,
         "incidence": 64.69
       }
     },
@@ -908,7 +908,7 @@
       },
       "CH": {
         "cases": 50965,
-        "deaths": null,
+        "deaths": 30,
         "incidence": 84.13
       }
     },
@@ -1060,7 +1060,7 @@
       },
       "CH": {
         "cases": 55415,
-        "deaths": null,
+        "deaths": 37,
         "incidence": 91.47
       }
     },
@@ -1212,7 +1212,7 @@
       },
       "CH": {
         "cases": 44157,
-        "deaths": null,
+        "deaths": 16,
         "incidence": 72.89
       }
     },
@@ -1364,7 +1364,7 @@
       },
       "CH": {
         "cases": 31540,
-        "deaths": null,
+        "deaths": 12,
         "incidence": 52.06
       }
     },
@@ -1516,7 +1516,7 @@
       },
       "CH": {
         "cases": 23439,
-        "deaths": null,
+        "deaths": 10,
         "incidence": 38.69
       }
     },
@@ -1673,7 +1673,7 @@
       },
       "CH": {
         "cases": 14904,
-        "deaths": null,
+        "deaths": 6,
         "incidence": 24.6
       }
     },
@@ -1830,7 +1830,7 @@
       },
       "CH": {
         "cases": 10198,
-        "deaths": null,
+        "deaths": 7,
         "incidence": 16.83
       }
     },
@@ -1987,7 +1987,7 @@
       },
       "CH": {
         "cases": 6687,
-        "deaths": null,
+        "deaths": 4,
         "incidence": 11.04
       }
     },
@@ -2144,7 +2144,7 @@
       },
       "CH": {
         "cases": 8555,
-        "deaths": null,
+        "deaths": 14,
         "incidence": 14.12
       }
     },
@@ -2301,7 +2301,7 @@
       },
       "CH": {
         "cases": 11193,
-        "deaths": null,
+        "deaths": 11,
         "incidence": 18.48
       }
     },
@@ -2458,7 +2458,7 @@
       },
       "CH": {
         "cases": 13136,
-        "deaths": null,
+        "deaths": 15,
         "incidence": 21.68
       }
     },
@@ -2615,7 +2615,7 @@
       },
       "CH": {
         "cases": 16769,
-        "deaths": null,
+        "deaths": 16,
         "incidence": 27.68
       }
     },
@@ -2772,7 +2772,7 @@
       },
       "CH": {
         "cases": 22339,
-        "deaths": null,
+        "deaths": 29,
         "incidence": 36.87
       }
     },
@@ -2929,7 +2929,7 @@
       },
       "CH": {
         "cases": 31021,
-        "deaths": null,
+        "deaths": 40,
         "incidence": 51.2
       }
     },
@@ -3086,7 +3086,7 @@
       },
       "CH": {
         "cases": 40926,
-        "deaths": null,
+        "deaths": 48,
         "incidence": 67.55
       }
     },
@@ -3243,7 +3243,7 @@
       },
       "CH": {
         "cases": 66587,
-        "deaths": null,
+        "deaths": 55,
         "incidence": 109.91
       }
     },
@@ -3400,7 +3400,7 @@
       },
       "CH": {
         "cases": 121900,
-        "deaths": null,
+        "deaths": 89,
         "incidence": 201.21
       }
     },
@@ -3557,7 +3557,7 @@
       },
       "CH": {
         "cases": 182856,
-        "deaths": null,
+        "deaths": 97,
         "incidence": 301.83
       }
     },
@@ -3714,7 +3714,7 @@
       },
       "CH": {
         "cases": 190065,
-        "deaths": null,
+        "deaths": 66,
         "incidence": 313.73
       }
     },
@@ -3871,7 +3871,7 @@
       },
       "CH": {
         "cases": 151330,
-        "deaths": null,
+        "deaths": 51,
         "incidence": 249.79
       }
     },
@@ -4028,7 +4028,7 @@
       },
       "CH": {
         "cases": 105171,
-        "deaths": null,
+        "deaths": 85,
         "incidence": 173.6
       }
     },
@@ -4185,7 +4185,7 @@
       },
       "CH": {
         "cases": 109818,
-        "deaths": null,
+        "deaths": 73,
         "incidence": 181.27
       }
     },
@@ -4342,7 +4342,7 @@
       },
       "CH": {
         "cases": 151263,
-        "deaths": null,
+        "deaths": 101,
         "incidence": 249.68
       }
     },
@@ -4499,7 +4499,7 @@
       },
       "CH": {
         "cases": 201674,
-        "deaths": null,
+        "deaths": 97,
         "incidence": 332.89
       }
     },
@@ -4656,7 +4656,7 @@
       },
       "CH": {
         "cases": 248472,
-        "deaths": null,
+        "deaths": 104,
         "incidence": 410.14
       }
     },
@@ -4813,7 +4813,7 @@
       },
       "CH": {
         "cases": 237462,
-        "deaths": null,
+        "deaths": 113,
         "incidence": 391.97
       }
     },
@@ -4970,7 +4970,7 @@
       },
       "CH": {
         "cases": 185351,
-        "deaths": null,
+        "deaths": 99,
         "incidence": 305.95
       }
     },
@@ -5127,7 +5127,7 @@
       },
       "CH": {
         "cases": 180841,
-        "deaths": null,
+        "deaths": 102,
         "incidence": 298.5
       }
     },
@@ -5284,7 +5284,7 @@
       },
       "CH": {
         "cases": 112170,
-        "deaths": null,
+        "deaths": 132,
         "incidence": 185.15
       }
     },
@@ -5441,7 +5441,7 @@
       },
       "CH": {
         "cases": 67976,
-        "deaths": null,
+        "deaths": 146,
         "incidence": 112.2
       }
     },
@@ -5598,7 +5598,7 @@
       },
       "CH": {
         "cases": 60576,
-        "deaths": null,
+        "deaths": 185,
         "incidence": 99.99
       }
     },
@@ -5755,7 +5755,7 @@
       },
       "CH": {
         "cases": 64308,
-        "deaths": null,
+        "deaths": 190,
         "incidence": 106.15
       }
     },
@@ -5912,7 +5912,7 @@
       },
       "CH": {
         "cases": 63063,
-        "deaths": null,
+        "deaths": 174,
         "incidence": 104.09
       }
     },
@@ -6069,7 +6069,7 @@
       },
       "CH": {
         "cases": 51094,
-        "deaths": null,
+        "deaths": 114,
         "incidence": 84.34
       }
     },
@@ -6226,7 +6226,7 @@
       },
       "CH": {
         "cases": 37728,
-        "deaths": null,
+        "deaths": 80,
         "incidence": 62.28
       }
     },
@@ -6383,7 +6383,7 @@
       },
       "CH": {
         "cases": 24881,
-        "deaths": null,
+        "deaths": 61,
         "incidence": 41.07
       }
     },
@@ -6540,7 +6540,7 @@
       },
       "CH": {
         "cases": 17225,
-        "deaths": null,
+        "deaths": 34,
         "incidence": 28.43
       }
     },
@@ -6697,7 +6697,7 @@
       },
       "CH": {
         "cases": 11537,
-        "deaths": null,
+        "deaths": 45,
         "incidence": 19.04
       }
     },
@@ -6854,7 +6854,7 @@
       },
       "CH": {
         "cases": 8695,
-        "deaths": null,
+        "deaths": 33,
         "incidence": 14.35
       }
     },
@@ -7011,7 +7011,7 @@
       },
       "CH": {
         "cases": 6421,
-        "deaths": null,
+        "deaths": 32,
         "incidence": 10.6
       }
     },
@@ -7168,7 +7168,7 @@
       },
       "CH": {
         "cases": 6370,
-        "deaths": null,
+        "deaths": 31,
         "incidence": 10.51
       }
     },
@@ -7325,7 +7325,7 @@
       },
       "CH": {
         "cases": 7647,
-        "deaths": null,
+        "deaths": 35,
         "incidence": 12.62
       }
     },
@@ -7482,7 +7482,7 @@
       },
       "CH": {
         "cases": 9327,
-        "deaths": null,
+        "deaths": 42,
         "incidence": 15.4
       }
     },
@@ -7639,7 +7639,7 @@
       },
       "CH": {
         "cases": 12720,
-        "deaths": null,
+        "deaths": 42,
         "incidence": 21
       }
     },
@@ -7796,7 +7796,7 @@
       },
       "CH": {
         "cases": 18147,
-        "deaths": null,
+        "deaths": 55,
         "incidence": 29.95
       }
     },
@@ -7953,7 +7953,7 @@
       },
       "CH": {
         "cases": 18764,
-        "deaths": null,
+        "deaths": 53,
         "incidence": 30.97
       }
     },
@@ -8110,7 +8110,7 @@
       },
       "CH": {
         "cases": 17884,
-        "deaths": null,
+        "deaths": 42,
         "incidence": 29.52
       }
     },
@@ -8267,7 +8267,7 @@
       },
       "CH": {
         "cases": 17952,
-        "deaths": null,
+        "deaths": 25,
         "incidence": 29.63
       }
     },
@@ -8424,7 +8424,7 @@
       },
       "CH": {
         "cases": 14140,
-        "deaths": null,
+        "deaths": 15,
         "incidence": 23.34
       }
     },
@@ -8581,7 +8581,7 @@
       },
       "CH": {
         "cases": 7623,
-        "deaths": null,
+        "deaths": 3,
         "incidence": 12.58
       }
     },
@@ -8738,7 +8738,7 @@
       },
       "CH": {
         "cases": 5252,
-        "deaths": null,
+        "deaths": 11,
         "incidence": 8.67
       }
     },
@@ -8895,7 +8895,7 @@
       },
       "CH": {
         "cases": 4953,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 8.18
       }
     },
@@ -9052,7 +9052,7 @@
       },
       "CH": {
         "cases": 3798,
-        "deaths": null,
+        "deaths": 2,
         "incidence": 6.27
       }
     },
@@ -9209,7 +9209,7 @@
       },
       "CH": {
         "cases": 2047,
-        "deaths": null,
+        "deaths": 3,
         "incidence": 3.38
       }
     },
@@ -9366,7 +9366,7 @@
       },
       "CH": {
         "cases": 1026,
-        "deaths": null,
+        "deaths": 3,
         "incidence": 1.69
       }
     },
@@ -9523,7 +9523,7 @@
       },
       "CH": {
         "cases": 744,
-        "deaths": null,
+        "deaths": 7,
         "incidence": 1.23
       }
     },
@@ -9680,7 +9680,7 @@
       },
       "CH": {
         "cases": 1238,
-        "deaths": null,
+        "deaths": 12,
         "incidence": 2.04
       }
     },
@@ -9837,7 +9837,7 @@
       },
       "CH": {
         "cases": 2313,
-        "deaths": null,
+        "deaths": 16,
         "incidence": 3.82
       }
     },
@@ -9994,7 +9994,7 @@
       },
       "CH": {
         "cases": 3516,
-        "deaths": null,
+        "deaths": 24,
         "incidence": 5.8
       }
     },
@@ -10146,7 +10146,7 @@
       },
       "CH": {
         "cases": 5109,
-        "deaths": null,
+        "deaths": 19,
         "incidence": 8.43
       }
     },
@@ -10303,7 +10303,7 @@
       },
       "CH": {
         "cases": 7344,
-        "deaths": null,
+        "deaths": 33,
         "incidence": 12.12
       }
     },
@@ -10460,7 +10460,7 @@
       },
       "CH": {
         "cases": 7839,
-        "deaths": null,
+        "deaths": 30,
         "incidence": 12.94
       }
     },
@@ -10617,7 +10617,7 @@
       },
       "CH": {
         "cases": 10297,
-        "deaths": null,
+        "deaths": 41,
         "incidence": 17
       }
     },
@@ -10774,7 +10774,7 @@
       },
       "CH": {
         "cases": 11867,
-        "deaths": null,
+        "deaths": 68,
         "incidence": 19.59
       }
     },
@@ -10931,7 +10931,7 @@
       },
       "CH": {
         "cases": 14518,
-        "deaths": null,
+        "deaths": 54,
         "incidence": 23.96
       }
     },
@@ -11088,7 +11088,7 @@
       },
       "CH": {
         "cases": 14077,
-        "deaths": null,
+        "deaths": 46,
         "incidence": 23.24
       }
     },
@@ -11245,7 +11245,7 @@
       },
       "CH": {
         "cases": 14136,
-        "deaths": null,
+        "deaths": 63,
         "incidence": 23.33
       }
     },
@@ -11402,7 +11402,7 @@
       },
       "CH": {
         "cases": 12286,
-        "deaths": null,
+        "deaths": 71,
         "incidence": 20.28
       }
     },
@@ -11559,7 +11559,7 @@
       },
       "CH": {
         "cases": 12530,
-        "deaths": null,
+        "deaths": 60,
         "incidence": 20.68
       }
     },
@@ -11716,7 +11716,7 @@
       },
       "CH": {
         "cases": 10494,
-        "deaths": null,
+        "deaths": 62,
         "incidence": 17.32
       }
     },
@@ -11873,7 +11873,7 @@
       },
       "CH": {
         "cases": 8783,
-        "deaths": null,
+        "deaths": 75,
         "incidence": 14.5
       }
     },
@@ -12030,7 +12030,7 @@
       },
       "CH": {
         "cases": 7581,
-        "deaths": null,
+        "deaths": 64,
         "incidence": 12.51
       }
     },
@@ -12182,7 +12182,7 @@
       },
       "CH": {
         "cases": 7210,
-        "deaths": null,
+        "deaths": 63,
         "incidence": 11.9
       }
     },
@@ -12339,7 +12339,7 @@
       },
       "CH": {
         "cases": 6979,
-        "deaths": null,
+        "deaths": 86,
         "incidence": 11.52
       }
     },
@@ -12496,7 +12496,7 @@
       },
       "CH": {
         "cases": 7864,
-        "deaths": null,
+        "deaths": 129,
         "incidence": 12.98
       }
     },
@@ -12653,7 +12653,7 @@
       },
       "CH": {
         "cases": 10057,
-        "deaths": null,
+        "deaths": 165,
         "incidence": 16.6
       }
     },
@@ -12810,7 +12810,7 @@
       },
       "CH": {
         "cases": 11517,
-        "deaths": null,
+        "deaths": 242,
         "incidence": 19.01
       }
     },
@@ -12967,7 +12967,7 @@
       },
       "CH": {
         "cases": 13485,
-        "deaths": null,
+        "deaths": 332,
         "incidence": 22.26
       }
     },
@@ -13124,7 +13124,7 @@
       },
       "CH": {
         "cases": 15197,
-        "deaths": null,
+        "deaths": 376,
         "incidence": 25.08
       }
     },
@@ -13281,7 +13281,7 @@
       },
       "CH": {
         "cases": 22033,
-        "deaths": null,
+        "deaths": 419,
         "incidence": 36.37
       }
     },
@@ -13438,7 +13438,7 @@
       },
       "CH": {
         "cases": 23399,
-        "deaths": null,
+        "deaths": 549,
         "incidence": 38.62
       }
     },
@@ -13595,7 +13595,7 @@
       },
       "CH": {
         "cases": 23946,
-        "deaths": null,
+        "deaths": 593,
         "incidence": 39.53
       }
     },
@@ -13752,7 +13752,7 @@
       },
       "CH": {
         "cases": 29260,
-        "deaths": null,
+        "deaths": 644,
         "incidence": 48.3
       }
     },
@@ -13909,7 +13909,7 @@
       },
       "CH": {
         "cases": 30001,
-        "deaths": null,
+        "deaths": 607,
         "incidence": 49.52
       }
     },
@@ -14066,7 +14066,7 @@
       },
       "CH": {
         "cases": 27277,
-        "deaths": null,
+        "deaths": 605,
         "incidence": 45.02
       }
     },
@@ -14223,7 +14223,7 @@
       },
       "CH": {
         "cases": 26178,
-        "deaths": null,
+        "deaths": 623,
         "incidence": 43.21
       }
     },
@@ -14380,7 +14380,7 @@
       },
       "CH": {
         "cases": 30111,
-        "deaths": null,
+        "deaths": 632,
         "incidence": 49.7
       }
     },
@@ -14537,7 +14537,7 @@
       },
       "CH": {
         "cases": 39591,
-        "deaths": null,
+        "deaths": 631,
         "incidence": 65.35
       }
     },
@@ -14694,7 +14694,7 @@
       },
       "CH": {
         "cases": 51195,
-        "deaths": null,
+        "deaths": 559,
         "incidence": 84.5
       }
     },
@@ -14851,7 +14851,7 @@
       },
       "CH": {
         "cases": 55823,
-        "deaths": null,
+        "deaths": 327,
         "incidence": 92.14
       }
     },
@@ -15008,7 +15008,7 @@
       },
       "CH": {
         "cases": 39678,
-        "deaths": null,
+        "deaths": 146,
         "incidence": 65.49
       }
     },
@@ -15165,7 +15165,7 @@
       },
       "CH": {
         "cases": 19481,
-        "deaths": null,
+        "deaths": 49,
         "incidence": 32.16
       }
     },
@@ -15322,7 +15322,7 @@
       },
       "CH": {
         "cases": 8753,
-        "deaths": null,
+        "deaths": 19,
         "incidence": 14.45
       }
     },
@@ -15479,7 +15479,7 @@
       },
       "CH": {
         "cases": 3461,
-        "deaths": null,
+        "deaths": 11,
         "incidence": 5.71
       }
     },
@@ -15636,7 +15636,7 @@
       },
       "CH": {
         "cases": 2222,
-        "deaths": null,
+        "deaths": 13,
         "incidence": 3.67
       }
     },
@@ -15793,7 +15793,7 @@
       },
       "CH": {
         "cases": 2905,
-        "deaths": null,
+        "deaths": 15,
         "incidence": 4.8
       }
     },
@@ -15950,7 +15950,7 @@
       },
       "CH": {
         "cases": 2860,
-        "deaths": null,
+        "deaths": 18,
         "incidence": 4.72
       }
     },
@@ -16107,7 +16107,7 @@
       },
       "CH": {
         "cases": 2458,
-        "deaths": null,
+        "deaths": 13,
         "incidence": 4.06
       }
     },
@@ -16264,7 +16264,7 @@
       },
       "CH": {
         "cases": 2092,
-        "deaths": null,
+        "deaths": 4,
         "incidence": 3.45
       }
     },
@@ -16421,7 +16421,7 @@
       },
       "CH": {
         "cases": 1855,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 3.06
       }
     },
@@ -16578,7 +16578,7 @@
       },
       "CH": {
         "cases": 1574,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 2.6
       }
     },
@@ -16735,7 +16735,7 @@
       },
       "CH": {
         "cases": 1100,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 1.82
       }
     },
@@ -16892,7 +16892,7 @@
       },
       "CH": {
         "cases": 1155,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 1.91
       }
     },
@@ -17049,7 +17049,7 @@
       },
       "CH": {
         "cases": 824,
-        "deaths": null,
+        "deaths": 5,
         "incidence": 1.36
       }
     },
@@ -17206,7 +17206,7 @@
       },
       "CH": {
         "cases": 715,
-        "deaths": null,
+        "deaths": 4,
         "incidence": 1.18
       }
     },
@@ -17363,7 +17363,7 @@
       },
       "CH": {
         "cases": 636,
-        "deaths": null,
+        "deaths": 3,
         "incidence": 1.05
       }
     },
@@ -17520,7 +17520,7 @@
       },
       "CH": {
         "cases": 682,
-        "deaths": null,
+        "deaths": 2,
         "incidence": 1.13
       }
     },
@@ -17677,7 +17677,7 @@
       },
       "CH": {
         "cases": 359,
-        "deaths": null,
+        "deaths": 1,
         "incidence": 0.59
       }
     },
@@ -17834,7 +17834,7 @@
       },
       "CH": {
         "cases": 171,
-        "deaths": null,
+        "deaths": 2,
         "incidence": 0.28
       }
     },
@@ -17991,7 +17991,7 @@
       },
       "CH": {
         "cases": 140,
-        "deaths": null,
+        "deaths": 4,
         "incidence": 0.23
       }
     },
@@ -18148,7 +18148,7 @@
       },
       "CH": {
         "cases": 98,
-        "deaths": null,
+        "deaths": 1,
         "incidence": 0.16
       }
     },
@@ -18305,7 +18305,7 @@
       },
       "CH": {
         "cases": 126,
-        "deaths": null,
+        "deaths": 4,
         "incidence": 0.21
       }
     },
@@ -18462,7 +18462,7 @@
       },
       "CH": {
         "cases": 153,
-        "deaths": null,
+        "deaths": 14,
         "incidence": 0.25
       }
     },
@@ -18619,7 +18619,7 @@
       },
       "CH": {
         "cases": 231,
-        "deaths": null,
+        "deaths": 18,
         "incidence": 0.38
       }
     },
@@ -18776,7 +18776,7 @@
       },
       "CH": {
         "cases": 400,
-        "deaths": null,
+        "deaths": 54,
         "incidence": 0.66
       }
     },
@@ -18933,7 +18933,7 @@
       },
       "CH": {
         "cases": 700,
-        "deaths": null,
+        "deaths": 91,
         "incidence": 1.16
       }
     },
@@ -19090,7 +19090,7 @@
       },
       "CH": {
         "cases": 1167,
-        "deaths": null,
+        "deaths": 194,
         "incidence": 1.93
       }
     },
@@ -19247,7 +19247,7 @@
       },
       "CH": {
         "cases": 1838,
-        "deaths": null,
+        "deaths": 242,
         "incidence": 3.03
       }
     },
@@ -19404,7 +19404,7 @@
       },
       "CH": {
         "cases": 3601,
-        "deaths": null,
+        "deaths": 343,
         "incidence": 5.94
       }
     },
@@ -19561,7 +19561,7 @@
       },
       "CH": {
         "cases": 6024,
-        "deaths": null,
+        "deaths": 385,
         "incidence": 9.94
       }
     },
@@ -19718,7 +19718,7 @@
       },
       "CH": {
         "cases": 7345,
-        "deaths": null,
+        "deaths": 253,
         "incidence": 12.12
       }
     },
@@ -19875,7 +19875,7 @@
       },
       "CH": {
         "cases": 6558,
-        "deaths": null,
+        "deaths": 99,
         "incidence": 10.82
       }
     },
@@ -20032,7 +20032,7 @@
       },
       "CH": {
         "cases": 2265,
-        "deaths": null,
+        "deaths": 25,
         "incidence": 3.74
       }
     },
@@ -20179,7 +20179,7 @@
       },
       "CH": {
         "cases": 377,
-        "deaths": null,
+        "deaths": 3,
         "incidence": 0.62
       }
     },
@@ -20296,7 +20296,7 @@
       },
       "CH": {
         "cases": 57,
-        "deaths": null,
+        "deaths": 0,
         "incidence": 0.09
       }
     },
@@ -20514,14 +20514,14 @@
     "2022-34": {
       "CH": {
         "cases": 15153,
-        "deaths": null,
+        "deaths": 11,
         "incidence": 25.01
       }
     },
     "2022-35": {
       "CH": {
         "cases": 2284,
-        "deaths": null,
+        "deaths": 0,
         "incidence": 13.2
       }
     }
