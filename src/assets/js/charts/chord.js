@@ -63,7 +63,8 @@ export default async function generateChord(
     .sortSubgroups(d3.descending)
     .sortGroups(d3.ascending)(matrix);
 
-  const color = (index) => d3.interpolateTurbo(index / res.groups.length);
+  const color = (index) => d3.scaleSequential().domain([1, res.groups.length])
+    .interpolator(d3.interpolateTurbo)(index);
 
   // add the groups on the outer part of the circle
   const outerGroups = svg
@@ -150,6 +151,14 @@ export default async function generateChord(
 
   // Covid Data
   // X scale
+
+  // const covid19DataAroundNow = Object.entries(listOfCovidIncidence).forEach((entry, index, array) => {
+  //   const [weekYear, weekYearDatum] = entry;
+
+  //   const currIndex =
+
+  //   if (weekYear)
+  // })
 
   const y = d3.scaleRadial()
     .range([
