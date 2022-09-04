@@ -120,6 +120,11 @@
         "cases": 12162,
         "deaths": 181,
         "incidence": 25.69
+      },
+      "CH": {
+        "cases": 16621,
+        "deaths": null,
+        "incidence": 27.44
       }
     },
     "2022-32": {
@@ -272,6 +277,11 @@
         "cases": 3212,
         "deaths": 1,
         "incidence": 10.37
+      },
+      "CH": {
+        "cases": 18874,
+        "deaths": null,
+        "incidence": 31.15
       }
     },
     "2022-31": {
@@ -424,6 +434,11 @@
         "cases": 6234,
         "deaths": 59,
         "incidence": 8.62
+      },
+      "CH": {
+        "cases": 19830,
+        "deaths": null,
+        "incidence": 32.73
       }
     },
     "2022-30": {
@@ -576,6 +591,11 @@
         "cases": 5706,
         "deaths": 75,
         "incidence": 7.89
+      },
+      "CH": {
+        "cases": 26708,
+        "deaths": null,
+        "incidence": 44.09
       }
     },
     "2022-29": {
@@ -728,6 +748,11 @@
         "cases": 5953,
         "deaths": 96,
         "incidence": 8.23
+      },
+      "CH": {
+        "cases": 39191,
+        "deaths": null,
+        "incidence": 64.69
       }
     },
     "2022-28": {
@@ -880,6 +905,11 @@
         "cases": 5442,
         "deaths": 56,
         "incidence": 7.53
+      },
+      "CH": {
+        "cases": 50965,
+        "deaths": null,
+        "incidence": 84.13
       }
     },
     "2022-27": {
@@ -1027,6 +1057,11 @@
         "cases": 4236,
         "deaths": 56,
         "incidence": 5.86
+      },
+      "CH": {
+        "cases": 55415,
+        "deaths": null,
+        "incidence": 91.47
       }
     },
     "2022-26": {
@@ -1174,6 +1209,11 @@
         "cases": 4118,
         "deaths": 42,
         "incidence": 5.7
+      },
+      "CH": {
+        "cases": 44157,
+        "deaths": null,
+        "incidence": 72.89
       }
     },
     "2022-25": {
@@ -1321,6 +1361,11 @@
         "cases": 3090,
         "deaths": 34,
         "incidence": 4.27
+      },
+      "CH": {
+        "cases": 31540,
+        "deaths": null,
+        "incidence": 52.06
       }
     },
     "2022-24": {
@@ -1468,6 +1513,11 @@
         "cases": 2165,
         "deaths": 22,
         "incidence": 2.99
+      },
+      "CH": {
+        "cases": 23439,
+        "deaths": null,
+        "incidence": 38.69
       }
     },
     "2022-23": {
@@ -1620,6 +1670,11 @@
         "cases": 1896,
         "deaths": 28,
         "incidence": 2.62
+      },
+      "CH": {
+        "cases": 14904,
+        "deaths": null,
+        "incidence": 24.6
       }
     },
     "2022-22": {
@@ -1772,6 +1827,11 @@
         "cases": 1255,
         "deaths": 23,
         "incidence": 1.74
+      },
+      "CH": {
+        "cases": 10198,
+        "deaths": null,
+        "incidence": 16.83
       }
     },
     "2022-21": {
@@ -1924,6 +1984,11 @@
         "cases": 1316,
         "deaths": 26,
         "incidence": 1.82
+      },
+      "CH": {
+        "cases": 6687,
+        "deaths": null,
+        "incidence": 11.04
       }
     },
     "2022-20": {
@@ -2076,6 +2141,11 @@
         "cases": 1817,
         "deaths": 40,
         "incidence": 2.51
+      },
+      "CH": {
+        "cases": 8555,
+        "deaths": null,
+        "incidence": 14.12
       }
     },
     "2022-19": {
@@ -2228,6 +2298,11 @@
         "cases": 1656,
         "deaths": 42,
         "incidence": 2.29
+      },
+      "CH": {
+        "cases": 11193,
+        "deaths": null,
+        "incidence": 18.48
       }
     },
     "2022-18": {
@@ -2380,6 +2455,11 @@
         "cases": 1940,
         "deaths": 51,
         "incidence": 2.68
+      },
+      "CH": {
+        "cases": 13136,
+        "deaths": null,
+        "incidence": 21.68
       }
     },
     "2022-17": {
@@ -2532,6 +2612,11 @@
         "cases": 2319,
         "deaths": 51,
         "incidence": 3.21
+      },
+      "CH": {
+        "cases": 16769,
+        "deaths": null,
+        "incidence": 27.68
       }
     },
     "2022-16": {
@@ -2684,6 +2769,11 @@
         "cases": 2525,
         "deaths": 70,
         "incidence": 3.49
+      },
+      "CH": {
+        "cases": 22339,
+        "deaths": null,
+        "incidence": 36.87
       }
     },
     "2022-15": {
@@ -2836,6 +2926,11 @@
         "cases": 3071,
         "deaths": 71,
         "incidence": 4.25
+      },
+      "CH": {
+        "cases": 31021,
+        "deaths": null,
+        "incidence": 51.2
       }
     },
     "2022-14": {
@@ -2988,6 +3083,11 @@
         "cases": 4091,
         "deaths": 120,
         "incidence": 5.66
+      },
+      "CH": {
+        "cases": 40926,
+        "deaths": null,
+        "incidence": 67.55
       }
     },
     "2022-13": {
@@ -3140,6 +3240,11 @@
         "cases": 4952,
         "deaths": 122,
         "incidence": 6.85
+      },
+      "CH": {
+        "cases": 66587,
+        "deaths": null,
+        "incidence": 109.91
       }
     },
     "2022-12": {
@@ -3292,6 +3397,11 @@
         "cases": 7040,
         "deaths": 156,
         "incidence": 9.74
+      },
+      "CH": {
+        "cases": 121900,
+        "deaths": null,
+        "incidence": 201.21
       }
     },
     "2022-11": {
@@ -3444,6 +3554,11 @@
         "cases": 8502,
         "deaths": 195,
         "incidence": 11.76
+      },
+      "CH": {
+        "cases": 182856,
+        "deaths": null,
+        "incidence": 301.83
       }
     },
     "2022-10": {
@@ -3596,6 +3711,11 @@
         "cases": 10110,
         "deaths": 204,
         "incidence": 13.98
+      },
+      "CH": {
+        "cases": 190065,
+        "deaths": null,
+        "incidence": 313.73
       }
     },
     "2022-09": {
@@ -3748,6 +3868,11 @@
         "cases": 12548,
         "deaths": 273,
         "incidence": 17.36
+      },
+      "CH": {
+        "cases": 151330,
+        "deaths": null,
+        "incidence": 249.79
       }
     },
     "2022-08": {
@@ -3900,6 +4025,11 @@
         "cases": 17660,
         "deaths": 319,
         "incidence": 24.43
+      },
+      "CH": {
+        "cases": 105171,
+        "deaths": null,
+        "incidence": 173.6
       }
     },
     "2022-07": {
@@ -4052,6 +4182,11 @@
         "cases": 22160,
         "deaths": 361,
         "incidence": 30.65
+      },
+      "CH": {
+        "cases": 109818,
+        "deaths": null,
+        "incidence": 181.27
       }
     },
     "2022-06": {
@@ -4204,6 +4339,11 @@
         "cases": 62338,
         "deaths": 328,
         "incidence": 86.23
+      },
+      "CH": {
+        "cases": 151263,
+        "deaths": null,
+        "incidence": 249.68
       }
     },
     "2022-05": {
@@ -4356,6 +4496,11 @@
         "cases": 185716,
         "deaths": 358,
         "incidence": 256.89
+      },
+      "CH": {
+        "cases": 201674,
+        "deaths": null,
+        "incidence": 332.89
       }
     },
     "2022-04": {
@@ -4508,6 +4653,11 @@
         "cases": 265043,
         "deaths": 301,
         "incidence": 366.62
+      },
+      "CH": {
+        "cases": 248472,
+        "deaths": null,
+        "incidence": 410.14
       }
     },
     "2022-03": {
@@ -4660,6 +4810,11 @@
         "cases": 256322,
         "deaths": 243,
         "incidence": 354.56
+      },
+      "CH": {
+        "cases": 237462,
+        "deaths": null,
+        "incidence": 391.97
       }
     },
     "2022-02": {
@@ -4812,6 +4967,11 @@
         "cases": 164690,
         "deaths": 171,
         "incidence": 227.81
+      },
+      "CH": {
+        "cases": 185351,
+        "deaths": null,
+        "incidence": 305.95
       }
     },
     "2022-01": {
@@ -4964,6 +5124,11 @@
         "cases": 125275,
         "deaths": 130,
         "incidence": 173.29
+      },
+      "CH": {
+        "cases": 180841,
+        "deaths": null,
+        "incidence": 298.5
       }
     },
     "2021-52": {
@@ -5116,6 +5281,11 @@
         "cases": 59341,
         "deaths": 70,
         "incidence": 82.08
+      },
+      "CH": {
+        "cases": 112170,
+        "deaths": null,
+        "incidence": 185.15
       }
     },
     "2021-51": {
@@ -5268,6 +5438,11 @@
         "cases": 27907,
         "deaths": 44,
         "incidence": 38.6
+      },
+      "CH": {
+        "cases": 67976,
+        "deaths": null,
+        "incidence": 112.2
       }
     },
     "2021-50": {
@@ -5420,6 +5595,11 @@
         "cases": 24485,
         "deaths": 49,
         "incidence": 33.87
+      },
+      "CH": {
+        "cases": 60576,
+        "deaths": null,
+        "incidence": 99.99
       }
     },
     "2021-49": {
@@ -5572,6 +5752,11 @@
         "cases": 18649,
         "deaths": 38,
         "incidence": 25.8
+      },
+      "CH": {
+        "cases": 64308,
+        "deaths": null,
+        "incidence": 106.15
       }
     },
     "2021-48": {
@@ -5724,6 +5909,11 @@
         "cases": 13801,
         "deaths": 29,
         "incidence": 19.09
+      },
+      "CH": {
+        "cases": 63063,
+        "deaths": null,
+        "incidence": 104.09
       }
     },
     "2021-47": {
@@ -5876,6 +6066,11 @@
         "cases": 11915,
         "deaths": 15,
         "incidence": 16.48
+      },
+      "CH": {
+        "cases": 51094,
+        "deaths": null,
+        "incidence": 84.34
       }
     },
     "2021-46": {
@@ -6028,6 +6223,11 @@
         "cases": 7093,
         "deaths": 30,
         "incidence": 9.81
+      },
+      "CH": {
+        "cases": 37728,
+        "deaths": null,
+        "incidence": 62.28
       }
     },
     "2021-45": {
@@ -6180,6 +6380,11 @@
         "cases": 5819,
         "deaths": 31,
         "incidence": 8.05
+      },
+      "CH": {
+        "cases": 24881,
+        "deaths": null,
+        "incidence": 41.07
       }
     },
     "2021-44": {
@@ -6332,6 +6537,11 @@
         "cases": 5060,
         "deaths": 33,
         "incidence": 7
+      },
+      "CH": {
+        "cases": 17225,
+        "deaths": null,
+        "incidence": 28.43
       }
     },
     "2021-43": {
@@ -6484,6 +6694,11 @@
         "cases": 5910,
         "deaths": 30,
         "incidence": 8.18
+      },
+      "CH": {
+        "cases": 11537,
+        "deaths": null,
+        "incidence": 19.04
       }
     },
     "2021-42": {
@@ -6636,6 +6851,11 @@
         "cases": 5194,
         "deaths": 23,
         "incidence": 7.18
+      },
+      "CH": {
+        "cases": 8695,
+        "deaths": null,
+        "incidence": 14.35
       }
     },
     "2021-41": {
@@ -6788,6 +7008,11 @@
         "cases": 4069,
         "deaths": 32,
         "incidence": 5.63
+      },
+      "CH": {
+        "cases": 6421,
+        "deaths": null,
+        "incidence": 10.6
       }
     },
     "2021-40": {
@@ -6940,6 +7165,11 @@
         "cases": 4137,
         "deaths": 49,
         "incidence": 5.72
+      },
+      "CH": {
+        "cases": 6370,
+        "deaths": null,
+        "incidence": 10.51
       }
     },
     "2021-39": {
@@ -7092,6 +7322,11 @@
         "cases": 4231,
         "deaths": 39,
         "incidence": 5.85
+      },
+      "CH": {
+        "cases": 7647,
+        "deaths": null,
+        "incidence": 12.62
       }
     },
     "2021-38": {
@@ -7244,6 +7479,11 @@
         "cases": 4305,
         "deaths": 43,
         "incidence": 5.95
+      },
+      "CH": {
+        "cases": 9327,
+        "deaths": null,
+        "incidence": 15.4
       }
     },
     "2021-37": {
@@ -7396,6 +7636,11 @@
         "cases": 6259,
         "deaths": 51,
         "incidence": 8.66
+      },
+      "CH": {
+        "cases": 12720,
+        "deaths": null,
+        "incidence": 21
       }
     },
     "2021-36": {
@@ -7548,6 +7793,11 @@
         "cases": 7968,
         "deaths": 49,
         "incidence": 11.02
+      },
+      "CH": {
+        "cases": 18147,
+        "deaths": null,
+        "incidence": 29.95
       }
     },
     "2021-35": {
@@ -7700,6 +7950,11 @@
         "cases": 7237,
         "deaths": 25,
         "incidence": 10.01
+      },
+      "CH": {
+        "cases": 18764,
+        "deaths": null,
+        "incidence": 30.97
       }
     },
     "2021-34": {
@@ -7852,6 +8107,11 @@
         "cases": 6685,
         "deaths": 20,
         "incidence": 9.25
+      },
+      "CH": {
+        "cases": 17884,
+        "deaths": null,
+        "incidence": 29.52
       }
     },
     "2021-33": {
@@ -8004,6 +8264,11 @@
         "cases": 6463,
         "deaths": 11,
         "incidence": 8.94
+      },
+      "CH": {
+        "cases": 17952,
+        "deaths": null,
+        "incidence": 29.63
       }
     },
     "2021-32": {
@@ -8156,6 +8421,11 @@
         "cases": 5817,
         "deaths": 7,
         "incidence": 8.05
+      },
+      "CH": {
+        "cases": 14140,
+        "deaths": null,
+        "incidence": 23.34
       }
     },
     "2021-31": {
@@ -8308,6 +8578,11 @@
         "cases": 4609,
         "deaths": 7,
         "incidence": 6.38
+      },
+      "CH": {
+        "cases": 7623,
+        "deaths": null,
+        "incidence": 12.58
       }
     },
     "2021-30": {
@@ -8460,6 +8735,11 @@
         "cases": 3460,
         "deaths": 4,
         "incidence": 4.79
+      },
+      "CH": {
+        "cases": 5252,
+        "deaths": null,
+        "incidence": 8.67
       }
     },
     "2021-29": {
@@ -8612,6 +8892,11 @@
         "cases": 2661,
         "deaths": 3,
         "incidence": 3.68
+      },
+      "CH": {
+        "cases": 4953,
+        "deaths": null,
+        "incidence": 8.18
       }
     },
     "2021-28": {
@@ -8764,6 +9049,11 @@
         "cases": 1883,
         "deaths": 2,
         "incidence": 2.6
+      },
+      "CH": {
+        "cases": 3798,
+        "deaths": null,
+        "incidence": 6.27
       }
     },
     "2021-27": {
@@ -8916,6 +9206,11 @@
         "cases": 1514,
         "deaths": 3,
         "incidence": 2.09
+      },
+      "CH": {
+        "cases": 2047,
+        "deaths": null,
+        "incidence": 3.38
       }
     },
     "2021-26": {
@@ -9068,6 +9363,11 @@
         "cases": 1870,
         "deaths": 8,
         "incidence": 2.59
+      },
+      "CH": {
+        "cases": 1026,
+        "deaths": null,
+        "incidence": 1.69
       }
     },
     "2021-25": {
@@ -9220,6 +9520,11 @@
         "cases": 1983,
         "deaths": 9,
         "incidence": 2.74
+      },
+      "CH": {
+        "cases": 744,
+        "deaths": null,
+        "incidence": 1.23
       }
     },
     "2021-24": {
@@ -9372,6 +9677,11 @@
         "cases": 2848,
         "deaths": 17,
         "incidence": 3.94
+      },
+      "CH": {
+        "cases": 1238,
+        "deaths": null,
+        "incidence": 2.04
       }
     },
     "2021-23": {
@@ -9524,6 +9834,11 @@
         "cases": 4394,
         "deaths": 22,
         "incidence": 6.08
+      },
+      "CH": {
+        "cases": 2313,
+        "deaths": null,
+        "incidence": 3.82
       }
     },
     "2021-22": {
@@ -9676,6 +9991,11 @@
         "cases": 9094,
         "deaths": 39,
         "incidence": 12.58
+      },
+      "CH": {
+        "cases": 3516,
+        "deaths": null,
+        "incidence": 5.8
       }
     },
     "2021-21": {
@@ -9823,6 +10143,11 @@
         "cases": 7974,
         "deaths": 47,
         "incidence": 11.03
+      },
+      "CH": {
+        "cases": 5109,
+        "deaths": null,
+        "incidence": 8.43
       }
     },
     "2021-20": {
@@ -9975,6 +10300,11 @@
         "cases": 18170,
         "deaths": 70,
         "incidence": 25.13
+      },
+      "CH": {
+        "cases": 7344,
+        "deaths": null,
+        "incidence": 12.12
       }
     },
     "2021-19": {
@@ -10127,6 +10457,11 @@
         "cases": 25914,
         "deaths": 111,
         "incidence": 35.85
+      },
+      "CH": {
+        "cases": 7839,
+        "deaths": null,
+        "incidence": 12.94
       }
     },
     "2021-18": {
@@ -10279,6 +10614,11 @@
         "cases": 33678,
         "deaths": 107,
         "incidence": 46.59
+      },
+      "CH": {
+        "cases": 10297,
+        "deaths": null,
+        "incidence": 17
       }
     },
     "2021-17": {
@@ -10431,6 +10771,11 @@
         "cases": 35306,
         "deaths": 115,
         "incidence": 48.84
+      },
+      "CH": {
+        "cases": 11867,
+        "deaths": null,
+        "incidence": 19.59
       }
     },
     "2021-16": {
@@ -10583,6 +10928,11 @@
         "cases": 36030,
         "deaths": 131,
         "incidence": 49.84
+      },
+      "CH": {
+        "cases": 14518,
+        "deaths": null,
+        "incidence": 23.96
       }
     },
     "2021-15": {
@@ -10735,6 +11085,11 @@
         "cases": 41036,
         "deaths": 141,
         "incidence": 56.76
+      },
+      "CH": {
+        "cases": 14077,
+        "deaths": null,
+        "incidence": 23.24
       }
     },
     "2021-14": {
@@ -10887,6 +11242,11 @@
         "cases": 41142,
         "deaths": 133,
         "incidence": 56.91
+      },
+      "CH": {
+        "cases": 14136,
+        "deaths": null,
+        "incidence": 23.33
       }
     },
     "2021-13": {
@@ -11039,6 +11399,11 @@
         "cases": 38384,
         "deaths": 142,
         "incidence": 53.09
+      },
+      "CH": {
+        "cases": 12286,
+        "deaths": null,
+        "incidence": 20.28
       }
     },
     "2021-12": {
@@ -11191,6 +11556,11 @@
         "cases": 37880,
         "deaths": 126,
         "incidence": 52.4
+      },
+      "CH": {
+        "cases": 12530,
+        "deaths": null,
+        "incidence": 20.68
       }
     },
     "2021-11": {
@@ -11343,6 +11713,11 @@
         "cases": 33032,
         "deaths": 127,
         "incidence": 45.69
+      },
+      "CH": {
+        "cases": 10494,
+        "deaths": null,
+        "incidence": 17.32
       }
     },
     "2021-10": {
@@ -11495,6 +11870,11 @@
         "cases": 28555,
         "deaths": 141,
         "incidence": 39.5
+      },
+      "CH": {
+        "cases": 8783,
+        "deaths": null,
+        "incidence": 14.5
       }
     },
     "2021-09": {
@@ -11647,6 +12027,11 @@
         "cases": 27739,
         "deaths": 129,
         "incidence": 38.37
+      },
+      "CH": {
+        "cases": 7581,
+        "deaths": null,
+        "incidence": 12.51
       }
     },
     "2021-08": {
@@ -11794,6 +12179,11 @@
         "cases": 26681,
         "deaths": 146,
         "incidence": 36.91
+      },
+      "CH": {
+        "cases": 7210,
+        "deaths": null,
+        "incidence": 11.9
       }
     },
     "2021-07": {
@@ -11946,6 +12336,11 @@
         "cases": 23613,
         "deaths": 172,
         "incidence": 32.66
+      },
+      "CH": {
+        "cases": 6979,
+        "deaths": null,
+        "incidence": 11.52
       }
     },
     "2021-06": {
@@ -12098,6 +12493,11 @@
         "cases": 21282,
         "deaths": 205,
         "incidence": 29.44
+      },
+      "CH": {
+        "cases": 7864,
+        "deaths": null,
+        "incidence": 12.98
       }
     },
     "2021-05": {
@@ -12250,6 +12650,11 @@
         "cases": 19604,
         "deaths": 269,
         "incidence": 27.12
+      },
+      "CH": {
+        "cases": 10057,
+        "deaths": null,
+        "incidence": 16.6
       }
     },
     "2021-04": {
@@ -12402,6 +12807,11 @@
         "cases": 20654,
         "deaths": 389,
         "incidence": 28.57
+      },
+      "CH": {
+        "cases": 11517,
+        "deaths": null,
+        "incidence": 19.01
       }
     },
     "2021-03": {
@@ -12554,6 +12964,11 @@
         "cases": 23222,
         "deaths": 513,
         "incidence": 32.12
+      },
+      "CH": {
+        "cases": 13485,
+        "deaths": null,
+        "incidence": 22.26
       }
     },
     "2021-02": {
@@ -12706,6 +13121,11 @@
         "cases": 28935,
         "deaths": 598,
         "incidence": 40.02
+      },
+      "CH": {
+        "cases": 15197,
+        "deaths": null,
+        "incidence": 25.08
       }
     },
     "2021-01": {
@@ -12858,6 +13278,11 @@
         "cases": 39446,
         "deaths": 644,
         "incidence": 54.56
+      },
+      "CH": {
+        "cases": 22033,
+        "deaths": null,
+        "incidence": 36.37
       }
     },
     "2020-53": {
@@ -13010,6 +13435,11 @@
         "cases": 41323,
         "deaths": 663,
         "incidence": 57.16
+      },
+      "CH": {
+        "cases": 23399,
+        "deaths": null,
+        "incidence": 38.62
       }
     },
     "2020-52": {
@@ -13162,6 +13592,11 @@
         "cases": 37134,
         "deaths": 643,
         "incidence": 51.37
+      },
+      "CH": {
+        "cases": 23946,
+        "deaths": null,
+        "incidence": 39.53
       }
     },
     "2020-51": {
@@ -13314,6 +13749,11 @@
         "cases": 46177,
         "deaths": 645,
         "incidence": 63.87
+      },
+      "CH": {
+        "cases": 29260,
+        "deaths": null,
+        "incidence": 48.3
       }
     },
     "2020-50": {
@@ -13466,6 +13906,11 @@
         "cases": 43631,
         "deaths": 500,
         "incidence": 60.35
+      },
+      "CH": {
+        "cases": 30001,
+        "deaths": null,
+        "incidence": 49.52
       }
     },
     "2020-49": {
@@ -13618,6 +14063,11 @@
         "cases": 36837,
         "deaths": 476,
         "incidence": 50.96
+      },
+      "CH": {
+        "cases": 27277,
+        "deaths": null,
+        "incidence": 45.02
       }
     },
     "2020-48": {
@@ -13770,6 +14220,11 @@
         "cases": 35560,
         "deaths": 417,
         "incidence": 49.19
+      },
+      "CH": {
+        "cases": 26178,
+        "deaths": null,
+        "incidence": 43.21
       }
     },
     "2020-47": {
@@ -13922,6 +14377,11 @@
         "cases": 31944,
         "deaths": 332,
         "incidence": 44.19
+      },
+      "CH": {
+        "cases": 30111,
+        "deaths": null,
+        "incidence": 49.7
       }
     },
     "2020-46": {
@@ -14074,6 +14534,11 @@
         "cases": 31319,
         "deaths": 235,
         "incidence": 43.32
+      },
+      "CH": {
+        "cases": 39591,
+        "deaths": null,
+        "incidence": 65.35
       }
     },
     "2020-45": {
@@ -14226,6 +14691,11 @@
         "cases": 25405,
         "deaths": 157,
         "incidence": 35.14
+      },
+      "CH": {
+        "cases": 51195,
+        "deaths": null,
+        "incidence": 84.5
       }
     },
     "2020-44": {
@@ -14378,6 +14848,11 @@
         "cases": 18474,
         "deaths": 82,
         "incidence": 25.55
+      },
+      "CH": {
+        "cases": 55823,
+        "deaths": null,
+        "incidence": 92.14
       }
     },
     "2020-43": {
@@ -14530,6 +15005,11 @@
         "cases": 9155,
         "deaths": 43,
         "incidence": 12.66
+      },
+      "CH": {
+        "cases": 39678,
+        "deaths": null,
+        "incidence": 65.49
       }
     },
     "2020-42": {
@@ -14682,6 +15162,11 @@
         "cases": 5620,
         "deaths": 16,
         "incidence": 7.77
+      },
+      "CH": {
+        "cases": 19481,
+        "deaths": null,
+        "incidence": 32.16
       }
     },
     "2020-41": {
@@ -14834,6 +15319,11 @@
         "cases": 4278,
         "deaths": 22,
         "incidence": 5.92
+      },
+      "CH": {
+        "cases": 8753,
+        "deaths": null,
+        "incidence": 14.45
       }
     },
     "2020-40": {
@@ -14986,6 +15476,11 @@
         "cases": 3642,
         "deaths": 17,
         "incidence": 5.04
+      },
+      "CH": {
+        "cases": 3461,
+        "deaths": null,
+        "incidence": 5.71
       }
     },
     "2020-39": {
@@ -15138,6 +15633,11 @@
         "cases": 2919,
         "deaths": 11,
         "incidence": 4.04
+      },
+      "CH": {
+        "cases": 2222,
+        "deaths": null,
+        "incidence": 3.67
       }
     },
     "2020-38": {
@@ -15290,6 +15790,11 @@
         "cases": 2080,
         "deaths": 12,
         "incidence": 2.88
+      },
+      "CH": {
+        "cases": 2905,
+        "deaths": null,
+        "incidence": 4.8
       }
     },
     "2020-37": {
@@ -15442,6 +15947,11 @@
         "cases": 1592,
         "deaths": 13,
         "incidence": 2.2
+      },
+      "CH": {
+        "cases": 2860,
+        "deaths": null,
+        "incidence": 4.72
       }
     },
     "2020-36": {
@@ -15594,6 +16104,11 @@
         "cases": 1332,
         "deaths": 12,
         "incidence": 1.84
+      },
+      "CH": {
+        "cases": 2458,
+        "deaths": null,
+        "incidence": 4.06
       }
     },
     "2020-35": {
@@ -15746,6 +16261,11 @@
         "cases": 1200,
         "deaths": 10,
         "incidence": 1.66
+      },
+      "CH": {
+        "cases": 2092,
+        "deaths": null,
+        "incidence": 3.45
       }
     },
     "2020-34": {
@@ -15898,6 +16418,11 @@
         "cases": 1687,
         "deaths": 19,
         "incidence": 2.33
+      },
+      "CH": {
+        "cases": 1855,
+        "deaths": null,
+        "incidence": 3.06
       }
     },
     "2020-33": {
@@ -16050,6 +16575,11 @@
         "cases": 2052,
         "deaths": 16,
         "incidence": 2.84
+      },
+      "CH": {
+        "cases": 1574,
+        "deaths": null,
+        "incidence": 2.6
       }
     },
     "2020-32": {
@@ -16202,6 +16732,11 @@
         "cases": 2014,
         "deaths": 18,
         "incidence": 2.79
+      },
+      "CH": {
+        "cases": 1100,
+        "deaths": null,
+        "incidence": 1.82
       }
     },
     "2020-31": {
@@ -16354,6 +16889,11 @@
         "cases": 1556,
         "deaths": 18,
         "incidence": 2.15
+      },
+      "CH": {
+        "cases": 1155,
+        "deaths": null,
+        "incidence": 1.91
       }
     },
     "2020-30": {
@@ -16506,6 +17046,11 @@
         "cases": 1316,
         "deaths": 30,
         "incidence": 1.82
+      },
+      "CH": {
+        "cases": 824,
+        "deaths": null,
+        "incidence": 1.36
       }
     },
     "2020-29": {
@@ -16658,6 +17203,11 @@
         "cases": 1622,
         "deaths": 57,
         "incidence": 2.24
+      },
+      "CH": {
+        "cases": 715,
+        "deaths": null,
+        "incidence": 1.18
       }
     },
     "2020-28": {
@@ -16810,6 +17360,11 @@
         "cases": 2179,
         "deaths": 84,
         "incidence": 3.01
+      },
+      "CH": {
+        "cases": 636,
+        "deaths": null,
+        "incidence": 1.05
       }
     },
     "2020-27": {
@@ -16962,6 +17517,11 @@
         "cases": 4279,
         "deaths": 98,
         "incidence": 5.92
+      },
+      "CH": {
+        "cases": 682,
+        "deaths": null,
+        "incidence": 1.13
       }
     },
     "2020-26": {
@@ -17114,6 +17674,11 @@
         "cases": 7455,
         "deaths": 138,
         "incidence": 10.31
+      },
+      "CH": {
+        "cases": 359,
+        "deaths": null,
+        "incidence": 0.59
       }
     },
     "2020-25": {
@@ -17266,6 +17831,11 @@
         "cases": 7073,
         "deaths": 200,
         "incidence": 9.78
+      },
+      "CH": {
+        "cases": 171,
+        "deaths": null,
+        "incidence": 0.28
       }
     },
     "2020-24": {
@@ -17418,6 +17988,11 @@
         "cases": 7123,
         "deaths": 234,
         "incidence": 9.85
+      },
+      "CH": {
+        "cases": 140,
+        "deaths": null,
+        "incidence": 0.23
       }
     },
     "2020-23": {
@@ -17570,6 +18145,11 @@
         "cases": 6021,
         "deaths": 246,
         "incidence": 8.33
+      },
+      "CH": {
+        "cases": 98,
+        "deaths": null,
+        "incidence": 0.16
       }
     },
     "2020-22": {
@@ -17722,6 +18302,11 @@
         "cases": 4280,
         "deaths": 272,
         "incidence": 5.92
+      },
+      "CH": {
+        "cases": 126,
+        "deaths": null,
+        "incidence": 0.21
       }
     },
     "2020-21": {
@@ -17874,6 +18459,11 @@
         "cases": 3659,
         "deaths": 360,
         "incidence": 5.06
+      },
+      "CH": {
+        "cases": 153,
+        "deaths": null,
+        "incidence": 0.25
       }
     },
     "2020-20": {
@@ -18026,6 +18616,11 @@
         "cases": 3869,
         "deaths": 380,
         "incidence": 5.35
+      },
+      "CH": {
+        "cases": 231,
+        "deaths": null,
+        "incidence": 0.38
       }
     },
     "2020-19": {
@@ -18178,6 +18773,11 @@
         "cases": 4153,
         "deaths": 509,
         "incidence": 5.74
+      },
+      "CH": {
+        "cases": 400,
+        "deaths": null,
+        "incidence": 0.66
       }
     },
     "2020-18": {
@@ -18330,6 +18930,11 @@
         "cases": 3832,
         "deaths": 543,
         "incidence": 5.3
+      },
+      "CH": {
+        "cases": 700,
+        "deaths": null,
+        "incidence": 1.16
       }
     },
     "2020-17": {
@@ -18482,6 +19087,11 @@
         "cases": 4203,
         "deaths": 546,
         "incidence": 5.81
+      },
+      "CH": {
+        "cases": 1167,
+        "deaths": null,
+        "incidence": 1.93
       }
     },
     "2020-16": {
@@ -18634,6 +19244,11 @@
         "cases": 3752,
         "deaths": 657,
         "incidence": 5.19
+      },
+      "CH": {
+        "cases": 1838,
+        "deaths": null,
+        "incidence": 3.03
       }
     },
     "2020-15": {
@@ -18786,6 +19401,11 @@
         "cases": 3740,
         "deaths": 664,
         "incidence": 5.17
+      },
+      "CH": {
+        "cases": 3601,
+        "deaths": null,
+        "incidence": 5.94
       }
     },
     "2020-14": {
@@ -18938,6 +19558,11 @@
         "cases": 3229,
         "deaths": 451,
         "incidence": 4.47
+      },
+      "CH": {
+        "cases": 6024,
+        "deaths": null,
+        "incidence": 9.94
       }
     },
     "2020-13": {
@@ -19090,6 +19715,11 @@
         "cases": 1957,
         "deaths": 190,
         "incidence": 2.71
+      },
+      "CH": {
+        "cases": 7345,
+        "deaths": null,
+        "incidence": 12.12
       }
     },
     "2020-12": {
@@ -19242,6 +19872,11 @@
         "cases": 924,
         "deaths": 44,
         "incidence": 1.28
+      },
+      "CH": {
+        "cases": 6558,
+        "deaths": null,
+        "incidence": 10.82
       }
     },
     "2020-11": {
@@ -19394,6 +20029,11 @@
         "cases": 838,
         "deaths": 5,
         "incidence": 1.16
+      },
+      "CH": {
+        "cases": 2265,
+        "deaths": null,
+        "incidence": 3.74
       }
     },
     "2020-10": {
@@ -19536,6 +20176,11 @@
         "cases": 211,
         "deaths": 0,
         "incidence": 0.29
+      },
+      "CH": {
+        "cases": 377,
+        "deaths": null,
+        "incidence": 0.62
       }
     },
     "2020-09": {
@@ -19648,6 +20293,11 @@
         "cases": 13,
         "deaths": 0,
         "incidence": 0.02
+      },
+      "CH": {
+        "cases": 57,
+        "deaths": null,
+        "incidence": 0.09
       }
     },
     "2020-08": {
@@ -19860,6 +20510,20 @@
         "deaths": 0,
         "incidence": 0
       }
+    },
+    "2022-34": {
+      "CH": {
+        "cases": 15153,
+        "deaths": null,
+        "incidence": 25.01
+      }
+    },
+    "2022-35": {
+      "CH": {
+        "cases": 2284,
+        "deaths": null,
+        "incidence": 13.2
+      }
     }
   },
   "countries": {
@@ -19892,6 +20556,7 @@
     "SK": "5457873",
     "SI": "2095861",
     "ES": "47332614",
-    "SE": "10327589"
+    "SE": "10327589",
+    "CH": "8654622"
   }
 }
