@@ -17,11 +17,11 @@ import './helper';
   const totalNumberOfWeeks = listOfWeeks.length;
   elSlider.max = totalNumberOfWeeks;
 
-  const startWeekParts = listOfWeeks[0].split('-');
+  const [startYear, startMonth] = listOfWeeks[0].split('-');
 
   const startDate = Date.fromISOWeek(
-    parseInt(startWeekParts[1], 10),
-    parseInt(startWeekParts[0], 10),
+    parseInt(startMonth, 10),
+    parseInt(startYear, 10),
   );
 
   /**
@@ -29,36 +29,69 @@ import './helper';
    */
   const elGraphWrapper = d3.select('[data-js-graph]');
 
-  function renderChordChart() {
-    elGraphWrapper.node().replaceChildren();
+  // function renderChordChart() {
+  //   elGraphWrapper.node().replaceChildren();
 
-    const numberOfWeeks = elSlider.value - 1;
+  //   const numberOfWeeks = elSlider.value - 1;
+  //   const currentDate = new Date(startDate);
+  //   currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
+
+  //   const {
+  //     width,
+  //     height,
+  //   } = elGraphWrapper.node().getBoundingClientRect();
+
+  //   generateChordChart(
+  //     elGraphWrapper,
+  //     flightCountriesJson.yearMonth,
+  //     flightCountriesJson.countries,
+  //     covidCountriesJson.yearWeek,
+  //     currentDate.getFullYear(),
+  //     currentDate.getISOWeek(),
+  //     width,
+  //     height,
+  //   );
+
+  //   weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
+  // }
+  const {
+    width,
+    height,
+  } = elGraphWrapper.node().getBoundingClientRect();
+
+  generateChordChart(
+    elGraphWrapper,
+    flightCountriesJson.yearMonth,
+    flightCountriesJson.countries,
+    covidCountriesJson.yearWeek,
+    startYear,
+    startMonth,
+    width,
+    height,
+  );
+
+  function newWeekData(e) {
+    const numberOfWeeks = e.target.value - 1;
     const currentDate = new Date(startDate);
     currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
 
-    const {
-      width,
-      height,
-    } = elGraphWrapper.node().getBoundingClientRect();
+    const event = new CustomEvent('changeWeekData', {
+      detail: {
+        year: currentDate.getFullYear(),
+        week: currentDate.getISOWeek(),
+      },
+    });
 
-    generateChordChart(
-      elGraphWrapper,
-      flightCountriesJson.yearMonth,
-      flightCountriesJson.countries,
-      covidCountriesJson.yearWeek,
-      currentDate.getFullYear(),
-      currentDate.getISOWeek(),
-      width,
-      height,
-    );
+    window.dispatchEvent(event);
 
+    // update text
     weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
   }
 
   // Generate Visualization when website is loaded
-  renderChordChart();
-  elSlider.addEventListener('input', renderChordChart);
-  window.addEventListener('resize', renderChordChart);
+  // renderChordChart();
+  // window.addEventListener('resize', renderChordChart);
+  elSlider.addEventListener('input', newWeekData);
 
   /**
    * Timeline Chart
