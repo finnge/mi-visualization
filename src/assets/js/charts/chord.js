@@ -1,5 +1,4 @@
 import * as d3 from 'd3'; // TODO: shorten
-import '../helper';
 import { getCssVar } from '../helper';
 
 /**
