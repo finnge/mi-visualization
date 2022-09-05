@@ -18,15 +18,23 @@ Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
 
 const FILEPATH = {
   inputCovid19: path.resolve(__dirname, 'raw/data.csv'),
+  inputCovid19Swiss: path.resolve(__dirname, 'raw/data-swiss.csv'),
   outputData: path.resolve(__dirname, 'output/covid19.json'),
 };
 
 (async () => {
   const dataRaw = await fs.promises.readFile(FILEPATH.inputCovid19, 'utf8');
-  const data = await csv.parse(dataRaw, {
+  const dataRawSwiss = await fs.promises.readFile(FILEPATH.inputCovid19Swiss, 'utf8');
+  let data = await csv.parse(dataRaw, {
     comment: '#',
     columns: true,
   });
+  const dataSwiss = await csv.parse(dataRawSwiss, {
+    comment: '#',
+    columns: true,
+  });
+
+  data = data.concat(dataSwiss);
 
   // Has been outside of EU+EWR+CH (both)
   const countriesToInclude = [
@@ -80,7 +88,7 @@ const FILEPATH = {
     const date = new Date(`${el.year}-${el.month}-${el.day}`);
     const yearWeek = date.getYearWeekNumber();
 
-    // Die Bezeichnung EL (Griechenland) wird durch die IOS Abkürzung GR ersetzt
+    // Die Bezeichnung EL (Griechenland) wird durch die ISO Abkürzung GR ersetzt
 
     if (popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] === undefined) {
       popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] = el.popData2020;
