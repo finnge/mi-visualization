@@ -1,0 +1,16 @@
+.intro-slides {
+  grid-column: side;
+}
+
+.intro-slides [data-js-slide] {
+  display: none;
+}
+
+.intro-slides [data-js-slide-active] {
+  display: block;
+}
+
+.intro-slides p {
+  font-family: var(--ff-sans);
+  font-size: var(--l);
+}

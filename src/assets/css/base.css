@@ -22,4 +22,14 @@ svg text {
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-column: main;
+}
+
+main {
+  display: grid;
+  grid-template-columns: [side-start] 1fr [side-end main-start] 2fr [main-end];
+
+  /* grid-template-columns:
+      [full-start] 1fr [wrapper-start]
+      minmax(0, 70rem) [wrapper-end] 1fr [full-end]; */
 }

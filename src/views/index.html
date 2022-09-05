@@ -23,9 +23,63 @@
 
 <body>
   <main>
-    <h1>COVID-19 + flights</h1>
-    <span data-js-week-indicator></span>
+    <header>
+      <h1>COVID-19 + flights</h1>
+      <span data-js-week-indicator></span>
+    </header>
+
+    <div data-js-intro class="intro-slides">
+      <div data-js-slide="0" data-js-slide-active>
+        <p>Due to the pandemic spread of the Corona virus (early 2020 - spring 2022), many economic sectors suffered
+          losses. This was due to the extensive contact restrictions necessary to contain the pandemic.</p>
+      </div>
+      <div data-js-slide="1">
+        <p>One industry that suffered serious losses was the aviation industry, as travel restrictions between countries
+          to combat the international spread of the coronavirus, were implemented.
+        </p>
+      </div>
+      <div data-js-slide="2">
+        <p>This visualization is intended to show the evolution of air travel during the pandemic phases of the corona
+          virus. The countries of the European Economic Area (27 <abbr title="European Union">EU</abbr> countries +
+          Iceland, Lichtenstein and Norway) and
+          Switzerland are considered.
+        </p>
+      </div>
+      <div data-js-slide="3">
+        <p>
+          The individual sections of the ring to be seen represent the countries. These are the countries of the
+          European Economic Area (27 <abbr title="European Union"></abbr>EU</abbr> states + Iceland, Lichtenstein and
+          Norway) and Switzerland. The width of the
+          countries depends on the number of flights of the country.</p>
+      </div>
+      <div data-js-slide="4">
+        <p>The connections between countries represent flight connections. The width of a connection represents the
+          number of flights on that flight connection compared to other flight connections.
+        </p>
+      </div>
+      <div data-js-slide="5">
+        <p>Connections that do not leave a country represent domestic flights.
+        </p>
+      </div>
+      <div data-js-slide="6">
+        <p>The bars represent the level of corona incidence for the respective country below.
+        </p>
+      </div>
+      <div data-js-slide="7">
+        <p>The time of visualization can now be selected via the timeline by hovering with the mouse pointer. In
+          addition, important events during the pandemic and the total number of flights are displayed in the timeline.
+        </p>
+      </div>
+
+      <div data-js-intro-navigion class="intro-navigation">
+        <button data-js-intro-action="back" disabled>Back</button>
+        <button data-js-intro-action="forward">Foward</button>
+        <button data-js-intro-action="skip">Skip intro</button>
+      </div>
+    </div>
+
     <div data-js-graph id="chorddiagram"></div>
+
     <div class="navigation">
       <div class="graph" data-js-timeline></div>
 
@@ -36,7 +90,17 @@
     <a href="https://github.com/finnge/mi-visualization" class="button" rel="noopener noreferrer" target="_blank"
       title="Open Repository">
       <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-        <defs><style>.cls-1{fill-rule: evenodd;}.cls-2{fill: none;}</style></defs>
+        <defs>
+          <style>
+            .cls-1 {
+              fill-rule: evenodd;
+            }
+
+            .cls-2 {
+              fill: none;
+            }
+          </style>
+        </defs>
         <title>logo--github</title>
         <path class="cls-1"
           d="M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z" />

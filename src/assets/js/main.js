@@ -84,4 +84,69 @@ import './helper';
 
   renderTimelineChart();
   window.addEventListener('resize', renderTimelineChart);
+
+  // Navigation
+
+  const slides = document.querySelectorAll('[data-js-slide]');
+  const buttonFoward = document.querySelector('[data-js-intro-action="forward"]');
+  const buttonBack = document.querySelector('[data-js-intro-action="back"]');
+  const buttonSkip = document.querySelector('[data-js-intro-action="skip"]');
+  let currentSlide = 0;
+
+  slides[currentSlide].dataset.jsSlideActive = '';
+
+  function switchSlide(nextSlide) {
+    if (nextSlide >= slides.length || nextSlide < 0) {
+      return;
+    }
+
+    delete slides[currentSlide].dataset.jsSlideActive;
+    slides[nextSlide].dataset.jsSlideActive = '';
+
+    currentSlide = nextSlide;
+
+    switch (currentSlide) {
+      case 0:
+        break;
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        break;
+      case 5:
+        break;
+      case 6:
+        break;
+      case 7:
+        break;
+
+      default:
+        break;
+    }
+
+    // Forward Button
+    if (currentSlide === slides.length - 1) {
+      buttonFoward.setAttribute('disabled', '');
+    } else {
+      buttonFoward.removeAttribute('disabled');
+    }
+
+    // Backwards Button
+    if (currentSlide === 0) {
+      buttonBack.setAttribute('disabled', '');
+    } else {
+      buttonBack.removeAttribute('disabled');
+    }
+  }
+
+  buttonFoward.addEventListener('click', () => {
+    switchSlide(currentSlide + 1);
+  });
+
+  buttonBack.addEventListener('click', () => {
+    switchSlide(currentSlide - 1);
+  });
 })();
