@@ -48,7 +48,10 @@ export default async function generateChord(
   const matrix = listOfMatrix[yearWeek];
   const covid19 = new Array(listOfCountries.length);
 
-  Object.entries(listOfCovidIncidence[yearWeek]).forEach((entry) => {
+  // default covid data
+  covid19.fill(0);
+
+  Object.entries(listOfCovidIncidence[yearWeek] ?? {}).forEach((entry) => {
     const [countryCode, value] = entry;
 
     const index = listOfCountries.findIndex((v) => v === countryCode);
@@ -152,13 +155,14 @@ export default async function generateChord(
   // Covid Data
   // X scale
 
-  // const covid19DataAroundNow = Object.entries(listOfCovidIncidence).forEach((entry, index, array) => {
-  //   const [weekYear, weekYearDatum] = entry;
-
-  //   const currIndex =
-
-  //   if (weekYear)
-  // })
+  const medianCovid19MaxValue = d3.quantile(
+    Object.values(listOfCovidIncidence),
+    0.25,
+    (weekYearDatum) => d3.max(
+      Object.values(weekYearDatum),
+      (datum) => datum.incidence,
+    ),
+  );
 
   const y = d3.scaleRadial()
     .range([
@@ -167,15 +171,9 @@ export default async function generateChord(
     ])
     .domain([
       0,
-      d3.max(covid19),
-      // d3.max(
-      //   Object.values(listOfCovidIncidence),
-      //   (weekYearDatum) => d3.max(
-      //     Object.values(weekYearDatum),
-      //     (datum) => datum.incidence,
-      //   ),
-      // ),
-    ]);
+      d3.max([...covid19, medianCovid19MaxValue]),
+    ])
+    .nice();
 
   outerGroups
     .append('path')
@@ -200,6 +198,7 @@ export default async function generateChord(
     .style('opacity', 0.3)
     .attr('r', y);
 
+  // ticks top
   yTick.append('text')
     .attr('y', (d) => -y(d))
     .attr('dy', '0.35em')
@@ -212,6 +211,23 @@ export default async function generateChord(
   yTick.append('text')
     .attr('fill', getCssVar('c-fg-1'))
     .attr('y', (d) => -y(d))
+    .attr('dy', '0.35em')
+    .style('font-size', getCssVar('xs'))
+    .text(y.tickFormat(5, 's'));
+
+  // ticks bottom
+  yTick.append('text')
+    .attr('y', (d) => y(d))
+    .attr('dy', '0.35em')
+    .attr('fill', 'none')
+    .attr('stroke', getCssVar('c-bg-1'))
+    .attr('stroke-width', 5)
+    .style('font-size', getCssVar('xs'))
+    .text(y.tickFormat(5, 's'));
+
+  yTick.append('text')
+    .attr('fill', getCssVar('c-fg-1'))
+    .attr('y', (d) => y(d))
     .attr('dy', '0.35em')
     .style('font-size', getCssVar('xs'))
     .text(y.tickFormat(5, 's'));
