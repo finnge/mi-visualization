@@ -8,6 +8,7 @@ import './helper';
 (async () => {
   // load data and select components
   const flightCountriesJson = await d3.json('data/flights_countries.json');
+  const covidCountriesJson = await d3.json('data/covid19.json');
   const elSlider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
@@ -23,34 +24,45 @@ import './helper';
     parseInt(startWeekParts[0], 10),
   );
 
-  // Generate Visualization by calculating week+year and generating Chord-Diagramm
-  function generateVisualization() {
+  /**
+   * Chord Chart
+   */
+  const elGraphWrapper = d3.select('[data-js-graph]');
+
+  function renderChordChart() {
+    elGraphWrapper.node().replaceChildren();
+
     const numberOfWeeks = elSlider.value - 1;
-
     const currentDate = new Date(startDate);
-
     currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
 
+    const {
+      width,
+      height,
+    } = elGraphWrapper.node().getBoundingClientRect();
+
     generateChordChart(
+      elGraphWrapper,
       flightCountriesJson.yearMonth,
       flightCountriesJson.countries,
+      covidCountriesJson.yearWeek,
       currentDate.getFullYear(),
       currentDate.getISOWeek(),
+      width,
+      height,
     );
-
-    console.log(currentDate);
 
     weekIndicator.innerHTML = `${currentDate.getFullYear()} - KW ${currentDate.getISOWeek()}`;
   }
 
   // Generate Visualization when website is loaded
-  generateVisualization();
+  renderChordChart();
+  elSlider.addEventListener('input', renderChordChart);
+  window.addEventListener('resize', renderChordChart);
 
-  // Generate Visualization when slider is used
-  elSlider.addEventListener('input', () => {
-    generateVisualization();
-  });
-
+  /**
+   * Timeline Chart
+   */
   const elTimelineWrapper = d3.select('[data-js-timeline]');
 
   function renderTimelineChart() {
