@@ -79,10 +79,9 @@ const FILEPATH = {
     const dateOfFlight = new Date(flight.day);
     const yearCalWeek = dateOfFlight.getYearWeekNumber();
 
-    if (
-      dateOfFlight.getFullYear() < 2019
-      || (dateOfFlight.getFullYear() === 2019 && yearCalWeek <= 9)
-    ) {
+    const [calYear, calWeek] = yearCalWeek.split('-');
+
+    if (calYear < 2019 || (calYear === 2019 && calWeek <= 9)) {
       return;
     }
 
@@ -169,7 +168,7 @@ const FILEPATH = {
   const flightFiles = await glob(FILEPATH.flights);
 
   // reduce file number for testing
-  // const numberOfFiles = 2;
+  // const numberOfFiles = 1;
   // for (let i = flightFiles.length; i > numberOfFiles; i -= 1) {
   //   flightFiles.pop();
   // }

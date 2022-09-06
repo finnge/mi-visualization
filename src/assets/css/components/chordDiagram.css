@@ -1,6 +1,6 @@
 [data-js-graph] {
   /* width: 100%; */
-  height: clamp(300px, 100vw, 1000px);
+  height: clamp(300px, 100vh, 1000px);
 }
 
 [data-js-graph] [data-type="arcs"] path {

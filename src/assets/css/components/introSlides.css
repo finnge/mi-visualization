@@ -1,0 +1,44 @@
+.intro-slides {
+  grid-column: side;
+}
+
+.intro-slides [data-js-slide] {
+  display: none;
+  height: 100%;
+}
+
+.intro-slides [data-js-slide-active] {
+  display: block;
+}
+
+.intro-slides p {
+  font-family: var(--ff-sans);
+  font-size: var(--l);
+}
+
+.intro-navigation {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+
+.graph :not([data-js-slide-el-active]) {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.graph [data-js-slide-el-active],
+.graph [data-js-slide-el-active] * {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.graph [data-js-slide-el-active-passive],
+.graph [data-js-slide-el-active-passive] * {
+  opacity: 0.1 !important;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.intro-navigation :last-child {
+  justify-self: end;
+}

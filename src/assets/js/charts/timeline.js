@@ -120,4 +120,23 @@ export default function generateTimeline(
     const m = d3.pointer(event, this);
     update(x.invert(m[0]));
   });
+
+  // Intro animation
+  svg.attr('data-js-intro-slide-el-7', '');
+
+  // init visability
+  const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;
+
+  const listInitSildeElements = document.querySelectorAll(`[data-js-intro-slide-el-${initSlideValue}]`);
+  const listInitSlidePassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${initSlideValue}-passive]`);
+
+  listInitSildeElements.forEach((el) => {
+    // eslint-disable-next-line no-param-reassign
+    el.dataset.jsSlideElActive = '';
+  });
+
+  listInitSlidePassiveElements.forEach((el) => {
+    // eslint-disable-next-line no-param-reassign
+    el.dataset.jsSlideElActivePassive = '';
+  });
 }
