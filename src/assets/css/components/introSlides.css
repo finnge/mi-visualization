@@ -4,7 +4,8 @@
 
 .intro-slides [data-js-slide] {
   display: none;
-  height: 100%;
+
+  /* height: 100%; */
 }
 
 .intro-slides [data-js-slide-active] {

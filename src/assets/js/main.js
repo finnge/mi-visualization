@@ -9,6 +9,7 @@ import './helper';
   // load data and select components
   const flightCountriesJson = await d3.json('data/flights_countries.json');
   const covidCountriesJson = await d3.json('data/covid19.json');
+  const covidEventsJson = await d3.json('data/events.json');
   const elSlider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
@@ -77,6 +78,7 @@ import './helper';
       elTimelineWrapper,
       elSlider,
       flightCountriesJson.totalNumOfFlights,
+      covidEventsJson,
       width,
       height,
     );

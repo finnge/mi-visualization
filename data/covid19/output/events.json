@@ -21,14 +21,14 @@
       "description": "A new type of virus has been identified."
     },
     {
-      "event": "WHO: 'international health emergency'",
+      "event": "WHO: \"international health emergency\"",
       "date": "2020-01-30",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "WHO declares 'international health emergency'. The first cases of corona have been reported in Europe."
+      "description": "WHO declares \"international health emergency\". The first cases of corona have been reported in Europe."
     },
     {
       "event": "WHO officially declares previous epidemic a global pandemic",
@@ -41,17 +41,17 @@
       "description": "WHO officially declares previous epidemic a global pandemic."
     },
     {
-      "event": "Europa becomes a Corona hotspot",
-      "date": "2020-03",
+      "event": "Europe becomes a Corona hotspot",
+      "date": "2020-03-01",
       "formatOption": {
         "year": "numeric",
-        "month": "long",
+        "month": "long"
       },
-      "description": "Europe becomes a Corona hotspot. Social isolation is introduced in DE and curfews in FR. In addition, Italy's healthcare system is at its limit."
+      "description": "Europe becomes a Corona hotspot. Social isolation is introduced in DE and curfews in FR. In addition, Italy\"s healthcare system is at its limit."
     },
     {
       "event": "Travelers returning from risk areas must get tested",
-      "date": "2020-07",
+      "date": "2020-07-01",
       "formatOption": {
         "year": "numeric",
         "month": "long"
@@ -60,7 +60,7 @@
     },
     {
       "event": "Second wave in Europe",
-      "date": "2020-09",
+      "date": "2020-09-01",
       "formatOption": {
         "year": "numeric",
         "month": "long"
@@ -98,7 +98,7 @@
     },
     {
       "event": "Virus variant gamma reported",
-      "date": "2021-01",
+      "date": "2021-01-01",
       "formatOption": {
         "year": "numeric",
         "month": "long"
@@ -107,10 +107,10 @@
     },
     {
       "event": "COVID-19 vaccines approved",
-      "date": "2021-01",
+      "date": "2021-01-01",
       "formatOption": {
         "year": "numeric",
-        "month": "long",
+        "month": "long"
       },
       "description": "The COVID-19 vaccines Moderna and AstraZeneca got approved."
     },

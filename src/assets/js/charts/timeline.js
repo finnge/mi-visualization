@@ -14,6 +14,7 @@ export default function generateTimeline(
   baseSelection,
   elSlider,
   listOfTimeData,
+  listOfEvents,
   width = 400,
   height = 100,
 ) {
@@ -71,17 +72,30 @@ export default function generateTimeline(
       .x((d) => x(d.date))
       .y((d) => y(d.value)));
 
-  // Marker + Bisector
+  // event bisector
   const bisect = d3.bisector((d) => d.date);
-  const marker = svg.append('circle')
-    .attr('r', 4)
-    .attr('cx', -100)
-    .attr('fill', 'none');
+  // const bisectDate = d3.bisector((d) => new Date(d.date));
 
-  changeOnPrefersColorSchemeAndOnce(() => {
-    marker.attr('stroke', getCssVar('c-fg-2'));
-  });
+  // Events
+  const eventBox = d3.select('[data-js-events]');
 
+  svg.append('g')
+    .attr('data-type', 'events')
+    .selectAll('circle')
+    .data(listOfEvents.events)
+    .enter()
+    .append('circle')
+    .attr('r', '3')
+    .attr('cx', (d) => {
+      const currentDate = new Date(d.date);
+      return x(currentDate);
+    })
+    .attr('cy', contentHeight)
+    .style('fill', getCssVar('c-prim'))
+    .style('stroke-width', '0.5')
+    .style('stroke-dasharray', '10 5');
+
+  // Marker
   const startIndex = Math.round(data.length / 2);
   let currentLookup = new Date(data[startIndex].date);
   elSlider.setAttribute('value', startIndex);
@@ -102,7 +116,6 @@ export default function generateTimeline(
     if (i >= data.length || i < 0) {
       return;
     }
-    marker.attr('cx', x(data[i].date)).attr('cy', y(data[i].value));
 
     currentLookup = new Date(date);
     bar.attr('x1', x(currentLookup)).attr('x2', x(currentLookup));
@@ -114,6 +127,29 @@ export default function generateTimeline(
       cancelable: true,
     });
     elSlider.dispatchEvent(inputEvent);
+
+    // events
+    const eventToShow = listOfEvents.events.findLast((event) => {
+      const paraDateObj = new Date(event.date);
+
+      return (paraDateObj <= date);
+    });
+
+    eventBox.text('');
+
+    if (eventToShow === undefined) {
+      return;
+    }
+
+    const dateToShow = new Date(eventToShow.date);
+
+    eventBox
+      .append('time')
+      .attr('datetime', eventToShow.date)
+      .text(dateToShow.toLocaleDateString('en-UK', eventToShow.formatOption));
+    eventBox
+      .append('p')
+      .text(eventToShow.description);
   }
 
   baseSelection.on('pointermove click', (event) => {
