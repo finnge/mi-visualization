@@ -79,19 +79,18 @@ export default async function generateChord(
     .append('g')
     .attr('data-country', (d) => listOfCountries[d.index]);
 
-  outerGroups
+  const outerGroupsCountries = outerGroups
     .append('path')
     .attr('data-country', (d) => listOfCountries[d.index])
     .attr('data-value', (d) => d.value)
     .attr('data-group', (d) => d.index)
-    // .style('fill', () => getCssVar('c-prim-interactive'))
     .style('fill', (d) => color(d.index))
     .attr('d', d3.arc()
       .innerRadius(innerRadius)
       .outerRadius(outerRadius));
 
   // add text label
-  outerGroups
+  const outerGroupsLabels = outerGroups
     .append('text')
     .each((d) => {
       const d2 = d;
@@ -130,7 +129,7 @@ export default async function generateChord(
     .attr('stop-color', (d) => color(d.source.index));
 
   // Add the links between groups
-  svg
+  const links = svg
     .datum(res)
     .append('g')
     .attr('data-type', 'links')
@@ -290,4 +289,37 @@ export default async function generateChord(
       });
     });
   });
+
+  //
+  // Intro animation
+  //
+
+  // 3
+  outerGroupsCountries.attr('data-js-intro-slide-el-3', ''); // TODO: remove corona
+  outerGroupsLabels.attr('data-js-intro-slide-el-3', ''); // TODO: remove corona
+
+  // 4
+  outerGroupsCountries.attr('data-js-intro-slide-el-4', '');
+  outerGroupsLabels.attr('data-js-intro-slide-el-4', '');
+
+  const indexOfDE = listOfCountries.findIndex((value) => value === 'DE');
+
+  links.filter((d) => d.source.index === indexOfDE
+    || d.target.index === indexOfDE).each(function each() {
+    d3.select(this).attr('data-js-intro-slide-el-4', '');
+  });
+
+  // 5
+  outerGroupsCountries.attr('data-js-intro-slide-el-5', '');
+  outerGroupsLabels.attr('data-js-intro-slide-el-5', '');
+  links.attr('data-js-intro-slide-el-5', '');
+  links.filter((d) => d.source.index !== d.target.index).each(function each() {
+    d3.select(this).attr('data-js-intro-slide-el-5-passive', '');
+  });
+
+  // 6
+  svg.attr('data-js-intro-slide-el-6', '');
+
+  // 7
+  svg.attr('data-js-intro-slide-el-7', '');
 }

@@ -103,29 +103,33 @@ import './helper';
     delete slides[currentSlide].dataset.jsSlideActive;
     slides[nextSlide].dataset.jsSlideActive = '';
 
+    const listCurrentElements = document.querySelectorAll(`[data-js-intro-slide-el-${currentSlide}]`);
+    const listNextElements = document.querySelectorAll(`[data-js-intro-slide-el-${nextSlide}]`);
+
+    listCurrentElements.forEach((el) => {
+      // eslint-disable-next-line no-param-reassign
+      delete el.dataset.jsSlideElActive;
+    });
+
+    listNextElements.forEach((el) => {
+      // eslint-disable-next-line no-param-reassign
+      el.dataset.jsSlideElActive = '';
+    });
+
+    const listCurrentPassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${currentSlide}-passive]`);
+    const listNextPassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${nextSlide}-passive]`);
+
+    listCurrentPassiveElements.forEach((el) => {
+      // eslint-disable-next-line no-param-reassign
+      delete el.dataset.jsSlideElActivePassive;
+    });
+
+    listNextPassiveElements.forEach((el) => {
+      // eslint-disable-next-line no-param-reassign
+      el.dataset.jsSlideElActivePassive = '';
+    });
+
     currentSlide = nextSlide;
-
-    switch (currentSlide) {
-      case 0:
-        break;
-      case 1:
-        break;
-      case 2:
-        break;
-      case 3:
-        break;
-      case 4:
-        break;
-      case 5:
-        break;
-      case 6:
-        break;
-      case 7:
-        break;
-
-      default:
-        break;
-    }
 
     // Forward Button
     if (currentSlide === slides.length - 1) {

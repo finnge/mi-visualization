@@ -17,14 +17,14 @@ function timeConvert(time) {
 /* eslint-disable no-extend-native */
 // Get ISO week number for given date
 // @see https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
-Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
+Date.prototype.getWeekNumber = function getWeekNumber() {
   const d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
 
-  return `${d.getUTCFullYear()}-${weekNo < 10 ? `0${weekNo}` : weekNo}`;
+  return weekNo;
 };
 /* eslint-enable no-extend-native */
 
@@ -77,11 +77,12 @@ const FILEPATH = {
     counterAll += 1;
 
     const dateOfFlight = new Date(flight.day);
-    const yearCalWeek = dateOfFlight.getYearWeekNumber();
+    const calWeek = dateOfFlight.getWeekNumber();
+    const yearCalWeek = `${dateOfFlight.getUTCFullYear()}-${calWeek < 10 ? `0${calWeek}` : calWeek}`;
 
     if (
-      dateOfFlight.getFullYear() < 2019
-      || (dateOfFlight.getFullYear() === 2019 && yearCalWeek <= 9)
+      dateOfFlight.getUTCFullYear() < 2019
+      || (dateOfFlight.getUTCFullYear() === 2019 && calWeek <= 9)
     ) {
       return;
     }
@@ -169,7 +170,7 @@ const FILEPATH = {
   const flightFiles = await glob(FILEPATH.flights);
 
   // reduce file number for testing
-  // const numberOfFiles = 2;
+  // const numberOfFiles = 1;
   // for (let i = flightFiles.length; i > numberOfFiles; i -= 1) {
   //   flightFiles.pop();
   // }

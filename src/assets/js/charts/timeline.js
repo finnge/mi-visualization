@@ -120,4 +120,7 @@ export default function generateTimeline(
     const m = d3.pointer(event, this);
     update(x.invert(m[0]));
   });
+
+  // Intro animation
+  svg.attr('data-js-intro-slide-el-7', '');
 }

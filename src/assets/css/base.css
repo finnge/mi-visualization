@@ -78,3 +78,9 @@ main {
       [full-start] 1fr [wrapper-start]
       minmax(0, 70rem) [wrapper-end] 1fr [full-end]; */
 }
+
+footer {
+  position: fixed;
+  top: var(--m);
+  right: var(--m);
+}
