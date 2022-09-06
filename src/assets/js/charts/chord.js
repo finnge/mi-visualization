@@ -190,7 +190,7 @@ export default async function generateChord(
       .startAngle((d) => d3.mean([d.startAngle, d.endAngle]) - 0.02)
       .endAngle((d) => d3.mean([d.startAngle, d.endAngle]) + 0.02));
 
-  const yAxis = svg.append('g')
+  const yAxis = svg.insert('g', ':first-child')
     .attr('text-anchor', 'middle');
 
   const yTick = yAxis
