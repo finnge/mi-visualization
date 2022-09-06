@@ -328,6 +328,9 @@ export default async function generateChord(
   // 7
   svg.attr('data-js-intro-slide-el-7', '');
 
+  // 8
+  svg.attr('data-js-intro-slide-el-8', '');
+
   // init visability
   const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;
 

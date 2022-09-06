@@ -26,7 +26,12 @@ svg text {
 .button svg {
   width: var(--m);
   height: var(--m);
+  margin: var(--xxs);
   fill: var(--c-fg-1);
+}
+
+.button[data-hidden] {
+  display: none;
 }
 
 .button--primary {

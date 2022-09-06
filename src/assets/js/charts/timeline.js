@@ -159,6 +159,7 @@ export default function generateTimeline(
 
   // Intro animation
   baseSelection.attr('data-js-intro-slide-el-7', '');
+  baseSelection.attr('data-js-intro-slide-el-8', '');
 
   // init visability
   const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;
