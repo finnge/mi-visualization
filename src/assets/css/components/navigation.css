@@ -16,10 +16,19 @@
   padding: var(--xs);
 }
 
+.event-display {
+  display: none;
+}
+
 .event-display time {
   font-weight: var(--fw-bold);
 }
 
 .event-display p {
   font-family: var(--ff-sans);
+}
+
+[data-js-current-slide="7"] .event-display,
+[data-js-current-slide="8"] .event-display {
+  display: block;
 }

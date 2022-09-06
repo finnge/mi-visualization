@@ -133,15 +133,13 @@ export default function generateTimeline(
     .style('stroke-dasharray', '10 5');
 
   // Marker
-  const startIndex = Math.round(data.length / 2);
+  const startIndex = elSlider.getAttribute('value') ?? Math.round(data.length / 2);
   let currentLookup = new Date(data[startIndex].date);
   elSlider.setAttribute('value', startIndex);
 
   const bar = svg
     .append('line')
-    .attr('y2', contentHeight)
-    .attr('x1', x(currentLookup))
-    .attr('x2', x(currentLookup));
+    .attr('y2', contentHeight);
 
   changeOnPrefersColorSchemeAndOnce(() => {
     bar.attr('style', `stroke:${getCssVar('c-fg-2')}; stroke-width:0.5; stroke-dasharray: 5 3;`);
@@ -188,6 +186,7 @@ export default function generateTimeline(
       .append('p')
       .text(eventToShow.description);
   }
+  update(currentLookup);
 
   baseSelection.on('pointermove click', (event) => {
     const m = d3.pointer(event, this);
