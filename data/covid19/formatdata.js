@@ -89,26 +89,35 @@ const FILEPATH = {
     const yearWeek = date.getYearWeekNumber();
 
     // Die Bezeichnung EL (Griechenland) wird durch die ISO Abkürzung GR ersetzt
+    const geoId = (el.geoId === 'EL') ? 'GR' : el.geoId;
 
-    if (popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] === undefined) {
-      popData2020[(el.geoId === 'EL') ? 'GR' : el.geoId] = el.popData2020;
+    if (popData2020[geoId] === undefined) {
+      popData2020[geoId] = el.popData2020;
     }
 
     if (formattedData[yearWeek] === undefined) {
       formattedData[yearWeek] = {};
     }
 
-    if (formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId] === undefined) {
-      formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId] = {
+    if (formattedData[yearWeek][geoId] === undefined) {
+      formattedData[yearWeek][geoId] = {
         cases: 0,
         deaths: 0,
         incidence: [],
       };
     }
 
-    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].cases += parseInt(el.cases, 10);
-    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].deaths += parseInt(el.deaths, 10);
-    formattedData[yearWeek][(el.geoId === 'EL') ? 'GR' : el.geoId].incidence.push(el.incidence);
+    const cases = parseInt(el.cases, 10);
+    const deaths = parseInt(el.deaths, 10);
+    const { incidence } = el;
+
+    // formattedData[yearWeek][geoId].cases += cases < 0 ? 0 : cases;
+    // formattedData[yearWeek][geoId].deaths += deaths < 0 ? 0 : deaths;
+    // formattedData[yearWeek][geoId].incidence.push(incidence < 0 ? 0 : incidence);
+
+    formattedData[yearWeek][geoId].cases += cases;
+    formattedData[yearWeek][geoId].deaths += deaths;
+    formattedData[yearWeek][geoId].incidence.push(incidence);
   });
 
   // 7 day incidence average for week
@@ -124,7 +133,9 @@ const FILEPATH = {
         addedIncidence += incidence;
       });
 
-      formattedData[key][countryKey].incidence = Math.round((addedIncidence / num) * 100) / 100;
+      const incidence = Math.round((addedIncidence / num) * 100) / 100;
+
+      formattedData[key][countryKey].incidence = incidence < 0 ? 0 : incidence;
     });
   });
 

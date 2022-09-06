@@ -180,7 +180,10 @@ export default async function generateChord(
 
   outerGroups
     .append('path')
-    .attr('fill', getCssVar('c-prim'))
+    .attr('fill', (d) => {
+      console.log(listOfCountries[d.index], covid19[d.index], y(covid19[d.index] ?? 0));
+      return getCssVar('c-prim');
+    })
     .attr('d', d3.arc() // imagine your doing a part of a donut plot
       .innerRadius(outerRadius + ringPadding)
       .outerRadius((d) => y(covid19[d.index] ?? 0))
