@@ -53,8 +53,8 @@ export default function generateTimeline(
   svg.append('g')
     .attr('transform', `translate(0,${contentHeight})`)
     .call(
-      d3.axisBottom(x)
-        .tickFormat(d3.timeFormat('KW%V %Y')),
+      d3.axisBottom(x),
+      // .tickFormat(d3.timeFormat('KW%V %Y')),
     );
 
   // xAxis.tickValues(d3.range(minX, maxX, interval));

@@ -158,29 +158,38 @@ export default async function generateChord(
   // Covid Data
   // X scale
 
-  const medianCovid19MaxValue = d3.quantile(
+  const medianCovid19Value = (quantil) => d3.quantile(
     Object.values(listOfCovidIncidence),
-    0.25,
+    quantil,
     (weekYearDatum) => d3.max(
       Object.values(weekYearDatum),
       (datum) => datum.incidence,
     ),
   );
 
+  let maxDomain = medianCovid19Value(1);
+
+  if (year < 2020 || (year === 2020 && week < 41)) {
+    maxDomain = medianCovid19Value(0.4);
+  } else if (year < 2021 || (year === 2021 && week < 44)) {
+    maxDomain = medianCovid19Value(0.7);
+  }
+
   const y = d3.scaleRadial()
     .range([
       outerRadius + ringPadding,
-      outerRadius + Math.min(margin.left, margin.right),
+      outerRadius + Math.min(margin.left, margin.right) - 5,
     ])
     .domain([
       0,
-      d3.max([...covid19, medianCovid19MaxValue]),
+      // d3.max([...covid19, medianCovid19]),
+      maxDomain,
     ])
     .nice();
 
   outerGroups
     .append('path')
-    .attr('fill', getCssVar('c-prim'))
+    .attr('fill', getCssVar('c-fg-1'))
     .attr('d', d3.arc() // imagine your doing a part of a donut plot
       .innerRadius(outerRadius + ringPadding)
       .outerRadius((d) => y(covid19[d.index] ?? 0))
