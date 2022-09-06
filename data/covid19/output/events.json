@@ -1,220 +1,178 @@
 {
   "events": [
     {
-      "event": "China - Ausbruch Lungenkrankheit",
+      "event": "China - mysterious lung disease",
       "date": "2019-12-31",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "China meldet Ausbruch einer mysteriösen Lungenkrankheit"
+      "description": "China reports the outbreak of a mysterious lung disease."
     },
     {
-      "event": "Identifizierung des Coronavirus",
+      "event": "Identification of the coronavirus",
       "date": "2020-01-07",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Identifizierung des Coronavirus"
+      "description": "A new type of virus has been identified."
     },
     {
-      "event": "Erste Fälle in Europa",
-      "date": "2020-01-24",
-      "formatOption": {
-        "year": "numeric",
-        "month": "long",
-        "day": "numeric"
-      },
-      "description": "Erste Fälle des Coronavirus in Europa"
-    },
-    {
-      "event": "WHO 'internationale gesundheitliche Notlage'",
+      "event": "WHO: 'international health emergency'",
       "date": "2020-01-30",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "WHO ruft 'internationale gesundheitliche Notlage' aus"
+      "description": "WHO declares 'international health emergency'. The first cases of corona have been reported in Europe."
     },
     {
-      "event": "WHO Namensgebung 'COVID-19'",
-      "date": "2020-02-11",
-      "formatOption": {
-        "year": "numeric",
-        "month": "long",
-        "day": "numeric"
-      },
-      "description": "WHO Namensgebung 'COVID-19'"
-    },
-    {
-      "event": "WHO erklärt die bisherige Epidemie offiziell zu einer weltweiten Pandemie",
+      "event": "WHO officially declares previous epidemic a global pandemic",
       "date": "2020-03-11",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "WHO erklärt die bisherige Epidemie offiziell zu einer weltweiten Pandemie"
+      "description": "WHO officially declares previous epidemic a global pandemic."
     },
     {
-      "event": "Europa wird zum Corona-Hotspot",
-      "date": "2020-03-16",
+      "event": "Europa becomes a Corona hotspot",
+      "date": "2020-03",
       "formatOption": {
         "year": "numeric",
         "month": "long",
-        "day": "numeric"
       },
-      "description": "Soziale Isolation in DE, Ausgangssperre in FR -> Europa wird zum Corona-Hotspot"
+      "description": "Europe becomes a Corona hotspot. Social isolation is introduced in DE and curfews in FR. In addition, Italy's healthcare system is at its limit."
     },
     {
-      "event": "Italiens Gesundheitssystem ist am Limit",
-      "date": "2020-03-21",
-      "formatOption": {
-        "year": "numeric",
-        "month": "long",
-        "day": "numeric"
-      },
-      "description": "Italiens Gesundheitssystem ist am Limit"
-    },
-    {
-      "event": "Reiserückkehrer aus Risikogebieten müssen sich testen lassen",
+      "event": "Travelers returning from risk areas must get tested",
       "date": "2020-07",
       "formatOption": {
         "year": "numeric",
         "month": "long"
       },
-      "description": "Reiserückkehrer aus Risikogebieten müssen sich testen lassen"
+      "description": "Travelers returning from risk areas must get tested."
     },
     {
-      "event": "Zweite Welle in Europa",
+      "event": "Second wave in Europe",
       "date": "2020-09",
       "formatOption": {
         "year": "numeric",
         "month": "long"
       },
-      "description": "Zweite Welle in Europa"
+      "description": "The second wave arises in Europe. The Healthcare systems are overburdened."
     },
     {
-      "event": "Empfehlung für einen gemeinsamen Ansatz für Reisebestimmungen",
+      "event": "Recommendation for a common approach to travel regulations",
       "date": "2020-10-13",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Rat nimmt Empfehlung für einen gemeinsamen Ansatz für Reisebestimmungen an"
+      "description": "European Council adopts recommendation for common approach to travel regulations."
     },
     {
-      "event": "Erster COVID-19-Impfstoff zur Verwendung in der EU zugelassen",
+      "event": "First COVID-19 vaccine approved in the EU",
       "date": "2020-12-21",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Erster COVID-19-Impfstoff zur Verwendung in der EU zugelassen"
+      "description": "First COVID-19 vaccine approved for use in the EU."
     },
     {
-      "event": "Virusvariante Alpha & Beta gemeldet",
+      "event": "Virus variants alpha & beta reported",
       "date": "2020-12",
       "formatOption": {
         "year": "numeric",
         "month": "long"
       },
-      "description": "Virusvariante Alpha & Beta gemeldet"
+      "description": "Virus variants alpha & beta have been reported. The mutation were first identified in the United Kingdom and in South Africa."
     },
     {
-      "event": "Virusvariante Gamma gemeldet",
+      "event": "Virus variant gamma reported",
       "date": "2021-01",
       "formatOption": {
         "year": "numeric",
         "month": "long"
       },
-      "description": "Virusvariante Gamma gemeldet"
+      "description": "Virus variant gamma has been reported. The mutation was first identified in the Brazilian Amazon region."
     },
     {
-      "event": "COVID-19-Impfstoff zugelassen (Moderna)",
-      "date": "2021-01-06",
+      "event": "COVID-19 vaccines approved",
+      "date": "2021-01",
       "formatOption": {
         "year": "numeric",
         "month": "long",
-        "day": "numeric"
       },
-      "description": "COVID-19-Impfstoff zugelassen (Moderna)"
+      "description": "The COVID-19 vaccines Moderna and AstraZeneca got approved."
     },
     {
-      "event": "COVID-19-Impfstoff zugelassen (AstraZeneca)",
-      "date": "2021-01-23",
-      "formatOption": {
-        "year": "numeric",
-        "month": "long",
-        "day": "numeric"
-      },
-      "description": "COVID-19-Impfstoff zugelassen (AstraZeneca)"
-    },
-    {
-      "event": "Rat aktualisiert Empfehlung zu COVID-19-Reisemaßnahmen",
+      "event": "Council updates recommendation on COVID-19 travel measures",
       "date": "2021-02-01",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Rat aktualisiert Empfehlung zu COVID-19-Reisemaßnahmen"
+      "description": "Council updates recommendation on COVID-19 travel measures."
     },
     {
-      "event": "COVID-19-Impfstoff zugelassen (J&J)",
+      "event": "COVID-19 vaccine approved",
       "date": "2021-03-11",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "COVID-19-Impfstoff zugelassen (J&J)"
+      "description": "The COVID-19 vaccine Johnson&Johnson got approved."
     },
     {
-      "event": "Virusvariante Delta gemeldet",
+      "event": "Virus variant delta reported",
       "date": "2021-05-11",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Virusvariante Delta gemeldet"
+      "description": "Virus variant gamma has been reported. The mutation was first identified in India."
     },
     {
-      "event": "Digitales COVID-Zertifikat der EU tritt in Kraft",
+      "event": "digital COVID certificate comes into force",
       "date": "2021-07-21",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Digitales COVID-Zertifikat der EU tritt in Kraft"
+      "description": "EU digital COVID certificate comes into force."
     },
     {
-      "event": "Virusvariante Omikron gemeldet",
+      "event": "Virus variant omikron reported",
       "date": "2021-12-24",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Virusvariante Omikron gemeldet"
+      "description": "Virus variant omikron has been reported. The mutation was first identified in South Africa."
     },
     {
-      "event": "Europäischer Rat verabschiedet neue Empfehlung zu COVID-19-Reisebestimmungen",
+      "event": "European Council adopts new recommendation on COVID-19 travel regulations",
       "date": "2022-01-25",
       "formatOption": {
         "year": "numeric",
         "month": "long",
         "day": "numeric"
       },
-      "description": "Europäischer Rat verabschiedet neue Empfehlung zu COVID-19-Reisebestimmungen"
+      "description": "European Council adopts new recommendation on COVID-19 travel regulations."
     }
   ]
 }
