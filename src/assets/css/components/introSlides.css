@@ -4,6 +4,7 @@
 
 .intro-slides [data-js-slide] {
   display: none;
+  height: 100%;
 }
 
 .intro-slides [data-js-slide-active] {
@@ -13,4 +14,13 @@
 .intro-slides p {
   font-family: var(--ff-sans);
   font-size: var(--l);
+}
+
+.intro-navigation {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+
+.intro-navigation :last-child {
+  justify-self: end;
 }

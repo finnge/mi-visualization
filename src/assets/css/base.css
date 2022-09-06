@@ -12,10 +12,53 @@ svg text {
   font-family: var(--ff-sans);
 }
 
+.button {
+  border: none;
+  appearance: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
 .button svg {
   width: var(--m);
   height: var(--m);
   fill: var(--c-fg-1);
+}
+
+.button--primary {
+  display: flex;
+  align-items: center;
+}
+
+.button--primary:disabled svg {
+  fill: var(--c-fg-3);
+}
+
+.button--primary:hover:not(:disabled),
+.button--primary:focus:not(:disabled) {
+  color: var(--c-prim);
+}
+
+.button--primary:hover:not(:disabled) svg,
+.button--primary:focus:not(:disabled) svg {
+  fill: var(--c-prim);
+}
+
+.button--primary:active:not(:disabled) {
+  color: var(--c-prim);
+}
+
+.button--primary:active:not(:disabled) svg {
+  fill: var(--c-prim-interactive);
+}
+
+.button--primary svg {
+  width: var(--xl);
+  height: var(--xl);
 }
 
 [data-js-graph] {
@@ -23,6 +66,8 @@ svg text {
   align-items: center;
   justify-content: center;
   grid-column: main;
+  grid-row-end: 3;
+  grid-row-start: 1;
 }
 
 main {
