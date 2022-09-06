@@ -35,7 +35,8 @@ import './helper';
 
     const numberOfWeeks = elSlider.value - 1;
     const currentDate = new Date(startDate);
-    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
+    // HotFix: Skip to Friday of week so we get always the correct year
+    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks + 5);
 
     const {
       width,
