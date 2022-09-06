@@ -20,6 +20,7 @@
     "clean": "recursive-delete 'dist'",
     "build:js": "rollup -c",
     "build:css": "postcss 'src/assets/css/main.css' -o 'dist/assets/css/main.css' -m",
+    "build:html": "node render-views.js",
     "build-dirty": "npm-run-all -s build:* copy",
     "build": "npm-run-all -s clean build-dirty",
     "watch:js": "chokidar './src/**/*.js' -c 'npm run build:js'",
@@ -52,7 +53,8 @@
     "csv": "^6.1.0",
     "d3": "^7.4.4",
     "glob-promise": "^4.2.2",
-    "multistream": "^4.1.0"
+    "multistream": "^4.1.0",
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",
