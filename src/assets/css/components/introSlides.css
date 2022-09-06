@@ -32,7 +32,7 @@
 .graph[data-js-slide-el-active] *,
 .graph [data-js-slide-el-active],
 .graph [data-js-slide-el-active] * {
-  pointer-events: all;
+  pointer-events: auto;
   visibility: visible;
 }
 
@@ -41,7 +41,7 @@
 .graph [data-js-slide-el-active-passive],
 .graph [data-js-slide-el-active-passive] * {
   opacity: 0.1 !important;
-  pointer-events: all;
+  pointer-events: auto;
   visibility: visible;
 }
 

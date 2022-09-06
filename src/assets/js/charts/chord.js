@@ -158,29 +158,38 @@ export default async function generateChord(
   // Covid Data
   // X scale
 
-  const medianCovid19MaxValue = d3.quantile(
+  const medianCovid19Value = (quantil) => d3.quantile(
     Object.values(listOfCovidIncidence),
-    0.25,
+    quantil,
     (weekYearDatum) => d3.max(
       Object.values(weekYearDatum),
       (datum) => datum.incidence,
     ),
   );
 
+  let maxDomain = medianCovid19Value(1);
+
+  if (year < 2020 || (year === 2020 && week < 41)) {
+    maxDomain = medianCovid19Value(0.4);
+  } else if (year < 2021 || (year === 2021 && week < 44)) {
+    maxDomain = medianCovid19Value(0.7);
+  }
+
   const y = d3.scaleRadial()
     .range([
       outerRadius + ringPadding,
-      outerRadius + Math.min(margin.left, margin.right),
+      outerRadius + Math.min(margin.left, margin.right) - 5,
     ])
     .domain([
       0,
-      d3.max([...covid19, medianCovid19MaxValue]),
+      // d3.max([...covid19, medianCovid19]),
+      maxDomain,
     ])
     .nice();
 
   outerGroups
     .append('path')
-    .attr('fill', getCssVar('c-prim'))
+    .attr('fill', getCssVar('c-fg-1'))
     .attr('d', d3.arc() // imagine your doing a part of a donut plot
       .innerRadius(outerRadius + ringPadding)
       .outerRadius((d) => y(covid19[d.index] ?? 0))
@@ -188,6 +197,7 @@ export default async function generateChord(
       .endAngle((d) => d3.mean([d.startAngle, d.endAngle]) + 0.02));
 
   const yAxis = svg.append('g')
+    .attr('data-type', 'covid-ticks')
     .attr('text-anchor', 'middle');
 
   const yTick = yAxis
@@ -239,7 +249,7 @@ export default async function generateChord(
   const tooltip = baseSelection.append('div')
     .style('position', 'absolute')
     .style('visibility', 'hidden')
-    .style('z-index', 1)
+    .attr('data-js-tooltip', '')
     .text('Value');
 
   // Interactivity
@@ -249,12 +259,12 @@ export default async function generateChord(
   listOfAllGroups.forEach((group) => {
     group.addEventListener('mouseenter', (e) => {
       const { target } = e;
-      const { group: groupId, country } = target.dataset;
+      const { group: groupId, value } = target.dataset;
 
       // tooltip
       tooltip
         .style('visibility', 'visible')
-        .text(country);
+        .html(`${value} total <br> number of flights`);
 
       // highlight active paths
       const listOfGroupSource = elGraphWrapper.querySelectorAll(`path[data-group-source="${groupId}"]`);
@@ -327,6 +337,9 @@ export default async function generateChord(
 
   // 7
   svg.attr('data-js-intro-slide-el-7', '');
+
+  // 8
+  svg.attr('data-js-intro-slide-el-8', '');
 
   // init visability
   const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;

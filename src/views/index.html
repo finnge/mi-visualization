@@ -18,105 +18,119 @@
   <link rel="stylesheet" href="/assets/css/main.css">
 
   <script src="/assets/js/main.js" async defer></script>
-  <title>Document</title>
+  <title>Flight data during the COVID-19 pandemic</title>
 </head>
 
 <body>
   <main>
-    <header>
-      <h1>How Has the <abbr title="Coronavirus Disease 2019">COVID-19</abbr> Pandemic Affected Air Travel in Europe?
-      </h1>
-      <span data-js-week-indicator></span>
-    </header>
+    <div class="side">
+      <header>
+        <h1>How Has the <abbr title="Coronavirus Disease 2019">COVID-19</abbr> Pandemic Affected Air Travel in Europe?
+        </h1>
+      </header>
 
-    <div data-js-intro class="intro-slides">
-      <div data-js-slide="0" data-js-slide-active>
-        <p>Due to the pandemic spread of the Coronavirus (early 2020 - spring 2022), many economic sectors suffered
-          losses. This was due to the extensive contact restrictions necessary to contain the pandemic.</p>
-      </div>
-      <div data-js-slide="1">
-        <p>One industry that suffered serious losses was the aviation industry, as travel restrictions between countries
-          to combat the international spread of the Coronavirus, were implemented.
-        </p>
-      </div>
-      <div data-js-slide="2">
-        <p>This visualization is intended to show the evolution of air travel during the pandemic phases of the
-          Coronavirus. The countries of the European Economic Area (27 <abbr title="European Union">EU</abbr> countries
-          + Iceland, Lichtenstein and Norway) and Switzerland are considered.
-        </p>
-      </div>
-      <div data-js-slide="3">
-        <p>
-          The individual sections of the ring to be seen represent the countries. These are the countries of the
-          European Economic Area (27 <abbr title="European Union"></abbr>EU</abbr> states + Iceland, Lichtenstein and
-          Norway) and Switzerland. The width of the countries depends on the number of flights of the country.</p>
-      </div>
-      <div data-js-slide="4">
-        <p>The connections between countries represent flight connections. The width of a connection represents the
-          number of flights on that flight connection compared to other flight connections.
-        </p>
-      </div>
-      <div data-js-slide="5">
-        <p>Connections that do not leave a country represent domestic flights.
-        </p>
-      </div>
-      <div data-js-slide="6">
-        <p>The bars represent the level of <abbr title="Coronavirus Disease 2019">COVID-19</abbr> incidence for the
-          respective country below.
-        </p>
-      </div>
-      <div data-js-slide="7">
-        <p>The time of visualization can now be selected via the timeline by hovering with the mouse pointer. In
-          addition, important events during the pandemic and the total number of flights are displayed in the timeline.
-        </p>
+      <div data-js-intro class="intro-slides">
+        <div data-js-slide="0" data-js-slide-active>
+          <p>Due to the pandemic spread of the Coronavirus (early 2020 - spring 2022), many economic sectors suffered
+            losses. This was due to the extensive contact restrictions necessary to contain the pandemic.</p>
+        </div>
+        <div data-js-slide="1">
+          <p>One industry that suffered serious losses was the aviation industry, as travel restrictions between countries
+            to combat the international spread of the Coronavirus, were implemented.
+          </p>
+        </div>
+        <div data-js-slide="2">
+          <p>This visualization is intended to show the evolution of air travel during the pandemic phases of the
+            Coronavirus. The countries of the European Economic Area (27 <abbr title="European Union">EU</abbr> countries
+            + Iceland, Lichtenstein and Norway) and Switzerland are considered.
+          </p>
+        </div>
+        <div data-js-slide="3">
+          <p>
+            The individual sections of the ring to be seen represent the countries. These are the countries of the
+            European Economic Area (27 <abbr title="European Union"></abbr>EU</abbr> states + Iceland, Lichtenstein and
+            Norway) and Switzerland. The width of the countries depends on the number of flights of the country.</p>
+        </div>
+        <div data-js-slide="4">
+          <p>The connections between countries represent flight connections. The width of a connection represents the
+            number of flights on that flight connection compared to other flight connections.
+          </p>
+        </div>
+        <div data-js-slide="5">
+          <p>Connections that do not leave a country represent domestic flights.
+          </p>
+        </div>
+        <div data-js-slide="6">
+          <p>The bars represent the level of <abbr title="Coronavirus Disease 2019">COVID-19</abbr> incidence for the
+            respective country below.
+          </p>
+        </div>
+        <div data-js-slide="7">
+          <p>The time of visualization can now be selected via the timeline by hovering with the mouse pointer. In
+            addition, important events during the pandemic and the total number of flights are displayed in the timeline.
+          </p>
+        </div>
+
+        <div data-js-slide="8"></div>
+
+        <div data-js-intro-navigion class="intro-navigation">
+          <button data-js-intro-action="back" class="button button--primary" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <title>Previous</title>
+              <polygon points="16 8 17.43 9.393 11.85 15 24 15 24 17 11.85 17 17.43 22.573 16 24 8 16 16 8" />
+              <path d="M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z" />
+              <rect data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32" height="32" />
+            </svg>
+          </button>
+
+          <button data-js-intro-action="forward" class="button button--primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <title>Forward</title>
+              <polygon points="16 8 14.57 9.393 20.15 15 8 15 8 17 20.15 17 14.57 22.573 16 24 24 16 16 8" />
+              <path d="M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z" />
+              <rect data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32" height="32" />
+            </svg>
+          </button>
+
+          <button data-js-intro-action="skip" class="button button--primary">
+            Skip intro
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M10,28a1,1,0,0,1-1-1V5a1,1,0,0,1,1.501-.8652l19,11a1,1,0,0,1,0,1.73l-19,11A.9975.9975,0,0,1,10,28ZM11,6.7344V25.2656L27,16Z" />
+              <rect x="4" y="4" width="2" height="24" />
+              <rect data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32" height="32" />
+            </svg>
+          </button>
+
+          <button data-js-intro-action="done" class="button button--primary" data-hidden>
+            Done
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <polygon points="14 21.414 9 16.413 10.413 15 14 18.586 21.585 11 23 12.415 14 21.414" />
+              <path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z" />
+              <rect data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32" height="32" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div data-js-intro-navigion class="intro-navigation">
-        <button data-js-intro-action="back" class="button button--primary" disabled>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <title>Previous</title>
-            <polygon points="16 8 17.43 9.393 11.85 15 24 15 24 17 11.85 17 17.43 22.573 16 24 8 16 16 8" />
-            <path
-              d="M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z" />
-            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32"
-              height="32" />
-          </svg>
-        </button>
+    <p data-js-week-indicator></p>
 
-        <button data-js-intro-action="forward" class="button button--primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <title>Forward</title>
-            <polygon points="16 8 14.57 9.393 20.15 15 8 15 8 17 20.15 17 14.57 22.573 16 24 24 16 16 8" />
-            <path
-              d="M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z" />
-            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32"
-              height="32" />
-          </svg>
-        </button>
-        <button data-js-intro-action="skip" class="button button--primary">
-          Skip intro
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M10,28a1,1,0,0,1-1-1V5a1,1,0,0,1,1.501-.8652l19,11a1,1,0,0,1,0,1.73l-19,11A.9975.9975,0,0,1,10,28ZM11,6.7344V25.2656L27,16Z" />
-            <rect x="4" y="4" width="2" height="24" />
-            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32"
-              height="32" />
-          </svg>
+      <div class="navigation">
+        <div class="graph" data-js-timeline></div>
 
-        </button>
+        <input style="display:none" type="range" class="navigation-range" data-js-slider min="1" step="1">
       </div>
+
+      <div data-js-events class="event-display">
+      </div>
+
     </div>
+
 
     <div data-js-graph id="chorddiagram" class="graph"></div>
 
-    <div data-js-events class="event-display">
-    </div>
 
-    <div class="navigation">
-      <div class="graph" data-js-timeline></div>
 
-      <input style="display:none" type="range" class="navigation-range" data-js-slider min="1" step="1">
-    </div>
+
   </main>
   <footer>
     <a href="https://github.com/finnge/mi-visualization" class="button" rel="noopener noreferrer" target="_blank"
@@ -125,7 +139,7 @@
         <title>GitHub</title>
         <path class="cls-1" style="fill-rule: evenodd;"
           d="M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z" />
-        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32"
+        <rect data-name="&lt;Transparent Rectangle&gt;" style="fill:none;" width="32"
           height="32" />
       </svg>
     </a>

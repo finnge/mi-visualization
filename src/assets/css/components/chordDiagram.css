@@ -1,6 +1,6 @@
 [data-js-graph] {
   /* width: 100%; */
-  height: clamp(300px, 100vh, 1000px);
+  height: clamp(750px, 100vh, 1000px);
 }
 
 [data-js-graph] [data-type="arcs"] path {
@@ -13,4 +13,19 @@
 
 [data-js-graph] [data-type="links"] path[data-passive] {
   opacity: 0.05;
+}
+
+[data-js-graph] [data-type="covid-ticks"] {
+  pointer-events: none;
+}
+
+[data-js-tooltip] {
+  z-index: 1;
+  padding: var(--xxs);
+  backdrop-filter: blur(5px);
+  background-color: rgb(38 38 38 / 80%);
+  color: #f4f4f4;
+  font-family: var(--ff-sans);
+  font-size: var(--xs);
+  line-height: var(--lh-tight);
 }

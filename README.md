@@ -13,7 +13,7 @@ Germany
 
 ## Documentation
 
-tbd.
+Die Dokumentation zum Projekt befindet sich im [Wiki](https://github.com/finnge/vis-covid19-flights/wiki).
 
 ### Development
 

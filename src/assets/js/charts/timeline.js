@@ -52,15 +52,18 @@ export default function generateTimeline(
     .range([0, contentWidth]);
   svg.append('g')
     .attr('transform', `translate(0,${contentHeight})`)
-    .call(d3.axisBottom(x));
+    .call(
+      d3.axisBottom(x),
+      // .tickFormat(d3.timeFormat('KW%V %Y')),
+    );
+
+  // xAxis.tickValues(d3.range(minX, maxX, interval));
 
   // Add Y axis
   const y = d3.scaleLinear()
     .domain(d3.extent(data, (d) => d.value))
     .range([contentHeight, 0])
     .nice();
-  // svg.append('g')
-  //   .call(d3.axisLeft(y));
 
   // Add the path
   svg.append('path')
@@ -71,6 +74,40 @@ export default function generateTimeline(
     .attr('d', d3.line()
       .x((d) => x(d.date))
       .y((d) => y(d.value)));
+
+  // lines
+  const yAxis = svg.append('g')
+    .attr('data-type', 'ticks');
+
+  const yTick = yAxis
+    .selectAll('g')
+    .data(y.ticks(3))
+    .enter().append('g');
+
+  yTick.append('line')
+    .attr('fill', 'none')
+    .attr('stroke', getCssVar('c-fg-1'))
+    .style('opacity', 0.3)
+    .attr('x1', 0)
+    .attr('x2', contentWidth)
+    .attr('y1', y)
+    .attr('y2', y);
+
+  yTick.append('text')
+    .attr('y', (d) => y(d))
+    .attr('dy', '0.35em')
+    .attr('fill', 'none')
+    .attr('stroke', getCssVar('c-bg-1'))
+    .attr('stroke-width', 5)
+    .style('font-size', getCssVar('xxs'))
+    .text(y.tickFormat(5, 's'));
+
+  yTick.append('text')
+    .attr('fill', getCssVar('c-fg-1'))
+    .attr('y', (d) => y(d))
+    .attr('dy', '0.35em')
+    .style('font-size', getCssVar('xxs'))
+    .text(y.tickFormat(5, 's'));
 
   // event bisector
   const bisect = d3.bisector((d) => d.date);
@@ -96,15 +133,13 @@ export default function generateTimeline(
     .style('stroke-dasharray', '10 5');
 
   // Marker
-  const startIndex = Math.round(data.length / 2);
+  const startIndex = elSlider.getAttribute('value') ?? Math.round(data.length / 2);
   let currentLookup = new Date(data[startIndex].date);
   elSlider.setAttribute('value', startIndex);
 
   const bar = svg
     .append('line')
-    .attr('y2', contentHeight)
-    .attr('x1', x(currentLookup))
-    .attr('x2', x(currentLookup));
+    .attr('y2', contentHeight);
 
   changeOnPrefersColorSchemeAndOnce(() => {
     bar.attr('style', `stroke:${getCssVar('c-fg-2')}; stroke-width:0.5; stroke-dasharray: 5 3;`);
@@ -151,6 +186,7 @@ export default function generateTimeline(
       .append('p')
       .text(eventToShow.description);
   }
+  update(currentLookup);
 
   baseSelection.on('pointermove click', (event) => {
     const m = d3.pointer(event, this);
@@ -159,6 +195,7 @@ export default function generateTimeline(
 
   // Intro animation
   baseSelection.attr('data-js-intro-slide-el-7', '');
+  baseSelection.attr('data-js-intro-slide-el-8', '');
 
   // init visability
   const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;

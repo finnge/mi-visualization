@@ -36,7 +36,7 @@ import './helper';
     const numberOfWeeks = elSlider.value - 1;
     const currentDate = new Date(startDate);
     // HotFix: Skip to Friday of week so we get always the correct year
-    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks + 5);
+    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks + 3);
 
     const {
       width,
@@ -91,9 +91,10 @@ import './helper';
   // Navigation
 
   const slides = document.querySelectorAll('[data-js-slide]');
-  const buttonFoward = document.querySelector('[data-js-intro-action="forward"]');
+  const buttonForward = document.querySelector('[data-js-intro-action="forward"]');
   const buttonBack = document.querySelector('[data-js-intro-action="back"]');
-  const buttonSkip = document.querySelector('[data-js-intro-action="skip"]'); // TODO: implement
+  const buttonSkip = document.querySelector('[data-js-intro-action="skip"]');
+  const buttonDone = document.querySelector('[data-js-intro-action="done"]');
   let currentSlide = 0;
 
   slides[currentSlide].dataset.jsSlideActive = '';
@@ -143,10 +144,10 @@ import './helper';
     body.dataset.jsCurrentSlide = currentSlide;
 
     // Forward Button
-    if (currentSlide === slides.length - 1) {
-      buttonFoward.setAttribute('disabled', '');
+    if (currentSlide === slides.length - 2) {
+      buttonForward.setAttribute('disabled', '');
     } else {
-      buttonFoward.removeAttribute('disabled');
+      buttonForward.removeAttribute('disabled');
     }
 
     // Backwards Button
@@ -156,15 +157,36 @@ import './helper';
       buttonBack.removeAttribute('disabled');
     }
 
-    // Skip Button
+    // Last Slide
     if (currentSlide === slides.length - 1) {
+      buttonForward.dataset.hidden = '';
+      buttonBack.dataset.hidden = '';
+      buttonSkip.dataset.hidden = '';
+      buttonDone.dataset.hidden = '';
+    } else {
+      delete buttonForward.dataset.hidden;
+      delete buttonBack.dataset.hidden;
+      delete buttonSkip.dataset.hidden;
+    }
+
+    // Skip Button
+    if (currentSlide === slides.length - 2) {
       buttonSkip.setAttribute('disabled', '');
     } else {
       buttonSkip.removeAttribute('disabled');
     }
+
+    // Done Button
+    if (currentSlide === slides.length - 2) {
+      delete buttonDone.dataset.hidden;
+      buttonSkip.dataset.hidden = '';
+    } else if (currentSlide !== slides.length - 1) {
+      buttonDone.dataset.hidden = '';
+      delete buttonSkip.dataset.hidden;
+    }
   }
 
-  buttonFoward.addEventListener('click', () => {
+  buttonForward.addEventListener('click', () => {
     switchSlide(currentSlide + 1);
   });
 
@@ -173,6 +195,10 @@ import './helper';
   });
 
   buttonSkip.addEventListener('click', () => {
+    switchSlide(slides.length - 2);
+  });
+
+  buttonDone.addEventListener('click', () => {
     switchSlide(slides.length - 1);
   });
 })();

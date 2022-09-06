@@ -1,8 +1,13 @@
 .navigation {
+  /* position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--m);
   margin-top: var(--m);
-
-  /* background-color: var(--c-bg-2); */
-  grid-column: main;
+  backdrop-filter: blur(5px);
+  background-color: var(--c-bg-1);
+  background-color: rgba(var(--c-bg-1) / 80%); */
 }
 
 .navigation .graph {
@@ -16,10 +21,19 @@
   padding: var(--xs);
 }
 
+.event-display {
+  display: none;
+}
+
 .event-display time {
   font-weight: var(--fw-bold);
 }
 
 .event-display p {
   font-family: var(--ff-sans);
+}
+
+[data-js-current-slide="7"] .event-display,
+[data-js-current-slide="8"] .event-display {
+  display: block;
 }

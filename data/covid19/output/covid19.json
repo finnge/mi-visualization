@@ -7084,7 +7084,7 @@
       "IS": {
         "cases": -715,
         "deaths": 0,
-        "incidence": -39.27
+        "incidence": 0
       },
       "IE": {
         "cases": 9531,
@@ -10199,7 +10199,7 @@
       "FR": {
         "cases": -274121,
         "deaths": 980,
-        "incidence": -58.17
+        "incidence": 0
       },
       "DE": {
         "cases": 52727,
