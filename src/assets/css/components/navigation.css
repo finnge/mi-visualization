@@ -1,6 +1,7 @@
 .navigation {
   margin-top: var(--m);
   background-color: var(--c-bg-2);
+  grid-column: main;
 }
 
 .navigation .graph {
