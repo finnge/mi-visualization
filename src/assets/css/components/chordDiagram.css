@@ -14,3 +14,7 @@
 [data-js-graph] [data-type="links"] path[data-passive] {
   opacity: 0.05;
 }
+
+[data-js-graph] [data-type="covid-ticks"] {
+  pointer-events: none;
+}
