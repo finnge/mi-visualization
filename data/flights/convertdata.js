@@ -17,14 +17,14 @@ function timeConvert(time) {
 /* eslint-disable no-extend-native */
 // Get ISO week number for given date
 // @see https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
-Date.prototype.getWeekNumber = function getWeekNumber() {
+Date.prototype.getYearWeekNumber = function getYearWeekNumber() {
   const d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
 
-  return weekNo;
+  return `${d.getUTCFullYear()}-${weekNo < 10 ? `0${weekNo}` : weekNo}`;
 };
 /* eslint-enable no-extend-native */
 
@@ -77,13 +77,11 @@ const FILEPATH = {
     counterAll += 1;
 
     const dateOfFlight = new Date(flight.day);
-    const calWeek = dateOfFlight.getWeekNumber();
-    const yearCalWeek = `${dateOfFlight.getUTCFullYear()}-${calWeek < 10 ? `0${calWeek}` : calWeek}`;
+    const yearCalWeek = dateOfFlight.getYearWeekNumber();
 
-    if (
-      dateOfFlight.getUTCFullYear() < 2019
-      || (dateOfFlight.getUTCFullYear() === 2019 && calWeek <= 9)
-    ) {
+    const [calYear, calWeek] = yearCalWeek.split('-');
+
+    if (calYear < 2019 || (calYear === 2019 && calWeek <= 9)) {
       return;
     }
 

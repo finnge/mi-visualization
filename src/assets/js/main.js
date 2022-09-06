@@ -95,14 +95,18 @@ import './helper';
 
   slides[currentSlide].dataset.jsSlideActive = '';
 
+  const body = document.querySelector('body');
+
   function switchSlide(nextSlide) {
     if (nextSlide >= slides.length || nextSlide < 0) {
       return;
     }
 
+    // switch slider
     delete slides[currentSlide].dataset.jsSlideActive;
     slides[nextSlide].dataset.jsSlideActive = '';
 
+    // switch elements
     const listCurrentElements = document.querySelectorAll(`[data-js-intro-slide-el-${currentSlide}]`);
     const listNextElements = document.querySelectorAll(`[data-js-intro-slide-el-${nextSlide}]`);
 
@@ -116,6 +120,7 @@ import './helper';
       el.dataset.jsSlideElActive = '';
     });
 
+    // switch elements with passive value
     const listCurrentPassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${currentSlide}-passive]`);
     const listNextPassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${nextSlide}-passive]`);
 
@@ -131,6 +136,9 @@ import './helper';
 
     currentSlide = nextSlide;
 
+    // save to body
+    body.dataset.jsCurrentSlide = currentSlide;
+
     // Forward Button
     if (currentSlide === slides.length - 1) {
       buttonFoward.setAttribute('disabled', '');
@@ -144,6 +152,13 @@ import './helper';
     } else {
       buttonBack.removeAttribute('disabled');
     }
+
+    // Skip Button
+    if (currentSlide === slides.length - 1) {
+      buttonSkip.setAttribute('disabled', '');
+    } else {
+      buttonSkip.removeAttribute('disabled');
+    }
   }
 
   buttonFoward.addEventListener('click', () => {
@@ -152,5 +167,9 @@ import './helper';
 
   buttonBack.addEventListener('click', () => {
     switchSlide(currentSlide - 1);
+  });
+
+  buttonSkip.addEventListener('click', () => {
+    switchSlide(slides.length - 1);
   });
 })();

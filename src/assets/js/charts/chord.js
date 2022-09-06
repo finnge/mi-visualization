@@ -44,7 +44,12 @@ export default async function generateChord(
     .attr('transform', `translate(${width / 2},${height / 2})`);
 
   const yearWeek = `${year}-${week < 10 ? `0${week}` : week}`;
-  const matrix = listOfMatrix[yearWeek];
+  const matrix = listOfMatrix[yearWeek] ?? (() => {
+    const outerArray = new Array(listOfCountries.length);
+    const innerArray = new Array(listOfCountries.length);
+    innerArray.fill(0);
+    outerArray.fill(innerArray);
+  })();
   const covid19 = new Array(listOfCountries.length);
 
   // default covid data
@@ -322,4 +327,20 @@ export default async function generateChord(
 
   // 7
   svg.attr('data-js-intro-slide-el-7', '');
+
+  // init visability
+  const initSlideValue = document.querySelector('body').dataset.jsCurrentSlide;
+
+  const listInitSildeElements = document.querySelectorAll(`[data-js-intro-slide-el-${initSlideValue}]`);
+  const listInitSlidePassiveElements = document.querySelectorAll(`[data-js-intro-slide-el-${initSlideValue}-passive]`);
+
+  listInitSildeElements.forEach((el) => {
+    // eslint-disable-next-line no-param-reassign
+    el.dataset.jsSlideElActive = '';
+  });
+
+  listInitSlidePassiveElements.forEach((el) => {
+    // eslint-disable-next-line no-param-reassign
+    el.dataset.jsSlideElActivePassive = '';
+  });
 }
