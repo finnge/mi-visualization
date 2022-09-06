@@ -2,134 +2,218 @@
   "events": [
     {
       "event": "China - Ausbruch Lungenkrankheit",
-      "startdate": "2019-12-31",
-      "enddate": "2019-12-31",
+      "date": "2019-12-31",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "China meldet Ausbruch einer mysteriösen Lungenkrankheit"
     },
     {
       "event": "Identifizierung des Coronavirus",
-      "startdate": "2020-01-07",
-      "enddate": "2020-01-07",
+      "date": "2020-01-07",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Identifizierung des Coronavirus"
     },
     {
       "event": "Erste Fälle in Europa",
-      "startdate": "2020-01-24",
-      "enddate": "2020-01-24",
+      "date": "2020-01-24",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Erste Fälle des Coronavirus in Europa"
     },
     {
       "event": "WHO 'internationale gesundheitliche Notlage'",
-      "startdate": "2020-01-30",
-      "enddate": "2020-01-30",
+      "date": "2020-01-30",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "WHO ruft 'internationale gesundheitliche Notlage' aus"
     },
     {
       "event": "WHO Namensgebung 'COVID-19'",
-      "startdate": "2020-02-11",
-      "enddate": "2020-02-11",
+      "date": "2020-02-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "WHO Namensgebung 'COVID-19'"
     },
     {
       "event": "WHO erklärt die bisherige Epidemie offiziell zu einer weltweiten Pandemie",
-      "startdate": "2020-03-11",
-      "enddate": "2020-03-11",
+      "date": "2020-03-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "WHO erklärt die bisherige Epidemie offiziell zu einer weltweiten Pandemie"
     },
     {
       "event": "Europa wird zum Corona-Hotspot",
-      "startdate": "2020-03-16",
-      "enddate": "2020-03-16",
+      "date": "2020-03-16",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Soziale Isolation in DE, Ausgangssperre in FR -> Europa wird zum Corona-Hotspot"
     },
     {
       "event": "Italiens Gesundheitssystem ist am Limit",
-      "startdate": "2020-03-21",
-      "enddate": "2020-03-21",
+      "date": "2020-03-21",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Italiens Gesundheitssystem ist am Limit"
     },
     {
       "event": "Reiserückkehrer aus Risikogebieten müssen sich testen lassen",
-      "startdate": "2020-07",
-      "enddate": "",
+      "date": "2020-07",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
       "description": "Reiserückkehrer aus Risikogebieten müssen sich testen lassen"
     },
     {
       "event": "Zweite Welle in Europa",
-      "startdate": "2020-09",
-      "enddate": "",
+      "date": "2020-09",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
       "description": "Zweite Welle in Europa"
     },
     {
       "event": "Empfehlung für einen gemeinsamen Ansatz für Reisebestimmungen",
-      "startdate": "2020-10-13",
-      "enddate": "2020-10-13",
+      "date": "2020-10-13",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Rat nimmt Empfehlung für einen gemeinsamen Ansatz für Reisebestimmungen an"
     },
     {
       "event": "Erster COVID-19-Impfstoff zur Verwendung in der EU zugelassen",
-      "startdate": "2020-12-21",
-      "enddate": "2020-12-21",
+      "date": "2020-12-21",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Erster COVID-19-Impfstoff zur Verwendung in der EU zugelassen"
     },
     {
       "event": "Virusvariante Alpha & Beta gemeldet",
-      "startdate": "2020-12",
-      "enddate": "none",
+      "date": "2020-12",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
       "description": "Virusvariante Alpha & Beta gemeldet"
     },
     {
       "event": "Virusvariante Gamma gemeldet",
-      "startdate": "2021-01",
-      "enddate": "none",
+      "date": "2021-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
       "description": "Virusvariante Gamma gemeldet"
     },
     {
       "event": "COVID-19-Impfstoff zugelassen (Moderna)",
-      "startdate": "2021-01-06",
-      "enddate": "2021-01-06",
+      "date": "2021-01-06",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "COVID-19-Impfstoff zugelassen (Moderna)"
     },
     {
       "event": "COVID-19-Impfstoff zugelassen (AstraZeneca)",
-      "startdate": "2021-01-23",
-      "enddate": "2021-01-23",
+      "date": "2021-01-23",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "COVID-19-Impfstoff zugelassen (AstraZeneca)"
     },
     {
       "event": "Rat aktualisiert Empfehlung zu COVID-19-Reisemaßnahmen",
-      "startdate": "2021-02-01",
-      "enddate": "2021-02-01",
+      "date": "2021-02-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Rat aktualisiert Empfehlung zu COVID-19-Reisemaßnahmen"
     },
     {
       "event": "COVID-19-Impfstoff zugelassen (J&J)",
-      "startdate": "2021-03-11",
-      "enddate": "2021-03-11",
+      "date": "2021-03-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "COVID-19-Impfstoff zugelassen (J&J)"
     },
     {
       "event": "Virusvariante Delta gemeldet",
-      "startdate": "2021-05-11",
-      "enddate": "2021-05-11",
+      "date": "2021-05-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Virusvariante Delta gemeldet"
     },
     {
       "event": "Digitales COVID-Zertifikat der EU tritt in Kraft",
-      "startdate": "2021-07-21",
-      "enddate": "2021-07-21",
+      "date": "2021-07-21",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Digitales COVID-Zertifikat der EU tritt in Kraft"
     },
     {
       "event": "Virusvariante Omikron gemeldet",
-      "startdate": "2021-12-24",
-      "enddate": "2021-12-24",
+      "date": "2021-12-24",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Virusvariante Omikron gemeldet"
     },
     {
       "event": "Europäischer Rat verabschiedet neue Empfehlung zu COVID-19-Reisebestimmungen",
-      "startdate": "2022-01-25",
-      "enddate": "2022-01-25",
+      "date": "2022-01-25",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
       "description": "Europäischer Rat verabschiedet neue Empfehlung zu COVID-19-Reisebestimmungen"
     }
   ]
