@@ -78,11 +78,26 @@ svg text {
 main {
   display: grid;
   gap: var(--m);
-  grid-template-columns: [side-start] 1fr [side-end main-start] 2fr [main-end];
+  grid-template-columns: [side-start] 2fr [side-end main-start] 3fr [main-end];
+  grid-template-rows: repeat(auto-fit, min-content);
 
   /* grid-template-columns:
       [full-start] 1fr [wrapper-start]
       minmax(0, 70rem) [wrapper-end] 1fr [full-end]; */
+}
+
+@media screen and (max-width: 1400px) {
+  main {
+    display: block;
+  }
+}
+
+.side {
+  grid-column: side;
+}
+
+.side :nth-child(n) {
+  margin-bottom: var(--m);
 }
 
 footer {
