@@ -243,7 +243,7 @@ export default async function generateChord(
   const tooltip = baseSelection.append('div')
     .style('position', 'absolute')
     .style('visibility', 'hidden')
-    .style('z-index', 1)
+    .attr('data-js-tooltip', '')
     .text('Value');
 
   // Interactivity
@@ -253,12 +253,12 @@ export default async function generateChord(
   listOfAllGroups.forEach((group) => {
     group.addEventListener('mouseenter', (e) => {
       const { target } = e;
-      const { group: groupId, country } = target.dataset;
+      const { group: groupId, value } = target.dataset;
 
       // tooltip
       tooltip
         .style('visibility', 'visible')
-        .text(country);
+        .html(`${value} total <br> number of flights`);
 
       // highlight active paths
       const listOfGroupSource = elGraphWrapper.querySelectorAll(`path[data-group-source="${groupId}"]`);

@@ -5,6 +5,7 @@ body {
   background-color: var(--c-bg-1);
   color: var(--c-fg-1);
   font-family: var(--ff-serif);
+  font-size: var(--s);
   grid-template-rows: 1fr auto;
 }
 

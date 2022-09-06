@@ -18,3 +18,14 @@
 [data-js-graph] [data-type="covid-ticks"] {
   pointer-events: none;
 }
+
+[data-js-tooltip] {
+  z-index: 1;
+  padding: var(--xxs);
+  backdrop-filter: blur(5px);
+  background-color: rgb(38 38 38 / 80%);
+  color: #f4f4f4;
+  font-family: var(--ff-sans);
+  font-size: var(--xs);
+  line-height: var(--lh-tight);
+}
