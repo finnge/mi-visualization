@@ -34,6 +34,11 @@ svg text {
   align-items: center;
 }
 
+.button--primary svg {
+  width: var(--xl);
+  height: var(--xl);
+}
+
 .button--primary:disabled svg {
   fill: var(--c-fg-3);
 }
@@ -56,18 +61,12 @@ svg text {
   fill: var(--c-prim-interactive);
 }
 
-.button--primary svg {
-  width: var(--xl);
-  height: var(--xl);
-}
-
 [data-js-graph] {
   display: flex;
   align-items: center;
   justify-content: center;
   grid-column: main;
-  grid-row-end: 3;
-  grid-row-start: 1;
+  grid-row: 1 / span 2;
 }
 
 main {
