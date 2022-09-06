@@ -4,7 +4,8 @@
 
 .intro-slides [data-js-slide] {
   display: none;
-  height: 100%;
+
+  /* height: 100%; */
 }
 
 .intro-slides [data-js-slide-active] {
@@ -21,17 +22,22 @@
   grid-template-columns: auto auto 1fr;
 }
 
+.graph:not([data-js-slide-el-active]),
 .graph :not([data-js-slide-el-active]) {
   pointer-events: none;
   visibility: hidden;
 }
 
+.graph[data-js-slide-el-active],
+.graph[data-js-slide-el-active] *,
 .graph [data-js-slide-el-active],
 .graph [data-js-slide-el-active] * {
   pointer-events: all;
   visibility: visible;
 }
 
+.graph[data-js-slide-el-active-passive],
+.graph[data-js-slide-el-active-passive] *,
 .graph [data-js-slide-el-active-passive],
 .graph [data-js-slide-el-active-passive] * {
   opacity: 0.1 !important;

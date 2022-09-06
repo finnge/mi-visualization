@@ -1,6 +1,7 @@
 .navigation {
   margin-top: var(--m);
-  background-color: var(--c-bg-2);
+
+  /* background-color: var(--c-bg-2); */
   grid-column: main;
 }
 
@@ -13,4 +14,12 @@
   align-items: center;
   justify-content: center;
   padding: var(--xs);
+}
+
+.event-display time {
+  font-weight: var(--fw-bold);
+}
+
+.event-display p {
+  font-family: var(--ff-sans);
 }

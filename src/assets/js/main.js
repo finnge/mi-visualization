@@ -9,6 +9,7 @@ import './helper';
   // load data and select components
   const flightCountriesJson = await d3.json('data/flights_countries.json');
   const covidCountriesJson = await d3.json('data/covid19.json');
+  const covidEventsJson = await d3.json('data/events.json');
   const elSlider = document.querySelector('[data-js-slider]');
   const weekIndicator = document.querySelector('[data-js-week-indicator]');
 
@@ -34,7 +35,8 @@ import './helper';
 
     const numberOfWeeks = elSlider.value - 1;
     const currentDate = new Date(startDate);
-    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks);
+    // HotFix: Skip to Friday of week so we get always the correct year
+    currentDate.setDate(currentDate.getDate() + 7 * numberOfWeeks + 5);
 
     const {
       width,
@@ -77,6 +79,7 @@ import './helper';
       elTimelineWrapper,
       elSlider,
       flightCountriesJson.totalNumOfFlights,
+      covidEventsJson,
       width,
       height,
     );

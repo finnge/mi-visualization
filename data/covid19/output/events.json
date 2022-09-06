@@ -1,0 +1,178 @@
+{
+  "events": [
+    {
+      "event": "China - mysterious lung disease",
+      "date": "2019-12-31",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "China reports the outbreak of a mysterious lung disease."
+    },
+    {
+      "event": "Identification of the coronavirus",
+      "date": "2020-01-07",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "A new type of virus has been identified."
+    },
+    {
+      "event": "WHO: \"international health emergency\"",
+      "date": "2020-01-30",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "WHO declares \"international health emergency\". The first cases of corona have been reported in Europe."
+    },
+    {
+      "event": "WHO officially declares previous epidemic a global pandemic",
+      "date": "2020-03-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "WHO officially declares previous epidemic a global pandemic."
+    },
+    {
+      "event": "Europe becomes a Corona hotspot",
+      "date": "2020-03-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "Europe becomes a Corona hotspot. Social isolation is introduced in DE and curfews in FR. In addition, Italy\"s healthcare system is at its limit."
+    },
+    {
+      "event": "Travelers returning from risk areas must get tested",
+      "date": "2020-07-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "Travelers returning from risk areas must get tested."
+    },
+    {
+      "event": "Second wave in Europe",
+      "date": "2020-09-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "The second wave arises in Europe. The Healthcare systems are overburdened."
+    },
+    {
+      "event": "Recommendation for a common approach to travel regulations",
+      "date": "2020-10-13",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "European Council adopts recommendation for common approach to travel regulations."
+    },
+    {
+      "event": "First COVID-19 vaccine approved in the EU",
+      "date": "2020-12-21",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "First COVID-19 vaccine approved for use in the EU."
+    },
+    {
+      "event": "Virus variants alpha & beta reported",
+      "date": "2020-12",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "Virus variants alpha & beta have been reported. The mutation were first identified in the United Kingdom and in South Africa."
+    },
+    {
+      "event": "Virus variant gamma reported",
+      "date": "2021-01-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "Virus variant gamma has been reported. The mutation was first identified in the Brazilian Amazon region."
+    },
+    {
+      "event": "COVID-19 vaccines approved",
+      "date": "2021-01-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long"
+      },
+      "description": "The COVID-19 vaccines Moderna and AstraZeneca got approved."
+    },
+    {
+      "event": "Council updates recommendation on COVID-19 travel measures",
+      "date": "2021-02-01",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "Council updates recommendation on COVID-19 travel measures."
+    },
+    {
+      "event": "COVID-19 vaccine approved",
+      "date": "2021-03-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "The COVID-19 vaccine Johnson&Johnson got approved."
+    },
+    {
+      "event": "Virus variant delta reported",
+      "date": "2021-05-11",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "Virus variant gamma has been reported. The mutation was first identified in India."
+    },
+    {
+      "event": "digital COVID certificate comes into force",
+      "date": "2021-07-21",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "EU digital COVID certificate comes into force."
+    },
+    {
+      "event": "Virus variant omikron reported",
+      "date": "2021-12-24",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "Virus variant omikron has been reported. The mutation was first identified in South Africa."
+    },
+    {
+      "event": "European Council adopts new recommendation on COVID-19 travel regulations",
+      "date": "2022-01-25",
+      "formatOption": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+      },
+      "description": "European Council adopts new recommendation on COVID-19 travel regulations."
+    }
+  ]
+}

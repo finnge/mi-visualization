@@ -71,6 +71,7 @@ svg text {
 
 main {
   display: grid;
+  gap: var(--m);
   grid-template-columns: [side-start] 1fr [side-end main-start] 2fr [main-end];
 
   /* grid-template-columns:
