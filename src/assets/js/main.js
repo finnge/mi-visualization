@@ -90,7 +90,7 @@ import './helper';
   const slides = document.querySelectorAll('[data-js-slide]');
   const buttonFoward = document.querySelector('[data-js-intro-action="forward"]');
   const buttonBack = document.querySelector('[data-js-intro-action="back"]');
-  const buttonSkip = document.querySelector('[data-js-intro-action="skip"]');
+  const buttonSkip = document.querySelector('[data-js-intro-action="skip"]'); // TODO: implement
   let currentSlide = 0;
 
   slides[currentSlide].dataset.jsSlideActive = '';
